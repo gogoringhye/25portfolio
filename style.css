@@ -839,6 +839,37 @@ header {
   background-position: bottom;
 }
 
+/* 3 */
+.photoshop_wrap3 {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: url(img/sakuya.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+  border: 1px solid #ccc;
+  transition: 0.8s;
+}
+
+.photoshop_wrap3:hover {
+  background-position: bottom;
+}
+
+/* 4 */
+.photoshop_wrap4 {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: url(img/yushi.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+  border: 1px solid #ccc;
+  transition: 0.8s;
+}
+
+.photoshop_wrap4:hover {
+  background-position: bottom;
+}
 /* //포토샵 */
 
 /* 도라런 */
