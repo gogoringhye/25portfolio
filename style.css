@@ -844,7 +844,7 @@ header {
   position: relative;
   width: 250px;
   height: 250px;
-  background: url(img/sakuya.png) no-repeat;
+  background: url(img/yushi.png) no-repeat;
   background-size: cover;
   background-position: top;
   border: 1px solid #ccc;
@@ -860,7 +860,7 @@ header {
   position: relative;
   width: 250px;
   height: 250px;
-  background: url(img/yushi.png) no-repeat;
+  background: url(img/haerin.png) no-repeat;
   background-size: cover;
   background-position: top;
   border: 1px solid #ccc;
@@ -870,6 +870,24 @@ header {
 .photoshop_wrap4:hover {
   background-position: bottom;
 }
+
+/* 5 */
+.photoshop_wrap5 {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: url(img/sakuya.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+  border: 1px solid #ccc;
+  transition: 0.8s;
+}
+
+.photoshop_wrap5:hover {
+  background-position: bottom;
+}
+
+
 /* //포토샵 */
 
 /* 도라런 */
