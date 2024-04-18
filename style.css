@@ -790,6 +790,9 @@ header {
   height: 250px;
   border-radius: 8px;
 }
+.ditem a {
+color: #000;
+}
 
 .ditem img {
   width: 100%;
@@ -910,21 +913,6 @@ header {
 
 /* 피그마 */
 
-.figma_wrap {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  background: url(img/figma_site.png) no-repeat;
-  background-size: cover;
-  background-position: top;
-  border: 1px solid #ccc;
-  transition: 0.8s;
-}
-
-.figma_wrap:hover {
-  background-position: bottom;
-}
-
 /* 1 */
 .figma_wrap1 {
   position: relative;
@@ -946,7 +934,7 @@ header {
   position: relative;
   width: 250px;
   height: 250px;
-  background: url(img/시안2.jpg) no-repeat;
+  background: url(img/figma_draft2.jpg) no-repeat;
   background-size: cover;
   background-position: top;
   border: 1px solid #ccc;
@@ -962,25 +950,7 @@ header {
   position: relative;
   width: 250px;
   height: 250px;
-  background: url(img/시안3.jpg) no-repeat;
-  background-size: cover;
-  background-position: top;
-  border: 1px solid #ccc;
-  transition: 0.8s;
-}
-
-.figma_wrap3:hover {
-  background-position: bottom;
-}
-
-/* //피그마 */
-
-/* 3 */
-.figma_wrap3 {
-  position: relative;
-  width: 250px;
-  height: 250px;
-  background: url(img/시안3.jpg) no-repeat;
+  background: url(img/figma_draft3.jpg) no-repeat;
   background-size: cover;
   background-position: top;
   border: 1px solid #ccc;
