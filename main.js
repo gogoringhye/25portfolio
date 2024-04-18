@@ -738,7 +738,7 @@ spans.forEach((span, idx) => {
 
 
 
-/* test */
+/* 구조 */
 const lenis = new Lenis();
 
 lenis.on("scroll", (e) => {
@@ -973,4 +973,4 @@ function footer() {
 }
 footer()
 
-/* //test */
+/* //구조 */
