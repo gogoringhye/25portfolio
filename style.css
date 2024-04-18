@@ -964,7 +964,9 @@ color: #000;
 /* //피그마 */
 
 /* 일러스트 */
-.illustrate_wrap {
+
+/* 1 */
+.illustrate_wrap1 {
   position: relative;
   width: 250px;
   height: 250px;
@@ -975,7 +977,23 @@ color: #000;
   transition: 0.8s;
 }
 
-.illustrate_wrap:hover {
+.illustrate_wrap1:hover {
+  background-position: bottom;
+}
+
+/* 2 */
+.illustrate_wrap2 {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  background: url(img/aineko.png) no-repeat;
+  background-size: cover;
+  background-position: top;
+  border: 1px solid #ccc;
+  transition: 0.8s;
+}
+
+.illustrate_wrap2:hover {
   background-position: bottom;
 }
 
