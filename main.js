@@ -726,18 +726,6 @@ spans.forEach((span, idx) => {
 /* //통통 */
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* 구조 */
 const lenis = new Lenis();
 
