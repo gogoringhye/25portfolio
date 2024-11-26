@@ -64,7 +64,7 @@ li {
 .notice .close {
   position: absolute;
   font-size: 14px;
-  color: #171717;
+  color: #ffffff;
 }
 
 .notice #cb {
@@ -78,10 +78,10 @@ li {
 }
 
 .notice .close {
-  top: 10px;
-  right: 10px;
-  text-decoration: none;
-  font-weight: bold;
+    bottom: 20px;
+    right: 40px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .coo_txt,
