@@ -100,7 +100,7 @@ li {
 }
 
 .coo_txt {
-  padding-top: 25px;
+  padding-top: 50%;
 }
 
 .coo_comment {
@@ -115,7 +115,7 @@ li {
 
 .highlight {
   font-weight: bold;
-  color: ##ff3d00;
+  color: #ff3d00;
 }
 
 /* //🍪쿠키 */
