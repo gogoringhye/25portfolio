@@ -85,8 +85,7 @@ li {
 }
 
 .coo_txt,
-.coo_comment,
-.coo_comment2 {
+.coo_comment {
   font-size: 10px;
   color: #ffffff;
   text-align: center;
@@ -98,12 +97,6 @@ li {
 
 .coo_comment {
   padding-top: 15px;
-}
-
-.coo_comment2 {
-  position: absolute;
-  left: 40%;
-  bottom: 15%;
 }
 
 .highlight {
