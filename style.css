@@ -709,7 +709,9 @@ li {
 
 /* skill */
 
-.skill {}
+.skill {
+    position: relative;
+}
 
 .skill .skill_inner {
   height: 100%;
