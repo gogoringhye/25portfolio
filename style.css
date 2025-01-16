@@ -1526,9 +1526,9 @@ header {
 }
 
 .content-slider li {
-  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-  transition: all 0.5s;
-  background: #fff;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+    transition: all 0.5s;
+    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png);
 }
 
 .content-slider li .t-stroke {
