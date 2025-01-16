@@ -731,16 +731,8 @@ li {
     box-sizing: border-box;
     left: 80%;
     position: relative;
+    margin-top: 5vw;
     z-index: 100;
-}
-
-.skill .lw {
-  width: 100%;
-  font-size: 80px;
-  font-style: italic;
-  margin: 2.5vw 2.5vw 2.5vw 1vw;
-  /* wow */
-  animation-delay: 0.15s;
 }
 
 .skill .left ul {}
