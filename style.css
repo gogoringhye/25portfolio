@@ -737,7 +737,6 @@ li {
 .skill .left li {
   position: relative;
   padding: 2%;
-  border-bottom: 1px solid #171717;
   box-sizing: border-box;
   height: 7.5vh;
 }
