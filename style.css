@@ -195,7 +195,7 @@ li {
   margin: 0;
   font-size: 85px;
   text-align: center;
-  color: #171717;
+  color: #fff;
   text-transform: uppercase;
   z-index: 2;
 }
@@ -258,7 +258,7 @@ li {
   margin: 0;
   font-size: 100px;
   text-align: center;
-  color: #fff;
+  color: #171717;
   text-transform: uppercase;
   mix-blend-mode: difference;
   z-index: 2;
@@ -1659,7 +1659,7 @@ header {
   animation-name: marquee;
 }
 
-.title-wrapper {
+.-wrapper {
   position: relative;
   display: flex;
   gap: 30px;
