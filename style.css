@@ -1668,8 +1668,8 @@ header {
 }
 
 .t-stroke {
-  color: #171717;
-  -webkit-text-stroke: 1px #fff;
+  color: #f9f9f9;
+  -webkit-text-stroke: 1px #171717;
   font-style: italic;
 }
 
