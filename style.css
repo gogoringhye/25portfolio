@@ -753,7 +753,6 @@ li {
 }
 
 .skill .left ul li::before {
-  background-color: #171717;
   content: "";
   display: block;
   height: 0%;
