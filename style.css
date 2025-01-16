@@ -746,14 +746,15 @@ li {
 }
 
 .skill .left li a {
-  position: relative;
-  display: block;
-  font-size: 2vw;
-  font-weight: 600;
-  margin-left: 10px;
-  color: #222;
-  transition: 0.3s cubic-bezier(.07, .81, .3, .99);
-  z-index: 10;
+    position: relative;
+    display: block;
+    font-size: 2vw;
+    font-weight: 600;
+    margin-left: 10px;
+    color: #171717;
+    transition: 0.3s cubic-bezier(.07, .81, .3, .99);
+    z-index: 10;
+    opacity: 0.9;
 }
 
 .skill .left ul li::before {
