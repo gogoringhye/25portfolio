@@ -108,18 +108,19 @@ li {
 
 /* 메뉴 */
 .menu {
-  position: absolute;
-  top: 2rem;
-  bottom: 2rem;
-  left: 3rem;
-  right: 3rem;
-  display: grid;
-  grid-template-areas:
-    "top"
-    "content";
-  grid-template-rows: 3rem 1fr;
-  opacity: .9;
-  z-index: 1;
+    position: absolute;
+    top: 2rem;
+    bottom: 2rem;
+    left: 3rem;
+    right: 3rem;
+    display: grid
+;
+    grid-template-areas:
+        "top"
+        "content";
+    grid-template-rows: 3rem 1fr;
+    opacity: .9;
+    z-index: 100;
 }
 
 .menu__top {
