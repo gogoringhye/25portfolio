@@ -817,13 +817,13 @@ li {
 /* 오른쪽 */
 
 .skill .right {
-  position: relative;
-  width: 66.6666%;
-  height: 100vh;
-  box-sizing: border-box;
-  border-bottom: 1px solid #171717;
-  overflow: hidden;
-  transition: 0.3s;
+ position: absolute;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+    border-bottom: 1px solid #171717;
+    overflow: hidden;
+    transition: 0.3s;
 }
 
 .skill .right_inner {
