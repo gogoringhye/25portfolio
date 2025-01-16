@@ -725,9 +725,11 @@ li {
 
 /* 왼쪽 */
 .skill .left {
-  width: 33.3333%;
-  height: 100vh;
-  box-sizing: border-box;
+    width: 40%;
+    height: 100vh;
+    box-sizing: border-box;
+    left: 80vw;
+    position: relative;
 }
 
 .skill .lw {
