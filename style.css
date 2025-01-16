@@ -1418,8 +1418,7 @@ header {
 .img-slider img,
 .second-img-slider img,
 .third-img-slider img {
-  /* width: 100%; */
-  width: 250px;
+  width: 100%; 
   height: calc(100% - 54px);
   object-fit: cover;
   object-position: center top;
