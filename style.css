@@ -1629,7 +1629,7 @@ header {
 .content-slider li {
   clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
   transition: all 0.5s;
-  background: #171010;
+  background: #fff;
 }
 
 .content-slider li .t-stroke {
@@ -1668,9 +1668,9 @@ header {
 }
 
 .t-stroke {
-  color: #171010;
-  -webkit-text-stroke: 1px #fff;
-  font-style: italic;
+    color: #f9f9f9;
+    -webkit-text-stroke: 1px #171717;
+    font-style: italic;
 }
 
 @keyframes marquee {
