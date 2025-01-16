@@ -56,7 +56,8 @@ li {
     border-radius: 8px;
     font-weight: bold;
     z-index: 110;
-    background-color: #171717e3;
+    background-color: #171717;
+    opacity: 0.9;
 }
 
 .notice #cb,
