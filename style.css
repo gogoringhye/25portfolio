@@ -717,7 +717,6 @@ li {
 
 .skill .aboutme {
   display: flex;
-  border-top: 1px solid #171717;
   box-sizing: border-box;
 }
 
