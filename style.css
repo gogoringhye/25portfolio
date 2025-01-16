@@ -731,6 +731,7 @@ li {
     box-sizing: border-box;
     left: 80%;
     position: relative;
+    z-index: 100;
 }
 
 .skill .lw {
