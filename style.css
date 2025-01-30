@@ -48,7 +48,7 @@ li {
 
 .notice {
     position: absolute;
-    top: 25%;
+    top: 18%;
     left: 35%;
     width: 400px;
     height: 500px;
@@ -57,7 +57,6 @@ li {
     font-weight: bold;
     z-index: 110;
     background-color: #171717;
-    opacity: 0.9;
 }
 
 .notice #cb,
