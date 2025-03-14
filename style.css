@@ -414,9 +414,9 @@ li {
 .header__marq {
   width: 100%;
   height: auto;
+  background: #171717;
   overflow: hidden;
 }
-
 .header__marq-wrapp {
   display: flex;
   width: 100%;
