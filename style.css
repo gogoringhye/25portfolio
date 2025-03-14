@@ -412,11 +412,13 @@ li {
 }
 
 .header__marq {
-  width: 100%;
-  height: auto;
-  background: #171717;
-  overflow: hidden;
+    width: 100%;
+    height: auto;
+    background-color: #171717;
+    overflow: hidden;
+    color: #fff;
 }
+
 .header__marq-wrapp {
   display: flex;
   width: 100%;
