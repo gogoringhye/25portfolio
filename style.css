@@ -1,12 +1,6 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: 'GentleMonster';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("https://www.gentlemonster.com/kr/assets/fonts/GM/GentleMonsterSerif-Regular.woff2") format("woff2"), url("https://www.gentlemonster.com/kr/assets/fonts/GM/GentleMonsterSerif-Regular.woff") format("woff");
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @font-face {
   font-family: "SDGothicNeo";
@@ -22,18 +16,17 @@
   box-sizing: border-box;
 }
 
-
-/* GentleMonster 폰트를 기본 폰트로 지정 */
+/* Poppins 폰트를 기본 폰트로 지정 */
 body {
   overflow: hidden;
-  font-family: 'GentleMonster', sans-serif;
+  font-family: 'Poppins';
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png);
 }
 
 /* 한국어 텍스트에는 SDGothicNeo 폰트를 적용 */
-html[lang="ko"] body {
+/* html[lang="ko"] body {
   font-family: 'SDGothicNeo', sans-serif;
-}
+} */
 
 a {
   text-decoration: none;
@@ -47,16 +40,16 @@ li {
 /* 🍪쿠키 */
 
 .notice {
-    position: absolute;
-    top: 18%;
-    left: 35%;
-    width: 400px;
-    height: 500px;
-    padding: 15px;
-    border-radius: 8px;
-    font-weight: bold;
-    z-index: 110;
-    background-color: #171717;
+  position: absolute;
+  top: 18%;
+  left: 35%;
+  width: 400px;
+  height: 500px;
+  padding: 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  z-index: 110;
+  background-color: #171717;
 }
 
 .notice #cb,
@@ -78,10 +71,10 @@ li {
 }
 
 .notice .close {
-    bottom: 20px;
-    right: 40px;
-    text-decoration: none;
-    font-weight: bold;
+  bottom: 20px;
+  right: 40px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .coo_txt,
@@ -108,19 +101,18 @@ li {
 
 /* 메뉴 */
 .menu {
-    position: absolute;
-    top: 2rem;
-    bottom: 2rem;
-    left: 3rem;
-    right: 3rem;
-    display: grid
-;
-    grid-template-areas:
-        "top"
-        "content";
-    grid-template-rows: 3rem 1fr;
-    opacity: .9;
-    z-index: 100;
+  position: absolute;
+  top: 2rem;
+  bottom: 2rem;
+  left: 3rem;
+  right: 3rem;
+  display: grid;
+  grid-template-areas:
+    "top"
+    "content";
+  grid-template-rows: 3rem 1fr;
+  opacity: .9;
+  z-index: 100;
 }
 
 .menu__top {
@@ -412,12 +404,12 @@ li {
 }
 
 .header__marq {
-    width: 100%;
-    height: auto;
-    background-color: #171717;
-    overflow: hidden;
-    color: #fff;
-    z-index: 100;
+  width: 100%;
+  height: auto;
+  background-color: #171717;
+  overflow: hidden;
+  color: #fff;
+  z-index: 100;
 }
 
 .header__marq-wrapp {
@@ -447,6 +439,11 @@ li {
 .about__img {
   width: 50%;
   height: 100vh;
+}
+
+/* 어바웃 왼쪽 */
+.lfme {
+  position: relative;
 }
 
 /* 채팅 */
@@ -711,7 +708,7 @@ li {
 /* skill */
 
 .skill {
-    position: relative;
+  position: relative;
 }
 
 .skill .skill_inner {
@@ -725,13 +722,13 @@ li {
 
 /* 왼쪽 */
 .skill .left {
-    width: 40%;
-    height: 80vh;
-    box-sizing: border-box;
-    left: 80%;
-    position: relative;
-    margin-top: 7%;
-    z-index: 100;
+  width: 40%;
+  height: 80vh;
+  box-sizing: border-box;
+  left: 80%;
+  position: relative;
+  margin-top: 2%;
+  z-index: 100;
 }
 
 .skill .left ul {}
@@ -744,15 +741,15 @@ li {
 }
 
 .skill .left li a {
- position: relative;
-    display: block;
-    font-size: 2vw;
-    font-weight: 600;
-    margin-left: 10px;
-    color: #00000061;
-    transition: 0.3s cubic-bezier(.07, .81, .3, .99);
-    z-index: 10;
-    opacity: 0.8;
+  position: relative;
+  display: block;
+  font-size: 2vw;
+  font-weight: 600;
+  margin-left: 10px;
+  color: #00000061;
+  transition: 0.3s cubic-bezier(.07, .81, .3, .99);
+  z-index: 10;
+  opacity: 0.8;
 }
 
 .skill .left ul li::before {
@@ -813,12 +810,12 @@ li {
 /* 오른쪽 */
 
 .skill .right {
- position: absolute;
-    width: 100%;
-    height: 100vh;
-    box-sizing: border-box;
-    overflow: hidden;
-    transition: 0.3s;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
 .skill .right_inner {
@@ -947,15 +944,17 @@ li {
   }
 }
 
-.mobilebtn, .mobilebtn2 {
+.mobilebtn,
+.mobilebtn2 {
   padding-right: 80px;
   animation: moveUpDown 1.5s infinite;
 }
 
-.tabletbtn, .tabletbtn2 {
+.tabletbtn,
+.tabletbtn2 {
   padding-right: 80px;
   animation: moveUpDown 1s infinite;
-   animation-delay: 0.5s; 
+  animation-delay: 0.5s;
 }
 
 .web-list .redirect-link {
@@ -1346,11 +1345,12 @@ li {
 }
 
 h1 {
-  font-size: max(11.299vw, 108px);
+  font-size: max(10vw, 108px);
   line-height: 1.2;
   text-transform: uppercase;
   font-weight: 600;
   letter-spacing: 2px;
+  font-style: italic;
 }
 
 h6 {
@@ -1358,23 +1358,12 @@ h6 {
   line-height: 1.3;
 }
 
-/*header css*/
-header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  padding: 10px 30px;
-  /*   mix-blend-mode: difference; */
-}
-
 .arrow {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 99;
-  width: 30px;
+  z-index: 10;
+  width: 100px;
   height: auto;
   opacity: 0;
   mix-blend-mode: difference;
@@ -1410,7 +1399,7 @@ header {
 .second-img-slider li,
 .third-img-slider li {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 0;
   width: 100%;
   height: 100%;
@@ -1421,7 +1410,8 @@ header {
 .img-slider img,
 .second-img-slider img,
 .third-img-slider img {
-  width: 100%; 
+  /* width: 100%; */
+  width: 300px;
   height: calc(100% - 54px);
   object-fit: cover;
   object-position: center top;
@@ -1451,6 +1441,7 @@ header {
   opacity: 1;
 }
 
+/* 짝수 */
 .img-slider li:nth-child(even) .img-details h6,
 .img-slider li:nth-child(even) .img-details span,
 .second-img-slider li:nth-child(even) .img-details h6,
@@ -1521,28 +1512,31 @@ header {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+
 .content-slider li {
-    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-    transition: all 0.5s;
-    background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png);
+  clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+  transition: all 0.5s;
+  /* 배경 색상 */
+  /* background: #fff; */
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png);
 }
 
 .content-slider li .t-stroke {
   -webkit-text-stroke: 1px #171717;
 }
 
-
 .content-slider li:nth-child(even) {
+  /* 배경 색상 */
   background-color: #fff;
 }
 
 .content-slider li:nth-child(even) h1 {
-  color: #171010;
+  color: transparent;
+  -webkit-text-stroke: 1px #171010;
 }
 
 .content-slider li:nth-child(even) .t-stroke {
-  color: transparent;
-  -webkit-text-stroke: 1px #171010;
+  color: #171010;
 }
 
 .title-main {
@@ -1563,9 +1557,9 @@ header {
 }
 
 .t-stroke {
-    color: #f9f9f9;
-    -webkit-text-stroke: 1px #171717;
-    font-style: italic;
+  color: #f9f9f9;
+  -webkit-text-stroke: 1px #171717;
+  font-style: italic;
 }
 
 @keyframes marquee {
