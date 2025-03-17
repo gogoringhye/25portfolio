@@ -698,15 +698,32 @@ $(document).ready(function () {
 /* //필터 */
 
 /* 채팅 */
+
 const msgerForm = document.querySelector(".msger-inputarea");
 const msgerInput = document.querySelector(".msger-input");
 const msgerChat = document.querySelector(".msger-chat");
 
 const BOT_MSGS = [
-  "나는 협업을 중요하게 생각하며 다양한 기기에서도 일관된 경험을 제공하는 웹퍼블리셔가 되고 싶어",
-  "접근성과 웹 표준을 준수하면서 사용자가 편하게 쓸 수 있는 디자인을 만드는 게 목표야",
-  "지속적으로 학습하고 새로운 기술과 도구를 습득하여 나의 역량을 꾸준히 향상시킬거야",
-  "변화를 공포보다는 기회로 삼아 업계의 최신 동향을 따라가며 유연하게 대처하고, 웹사이트를 최신화하는 과정에서 끊임없이 발전하고 싶어",
+  "사용자 경험을 중요하게 생각하는 웹퍼블리셔가 되고 싶어. 항상 사용자 입장에서 생각해서 직관적이고 편리한 웹사이트를 만들고 싶어.",
+  "디자인과 기능을 동시에 고려해서 실용적인 웹사이트를 만들 수 있는 웹퍼블리셔가 되고 싶어.",
+  "반응형 웹을 잘 구현할 수 있는 퍼블리셔가 되고 싶어. 다양한 화면에서 최적화된 사용자 경험을 제공하고 싶어.",
+  "트렌디한 디자인을 반영하고 최신 웹 기술을 활용해서 효율적이고 빠른 웹사이트를 만들고 싶어.",
+  "콘텐츠 구성과 레이아웃을 최적화해서 가독성을 높이고, 사용자들이 더 편리하게 웹사이트를 사용할 수 있도록 하고 싶어.",
+  "웹 접근성을 고려해서 장애가 있는 사용자도 편리하게 웹사이트를 이용할 수 있도록 만들고 싶어.",
+  "웹사이트 성능 최적화에 집중해서 로딩 속도를 빠르게 하고, 사이트 안정성을 높일 수 있는 웹퍼블리셔가 되고 싶어.",
+  "디자인뿐만 아니라 사용자 반응을 고려한 UX/UI 설계를 통해 효과적인 웹사이트를 만들고 싶어.",
+  "다양한 기기에서 일관된 디자인과 사용자 경험을 제공하는 반응형 웹퍼블리셔가 되고 싶어.",
+  "팀원들과 협업하면서 효율적인 개발 프로세스를 구축하고, 품질 높은 웹사이트를 빠르게 구현할 수 있도록 노력할 거야.",
+  "기술을 배우면서 나만의 디자인 스타일을 만들고, 창의적이고 직관적인 웹사이트를 만들고 싶어.",
+  "웹사이트 관리와 유지보수가 쉬운 구조로 설계해서 고객이나 사용자가 계속 만족할 수 있는 환경을 만들고 싶어.",
+  "디지털 마케팅과 연계해서 SEO와 웹 분석을 잘 활용해, 방문자 수를 늘릴 수 있는 웹퍼블리셔가 되고 싶어.",
+  "콘텐츠가 시각적으로 잘 전달되도록 고민해서 효율적으로 정보를 제공하는 웹사이트를 만들고 싶어.",
+  "디자인과 기능이 균형을 이루는 웹사이트를 만들어서, 방문자들이 쉽게 정보를 찾을 수 있도록 하고 싶어.",
+  "다양한 브라우저와 기기에서 테스트해서 웹사이트의 일관성과 안정성을 유지할 수 있는 퍼블리셔가 되고 싶어.",
+  "HTML, CSS, JavaScript 같은 기본 기술을 탄탄히 익혀서 깔끔하고 효율적인 코드를 작성할 수 있는 웹퍼블리셔가 되고 싶어.",
+  "기술적인 부분뿐만 아니라 디자인 트렌드와 시장의 변화를 빠르게 적응해서 혁신적인 웹사이트를 만들고 싶어.",
+  "사용자가 편하게 웹사이트를 탐색할 수 있도록, 정보가 논리적으로 배열되고 직관적인 인터페이스를 만들고 싶어.",
+  "프로젝트 목표와 요구 사항을 정확히 파악해서 효율적이고 사용자 요구에 맞는 웹사이트를 빠르게 개발하는 능력을 키우고 싶어."
 ];
 
 const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
@@ -714,11 +731,13 @@ const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
 const BOT_NAME = "BOT";
 const PERSON_NAME = "Sajad";
 
+let previousMessage = null; // 마지막 출력된 메시지
+let remainingMessages = [...BOT_MSGS]; // 사용 가능한 메시지 배열
+
 msgerForm.addEventListener("submit", handleFormSubmit);
 
 function handleFormSubmit(event) {
   event.preventDefault();
-
   const msgText = msgerInput.value.trim();
   if (!msgText) return;
 
@@ -736,8 +755,7 @@ function appendMessage(name, img, side, text) {
             <div class="msg-text">${text}</div>
         </div>
     </div>
-    `;
-
+  `;
   msgerChat.insertAdjacentHTML("beforeend", msgHTML);
   scrollToBottom();
 }
@@ -748,7 +766,19 @@ function botResponse() {
 }
 
 function getRandomBotMessage() {
-  return BOT_MSGS[random(0, BOT_MSGS.length - 1)];
+  if (remainingMessages.length === 0) {
+    remainingMessages = [...BOT_MSGS]; // 모든 메시지가 출력되면 배열을 초기화
+  }
+
+  // 이전 메시지와 중복되지 않는 새로운 메시지 선택
+  let randomIndex;
+  do {
+    randomIndex = Math.floor(Math.random() * remainingMessages.length);
+  } while (remainingMessages[randomIndex] === previousMessage);
+
+  const message = remainingMessages.splice(randomIndex, 1)[0]; // 선택된 메시지 삭제 후 반환
+  previousMessage = message; // 마지막 메시지를 기록
+  return message;
 }
 
 function calculateBotResponseDelay(msgText) {
@@ -765,9 +795,6 @@ function formatDate(date) {
   return `${h}:${m}`;
 }
 
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 /* //채팅 */
 
 /* 스티커 */
@@ -800,15 +827,14 @@ function makeDraggable(sticker) {
 
 //wow
 var wow = new WOW({
-  boxClass: 'wow', 
-  animateClass: 'animated', 
-  offset: 0, 
-  mobile: true, 
-  live: true, 
-  callback: function (box) {
-  },
-  scrollContainer: null, 
-  resetAnimation: true, 
+  boxClass: 'wow',
+  animateClass: 'animated',
+  offset: 0,
+  mobile: true,
+  live: true,
+  callback: function (box) {},
+  scrollContainer: null,
+  resetAnimation: true,
 });
 wow.init();
 
