@@ -345,7 +345,7 @@ li {
   display: flex;
   justify-content: space-between;
   padding-top: 100px;
-  padding-bottom: 500px;
+  padding-bottom: 400px;
 }
 
 .about__txt {
@@ -366,8 +366,9 @@ li {
 /* 시계 */
 .time {
   position: relative;
-  left: 7%;
+  left: 2%;
 }
+
 /* //시계 */
 
 
@@ -528,7 +529,7 @@ li {
 /* 스티커 */
 
 .sticker {
-  position: absolute;
+  position: relative;
   width: 100px;
   height: 100px;
   cursor: grab;
@@ -630,7 +631,7 @@ li {
 /* //about me */
 
 
-/* skill */
+/* 스킬 */
 
 .skill {
   position: relative;
@@ -647,12 +648,12 @@ li {
 
 /* 왼쪽 */
 .skill .left {
-    box-sizing: border-box;
-    left: 85%;
-    position: relative;
-    margin-top: 6%;
-    z-index: 100;
-    text-align: left;
+  box-sizing: border-box;
+  left: 85%;
+  position: relative;
+  margin-top: 6%;
+  z-index: 100;
+  text-align: left;
 }
 
 .skill .left ul {}
@@ -750,7 +751,7 @@ li {
   padding-right: 4vw;
 }
 
-/* //skill */
+/* //스킬 */
 
 /* //🧷어바웃 */
 
@@ -1516,24 +1517,113 @@ h6 {
   position: fixed;
   bottom: 50px;
   right: 20px;
-  background-color: #fff;
-  color: #000;
-  border: 2px solid #000;
-  border-radius: 10px;
-  padding: 10px 20px;
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  color: #4b4b4bff;
+  border: none;
+  border-radius: 50px;
+  padding: 9px 20px;
   cursor: pointer;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  text-transform: capitalize;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  z-index: 1;
-  
+  font-size: 16px;
+  box-shadow: 4px -5px 0px rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  z-index: 100;
+  outline: none;
 }
 
 #scrollToTopBtn:hover {
-  text-transform: capitalize;
-  background-color: #000;
-  color: #fff;
-  border-color: #fff;
+  transform: translateY(-5px);
+  /* background: linear-gradient(135deg, #f0f0f0, #ffffff); */
+  background: linear-gradient(135deg, #ffffff, #f0f0f0);
+  box-shadow: 4px -5px 0px rgba(0, 0, 0, 0.5);
+}
+
+#scrollToTopBtn:focus {
+  outline: none;
 }
 
 /* //탑버튼 */
+
+/* 타이핑 */
+.typing-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #171717;
+  font-size: 100px;
+  font-family: 'Poppins';
+  margin: 0;
+}
+
+.typing-text::after {
+  content: "|";
+  animation: blink ease 1s infinite;
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+/* //타이핑 */
+
+/* 메일 */
+
+.email {}
+
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.form-container h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+  color: #333;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.form-container button {
+  width: 100%;
+  padding: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background: #0056b3;
+}
+
+/* //메일 */
