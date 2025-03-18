@@ -21,6 +21,7 @@ body {
   overflow: hidden;
   font-family: 'Poppins';
   background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/567707/paper_fibers.png);
+
 }
 
 /* 한국어 텍스트에는 SDGothicNeo 폰트를 적용 */
@@ -30,6 +31,7 @@ body {
 
 a {
   text-decoration: none;
+  font-family: 'Poppins';
 }
 
 
@@ -40,61 +42,72 @@ li {
 /* 🍪쿠키 */
 
 .notice {
-  position: absolute;
-  top: 18%;
-  left: 35%;
-  width: 400px;
-  height: 500px;
-  padding: 15px;
-  border-radius: 8px;
-  font-weight: bold;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  padding: 20px;
+  border-radius: 10px;
+  font-weight: 500;
+  background-color: #282828;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
   z-index: 110;
-  background-color: #171717;
-}
-
-.notice #cb,
-.notice .hide,
-.notice .close {
-  position: absolute;
-  font-size: 14px;
-  color: #ffffff;
-}
-
-.notice #cb {
-  bottom: 20px;
-  left: 70px;
-}
-
-.notice .hide {
-  bottom: 20px;
-  left: 100px;
-}
-
-.notice .close {
-  bottom: 20px;
-  right: 40px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.coo_txt,
-.coo_comment {
-  font-size: 10px;
-  color: #ffffff;
   text-align: center;
+  font-family: 'Poppins';
+}
+
+.coo_comment h2 {
+  font-size: 12px;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.coo_comment p {
+  font-size: 10px;
+  line-height: 2;
+  color: #ddd;
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .coo_txt {
-  padding-top: 50%;
-}
-
-.coo_comment {
-  padding-top: 15px;
+  font-size: 10px;
+  margin-top: 10px;
+  color: #edf1f7;
+  margin-bottom: 15px;
 }
 
 .highlight {
-  font-weight: bold;
   color: #ff3d00;
+  font-weight: bold;
+}
+
+.notice input[type="checkbox"] {
+  position: relative;
+  top: 10px;
+}
+
+.notice .hide {
+  font-size: 12px;
+  color: #ccc;
+  cursor: pointer;
+  position: relative;
+  top: 10px;
+}
+
+.notice .close {
+  display: block;
+  width: 120px;
+  margin: 20px auto 0;
+  padding: 10px 0;
+  background-color: #edf1f7;
+  color: #171717;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* //🍪쿠키 */
@@ -111,7 +124,7 @@ li {
     "top"
     "content";
   grid-template-rows: 3rem 1fr;
-  opacity: .9;
+  opacity: 0.9;
   z-index: 100;
 }
 
@@ -406,10 +419,12 @@ li {
 .header__marq {
   width: 100%;
   height: auto;
-  background-color: #171717;
+  background-color: #edf1f7;
   overflow: hidden;
-  color: #fff;
+  color: #000;
   z-index: 100;
+  /* background-color: #171717; */
+  /* color: #fff; */
 }
 
 .header__marq-wrapp {
