@@ -1,41 +1,3 @@
-/* 🍪쿠키 */
-let currentCookie = document.cookie; //쿠키를 가져오는 방법
-let cookieCheck = currentCookie.indexOf('green');
-
-let noticeElement = document.querySelector('.notice');
-let checkboxElement = document.querySelector('#cb');
-
-
-if (cookieCheck > -1) {
-  noticeElement.style.display = "none";
-} else {
-  noticeElement.style.display = "block";
-}
-
-
-checkboxElement.addEventListener('change', () => {
-  let date = new Date(); //오늘 날짜
-  date.setDate(date.getDate() + 7) //만료일 만듦
-  //console.log(date)
-
-  if (checkboxElement.checked) { //input에 check가 되었다면
-    let setCookie = "";
-    setCookie += 'green=true; ';
-    setCookie += 'expires=' + date.toUTCString();
-    document.cookie = setCookie; //쿠기저장
-    noticeElement.style.display = "none"; //check와 동시에 공지사항 닫김
-  }
-})
-
-/* close */
-document.querySelector('.close').addEventListener("click", function () {
-  this.parentElement.style.display = "none"
-})
-
-/* 한번 닫고나면 개발자에서 생선된 쿠기를 다시 삭제해줘야 화면에 나타남  */
-
-/* //🍪쿠키 */
-
 /* 구조 */
 const lenis = new Lenis();
 
@@ -55,178 +17,6 @@ Splitting();
 //---------------------------------
 gsap.registerPlugin(ScrollTrigger);
 
-//제목
-let tl = gsap.timeline();
-tl.from(".title .char", {
-  opacity: 0,
-  yPercent: 130,
-  stagger: 0.06,
-  duration: 1,
-  ease: "expo.out",
-})
-tl.to(".header__img", {
-  duration: 2,
-  clipPath: `polygon(100% 0, 0 0, 0 100%, 100% 100%)`,
-  ease: "expo.out",
-}, "-=1")
-
-tl.from(".header__marq", {
-  duration: 2,
-  opacity: 0,
-  yPercent: 100,
-  ease: "expo.out"
-}, "-=1.5")
-
-
-let gsapSq = document.querySelectorAll('.section-title__square')
-
-
-gsapSq.forEach((gSq, i) => {
-  let rotate = gsap.from(gSq, {
-    duration: 3,
-    rotation: 720
-  })
-
-  ScrollTrigger.create({
-    trigger: gSq,
-    animation: rotate,
-    start: 'top bottom',
-    scrub: 1.9
-  })
-})
-
-
-/* 🧷헤더 */
-function header() {
-  gsap.to(".title_paralax", {
-    scrollTrigger: {
-      trigger: ".skill", // Updated trigger
-      start: 'top top',
-      scrub: 1.9
-    },
-    yPercent: -150
-  });
-
-  gsap.to(".header__marq .stroke", {
-    scrollTrigger: {
-      trigger: ".skill", // Updated trigger
-      start: 'top top',
-      scrub: 1.9
-    },
-    yPercent: 50
-  });
-
-  gsap.to(".header__marq .header__img", {
-    scrollTrigger: {
-      trigger: ".skill", // Updated trigger
-      start: 'top top',
-      scrub: 1.9
-    },
-    xPercent: -70
-  });
-
-  gsap.to(".header__marq .header__img img", {
-    scrollTrigger: {
-      trigger: ".skill", // Updated trigger
-      start: 'top top',
-      scrub: 1.9
-    },
-    scale: 1.3
-  });
-
-  gsap.to(".header__marq .header__marq-wrapp", {
-    scrollTrigger: {
-      trigger: ".skill", // Updated trigger
-      start: 'top top',
-      scrub: 1.9
-    },
-    xPercent: -50
-  });
-
-  gsap.to(".header__marq .header__marq-star img", {
-    scrollTrigger: {
-      trigger: ".skill", // Updated trigger
-      start: 'top top',
-      scrub: 1.9
-    },
-    rotate: -720
-  });
-}
-
-header();
-/* //🧷헤더 */
-
-/* 🧷어바웃 */
-function about() {
-  gsap.from(".about__img", {
-    scrollTrigger: {
-      trigger: ".about",
-      start: 'top bottom',
-      scrub: 1.9
-    },
-    yPercent: 80
-
-  })
-
-  gsap.from(".about__img img", {
-    scrollTrigger: {
-      trigger: ".about",
-      start: 'top bottom',
-      scrub: 1.9
-    },
-    scale: 1.6
-
-  })
-
-  gsap.to(".about__txt", {
-    scrollTrigger: {
-      trigger: ".about__wrapp",
-      start: 'top bottom',
-      scrub: 1.9
-    },
-    yPercent: 50
-
-  })
-}
-
-about();
-
-/* //🧷어바웃 */
-
-/* ☎️컨택 */
-function contact() {
-  gsap.from(".contact__item-arrow", {
-    scrollTrigger: {
-      trigger: ".contact__list",
-      start: 'top bottom',
-      scrub: 1.9
-    },
-    x: (i, el) => (1 - el.getAttribute('data-speed'))
-
-  })
-}
-contact()
-
-/* //☎️컨택 */
-
-/* 🧷푸터 */
-function footer() {
-  gsap.from(".footer__div span", {
-    scrollTrigger: {
-      trigger: ".footer",
-      start: 'top bottom',
-      end: 'bottom bottom',
-      scrub: 1.9
-    },
-    y: (i, el) => (1 - el.getAttribute('data-speed'))
-
-  })
-}
-footer()
-
-/* //🧷푸터 */
-
-/* //구조 */
 
 
 /* 시계 */
@@ -239,107 +29,6 @@ setInterval(function () {
 
 }, 200);
 /* //시계 */
-
-/* 웹리스트 */
-document.addEventListener("DOMContentLoaded", function () {
-  // Image Animation
-  const items = document.querySelectorAll(".web-list li");
-  items.forEach((el) => {
-    gsap.set(".hover-img", {
-      xPercent: -50,
-      yPercent: -50
-    });
-    const image = el.querySelector(".hover-img");
-    const innerImage = el.querySelector(".hover-img img");
-    const pos = {
-      x: window.innerWidth / 2,
-      y: window.innerHeight / 2
-    };
-    const mouse = {
-      x: pos.x
-    };
-    const speed = 0.1;
-    const xSet = gsap.quickSetter(image, "x", "px");
-    window.addEventListener("mousemove", (e) => {
-      mouse.x = e.x;
-    });
-
-    gsap.ticker.add(() => {
-      const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
-      pos.x += (mouse.x - pos.x) * dt;
-      xSet(pos.x);
-    });
-
-    let direction = "",
-      oldx = 0,
-      // Vars
-      lastCursorX = null,
-      lastCursorY = null,
-      cursorThreshold = 150,
-      mousemovemethod = function (e) {
-        if (e.pageX < oldx && e.clientX <= lastCursorX - cursorThreshold) {
-          direction = "left";
-          lastCursorX = e.clientX;
-          innerImage.style.transform = "rotate(-15deg)";
-        } else if (
-          e.pageX > oldx &&
-          e.clientX >= lastCursorX + cursorThreshold
-        ) {
-          direction = "right";
-          lastCursorX = e.clientX;
-          innerImage.style.transform = "rotate(15deg)";
-        }
-        oldx = e.pageX;
-      };
-    $(document).on("mousemoveend", function () {
-      innerImage.style.transform = "translateX(0%) rotate(0deg)";
-    });
-    document.addEventListener("mousemove", mousemovemethod);
-    (function ($) {
-      let timeout;
-      $(document).on("mousemove", function (event) {
-        if (timeout !== undefined) {
-          window.clearTimeout(timeout);
-        }
-        timeout = window.setTimeout(function () {
-          // trigger the new event on event.target, so that it can bubble appropriately
-          $(event.target).trigger("mousemoveend");
-        }, 100);
-      });
-    })(jQuery);
-  });
-
-  // Hacky Code
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  let interval = null;
-  const list = document.querySelectorAll(".web-list li");
-
-  list.forEach((el) => {
-    el.onmouseenter = (event) => {
-      const target_element = event.target.querySelector("h2");
-      let iteration = 0;
-      const interval = setInterval(() => {
-        target_element.innerText = target_element.innerText
-          .split("")
-          .map((letter, index) => {
-            if (index < iteration) {
-              return target_element.dataset.value[index];
-            }
-
-            return letters[Math.floor(Math.random() * 26)];
-          })
-          .join("");
-
-        if (iteration >= target_element.dataset.value.length) {
-          clearInterval(interval);
-        }
-        iteration += 1 / 3;
-      }, 20);
-    };
-  });
-});
-
-/* //웹리스트 */
 
 /* 해시태그 */
 //Nav links animation
@@ -618,79 +307,6 @@ $(document).ready(function () {
 })
 /* //필터 */
 
-/* 채팅 */
-const msgerForm = document.querySelector(".msger-inputarea");
-const msgerInput = document.querySelector(".msger-input");
-const msgerChat = document.querySelector(".msger-chat");
-
-const BOT_MSGS = [
-  "나는 협업을 중요하게 생각하며 다양한 기기에서도 일관된 경험을 제공하는 웹퍼블리셔가 되고 싶어",
-  "접근성과 웹 표준을 준수하면서 사용자가 편하게 쓸 수 있는 디자인을 만드는 게 목표야",
-  "지속적으로 학습하고 새로운 기술과 도구를 습득하여 나의 역량을 꾸준히 향상시킬거야",
-  "변화를 공포보다는 기회로 삼아 업계의 최신 동향을 따라가며 유연하게 대처하고, 웹사이트를 최신화하는 과정에서 끊임없이 발전하고 싶어",
-];
-
-const BOT_IMG = "https://image.flaticon.com/icons/svg/327/327779.svg";
-const PERSON_IMG = "https://image.flaticon.com/icons/svg/145/145867.svg";
-const BOT_NAME = "BOT";
-const PERSON_NAME = "Sajad";
-
-msgerForm.addEventListener("submit", handleFormSubmit);
-
-function handleFormSubmit(event) {
-  event.preventDefault();
-
-  const msgText = msgerInput.value.trim();
-  if (!msgText) return;
-
-  appendMessage(PERSON_NAME, PERSON_IMG, "right", msgText);
-  msgerInput.value = "";
-
-  setTimeout(botResponse, calculateBotResponseDelay(msgText));
-}
-
-function appendMessage(name, img, side, text) {
-  const msgHTML = `
-    <div class="msg ${side}-msg">
-        <div class="msg-bubble">
-            <div class="msg-info-time">${formatDate(new Date())}</div>
-            <div class="msg-text">${text}</div>
-        </div>
-    </div>
-    `;
-
-  msgerChat.insertAdjacentHTML("beforeend", msgHTML);
-  scrollToBottom();
-}
-
-function botResponse() {
-  const msgText = getRandomBotMessage();
-  appendMessage(BOT_NAME, BOT_IMG, "left", msgText);
-}
-
-function getRandomBotMessage() {
-  return BOT_MSGS[random(0, BOT_MSGS.length - 1)];
-}
-
-function calculateBotResponseDelay(msgText) {
-  return msgText.split(" ").length * 100;
-}
-
-function scrollToBottom() {
-  msgerChat.scrollTop = msgerChat.scrollHeight;
-}
-
-function formatDate(date) {
-  const h = ("0" + date.getHours()).slice(-2);
-  const m = ("0" + date.getMinutes()).slice(-2);
-  return `${h}:${m}`;
-}
-
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-/* //채팅 */
-
 /* 스티커 */
 document.querySelectorAll('.sticker').forEach(makeDraggable);
 
@@ -718,6 +334,67 @@ function makeDraggable(sticker) {
   });
 }
 /* //스티커 */
+
+/* 🧷헤더 */
+function header() {
+  gsap.to(".title_paralax", {
+    scrollTrigger: {
+      trigger: "#home", // Updated trigger
+      start: 'top top',
+      scrub: 1.9
+    },
+    yPercent: -150
+  });
+
+  gsap.to(".header__marq .stroke", {
+    scrollTrigger: {
+      trigger: "#home", // Updated trigger
+      start: 'top top',
+      scrub: 1.9
+    },
+    yPercent: 50
+  });
+
+  gsap.to(".header__marq .header__img", {
+    scrollTrigger: {
+      trigger: "#home", // Updated trigger
+      start: 'top top',
+      scrub: 1.9
+    },
+    xPercent: -70
+  });
+
+  gsap.to(".header__marq .header__img img", {
+    scrollTrigger: {
+      trigger: "#home", // Updated trigger
+      start: 'top top',
+      scrub: 1.9
+    },
+    scale: 1.3
+  });
+
+  gsap.to(".header__marq .header__marq-wrapp", {
+    scrollTrigger: {
+      trigger: "#home", // Updated trigger
+      start: 'top top',
+      scrub: 1.9
+    },
+    xPercent: -50
+  });
+
+  gsap.to(".header__marq .header__marq-star img", {
+    scrollTrigger: {
+      trigger: "#home", // Updated trigger
+      start: 'top top',
+      scrub: 1.9
+    },
+    rotate: -720
+  });
+}
+
+header();
+/* //🧷헤더 */
+
 
 //wow
 var wow = new WOW({
@@ -761,10 +438,10 @@ const text = document.querySelector('.typing-text');
 
 // make a words array
 const words = [
-  "build.",
-  "design.",
-  "refine.",
-  "optimize."
+  "Let's collaborate!",
+  "kimnahye1313@naver.com",
+  "+82 (0)10 9236 7560",
+  "©2025 All rights reserved."
 ];
 
 // start typing effect
@@ -829,3 +506,186 @@ function setTyper(element, words) {
 }
 
 /* //타이핑 */
+
+
+/* 메인프로젝트 */
+var items = document.querySelectorAll(".list__item")
+
+items.forEach(item => {
+  var itemTitle = item.querySelector(".list__item__title")
+  var itemTitleOutline = item.querySelector(".list__item__titleOutline")
+  var itemImg = item.querySelector(".list__item img")
+  
+  var itemTL = gsap.timeline({scrollTrigger: {
+    trigger: item,
+    start: "0% 75%",
+    end: "25% 50%",
+    scrub: 3,
+  }})
+  
+  itemTL.fromTo(itemTitle, {scale: 2, y: "100%"}, {scale: 1, y: "0%", ease: "power2.inOut"}, 0)
+  itemTL.fromTo(itemTitleOutline, {scale: 2, y: "100%"}, {scale: 1, y: "0%", ease: "power2.inOut"}, 0)
+  
+  gsap.fromTo(itemImg, {x: "60vw", y : "60vh", rotate: -30}, {x: "-60vw", y: "-60vh", rotate: 30, ease: "none", scrollTrigger: {
+    trigger: item,
+    start: "50% 100%",
+    end: "100% 50%",
+    scrub: 3,
+  }})
+})
+/* //메인프로젝트 */
+
+
+
+/* test3 */
+
+gsap.utils.toArray(".nana").forEach((el) => {
+  gsap.to(el, {
+    yPercent: -100, // 이미지가 스크롤에 따라 위로 100%만큼 이동
+    scale: 1.1, // 스크롤에 따라 이미지 크기가 살짝 커짐
+    ease: "none", // 애니메이션을 부드럽게 만들기
+    scrollTrigger: {
+      trigger: el,  // 각 이미지가 트리거 역할을 하며, 해당 이미지가 화면에 들어오거나 나갈 때 애니메이션 발생
+      start: "top bottom",  // 이미지가 화면에 들어올 때 애니메이션 시작
+      end: "bottom top",    // 이미지가 화면을 벗어날 때 애니메이션 종료
+      scrub: true,          // 스크롤에 맞춰 애니메이션이 동기화되도록 설정
+      onUpdate: (self) => {
+        // 스크롤 진행 상태에 따라 크기 변화를 조금씩 조정
+        const scaleValue = 1 + self.progress * 0.2; // 스크롤 진행에 따라 크기 변화
+        gsap.set(el, {
+          scale: scaleValue, // 크기 변화를 설정
+        });
+      }
+    },
+  });
+});
+/* //test3 */
+
+/* 마그넷 */
+//Getting Started
+//Shery.mouseFollower();
+
+//위의 값을 바꿔서 아래처럼 사용할 수 있음
+//Cool Effects--Mouse Follower 
+Shery.mouseFollower({
+  skew: true,
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 1,
+});
+
+
+//Cool Effects--Make Magnet
+Shery.makeMagnet(".magnet-target", {
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 0.3,
+});
+
+//Cool Effects--Text Animate
+Shery.textAnimate(".text-target", {
+  style: 1,
+  y: 10,
+  delay: 0.1,
+  duration: 0.5,
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  multiplier: 0.1,
+});
+
+//Cool Effects--Hover With Media Circle
+Shery.hoverWithMediaCircle(".hvr" /* Element to target.*/, {
+  // images: ["https://cdn.pixabay.com/photo/2023/09/24/14/05/dog-8272860_1280.jpg", "https://cdn.pixabay.com/photo/2023/12/16/21/37/ai-generated-8453296_1280.jpg", "https://cdn.pixabay.com/photo/2023/12/11/20/07/ai-generated-8444360_1280.png"] /*OR*/,
+  videos: ["https://understanding963852.github.io/img/0.mp4", "https://understanding963852.github.io/img/2.mp4", "https://understanding963852.github.io/img/3.mp4"]
+});
+/* 영상은 깃헙에서 들어오는 편이 로딩 짧음, 직접 다운 받아서 가지고 있으면 로딩이 김 */
+/* 마그넷 */
+
+
+/* 프리로더 */
+const loadingText = new SplitType(".loading-text.initial", { types: "chars" });
+const completeText = new SplitType(".loading-text.complete", { types: "chars" });
+const titleText = new SplitType(".content h1", { types: "chars" });
+const paragraphText = new SplitType(".content p", { types: "chars" });
+
+// Initial states for elements
+gsap.set(".loading-text.complete", { y: "100%" });
+gsap.set(loadingText.chars, { opacity: 0, y: 100 });
+gsap.set(completeText.chars, { opacity: 0, y: 100 });
+
+// Animate in loading text
+gsap.to(loadingText.chars, {
+  opacity: 1,
+  y: 0,
+  duration: 0.5,
+  stagger: 0.05,
+  ease: "power2.out"
+});
+
+// Color stages for the preloader
+const colorStages = [
+  { bg: "rgb(0, 0, 0)", text: "rgb(255, 255, 255)" }, // Stage 1: black background, white text
+  { bg: "rgb(255, 255, 255)", text: "rgb(0, 0, 0)" }, // Stage 2: white background, black text
+  { bg: "rgb(0, 0, 0)", text: "rgb(255, 255, 255)" }, // Stage 3: black background, white text
+  { bg: "rgb(255, 255, 255)", text: "rgb(0, 0, 0)" }  // Stage 4: white background, black text
+];
+
+// Update colors based on the progress
+function updateColors(progress) {
+  const stage = Math.floor(progress / 25);
+  if (stage < colorStages.length) {
+    document.querySelector(".preloader").style.backgroundColor = colorStages[stage].bg;
+    document.querySelectorAll(".loading-text .char, .percentage").forEach(el => {
+      el.style.color = colorStages[stage].text;
+    });
+  }
+}
+
+// GSAP timeline for animations
+const tl = gsap.timeline();
+
+// Animate progress bar and preloader text transitions
+tl.to(".preloader", {
+  width: "100%",
+  duration: 5,
+  ease: "power1.inOut",
+  onUpdate: function () {
+    const progress = Math.round(this.progress() * 100);
+    document.querySelector(".percentage").textContent = progress;
+    updateColors(progress);
+  }
+})
+  .to(".loading-text.initial", {
+    y: "-100%",
+    duration: 0.5,
+    ease: "power2.inOut"
+  })
+  .to(".loading-text.complete", {
+    y: "0%",
+    duration: 0.5,
+    ease: "power2.inOut"
+  }, "<") // Synchronize with the previous animation
+  .to(completeText.chars, {
+    opacity: 1,
+    y: 0,
+    duration: 0.3,
+    stagger: 0.03,
+    ease: "power2.out"
+  }, "<0.2") // Stagger the appearance of "complete" text
+  .to(".preloader", {
+    y: "-100vh",
+    duration: 1,
+    ease: "power2.inOut",
+    delay: 0.8
+  })
+  .set(".content", {
+    visibility: "visible"
+  }, "-=1")
+  .to([titleText.chars, paragraphText.chars], {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    stagger: 0.02,
+    ease: "power4.out"
+  }, "-=0.5")
+  .set(".preloader", {
+    display: "none"
+  });
+/* //프리로더 */
