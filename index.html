@@ -4,1261 +4,1079 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NANA's PORTFOLIO</title>
+    <title>PORTFOLIO</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
     <!-- remixicon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
     <!-- animate-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- 마그넷 -->
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- //마그넷 -->
 </head>
 
 <body>
 
-    <!-- 🍪 쿠키 -->
-    <div class="notice">
-
-        <div class="coo_comment">
-            <h2>"디자인과 기능, 두 마리 토끼를 잡는 웹 퍼블리셔"</h2>
-            <p>
-                I’m a web publisher who brings creativity to simple code, striking the perfect balance between design
-                and functionality.I don’t just focus on building functionality; I also enhance it with intuitive design
-                that improves the
-                overall user experience. By writing clean, efficient code, I build websites that are not only functional
-                but also visually
-                engaging. Every line of code I write is meaningful, and I strive to deliver solutions that combine both
-                form and
-                function. With a focus on practicality and creativity, I’m ready to contribute to your team. I aim to
-                grow as a publisher who maximizes content appeal and captures the interest of users.
-            </p>
+    <!-- 프리로더 -->
+    <div class="preloader">
+        <div class="text-container">
+            <div class="loading-text initial">Loading</div>
+            <div class="loading-text complete">Complete</div>
         </div>
-
-        <div class="coo_txt">본 사이트는 포트폴리오용으로, <span class="highlight"> 1920x1080 </span>해상도의 <span
-                class="highlight">크롬</span>에 최적화되어 있으니 <span class="highlight">크롬</span>, <span
-                class="highlight">사파리</span>, <span class="highlight">엣지</span>
-            브라우저에서 확인해 주시기 바랍니다.</div>
-
-        <input type="checkbox" id="cb">
-        <label class="hide" for="cb">7일간 보이지 않기</label>
-        <a href="javascript:void(0)" class="close">close</a>
-
+        <div class="percentage">0</div>
     </div>
-    <!-- //쿠키 -->
+    <!-- //프리로더 -->
 
-    <!-- 메뉴 -->
-    <div class="menu">
-        <div class="menu__top">
-            <div class="menu__title">
-                <img src="img/logo.png" alt="" style="width: 20px;height: 20px;">
-                nana's
-            </div>
-            <div class="menu__nav-top">
-                <a class="menu__link" href="#home">
-                    <label for="menu-toggle">home</label>
-                </a>
-                <a class="menu__link" href="#about">
-                    <label for="menu-toggle">about</label>
-                </a>
-                <a class="menu__link" href="#webpublishing">
-                    <label for="menu-toggle">webpublishing</label>
-                </a>
-                <a class="menu__link" href="#design">
-                    <label for="menu-toggle">design</label>
-                </a>
-                <a class="menu__link" href="#contact">
-                    <label for="menu-toggle">contact</label>
-                </a>
-            </div>
-        </div>
-    </div>
-    <!-- //메뉴 -->
-
-    <!-- skill -->
-    <div id="home" class="skill">
-        <div class="skill_inner">
-            <div class="aboutme">
-                <!-- 왼쪽 -->
-                <div class="left">
-                    <ul>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="javascript:void(0)">html</a>
-                        </li>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="javascript:void(0)">css</a>
-                        </li>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="javascript:void(0)">javascript</a></li>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="https://reactshoppinghnm.netlify.app/" target="_blank">react</a>
-                        </li>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="javascript:void(0)">php</a>
-                        </li>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="javascript:void(0)">photoshop</a>
-                        </li>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="javascript:void(0)">figma</a>
-                        </li>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="javascript:void(0)">illustrate</a></li>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="javascript:void(0)">dorarun</a>
-                        </li>
-                        <li class="wow animate__animated animate__fadeInLeft">
-                            <a href="javascript:void(0)">spline</a>
-                        </li>
-                    </ul>
+    <!-- 마그넷 -->
+    <div id="cursor">
+        <div id="home">
+            <div id="nav">
+                <div class="magnet-target">
+                    <img src="img/logo.png" alt="로고" style="width: 20px;height: 20px;">
+                    nana's</div>
+                <div id="right">
+                    <a href="javascript:void(0)">about</a>
+                    <a href="javascript:void(0)">projects</a>
+                    <a class="magnet-target" href="javascript:void(0)">contact</a>
                 </div>
-                <!-- //왼쪽-->
-                <!-- 오른쪽 -->
-                <div class="right">
-                    <!-- 해시태그 -->
-                    <div>
-                        <div class="arrow">
-                            <div class="arrow-img-wrapper">
-                                <img src="https://www.yudiz.com/codepen/gsap-slider/left-arrow.png" alt="arrow"
-                                    class="img-fluid dark-arrow">
-                            </div>
-                        </div>
-
-                        <div class="word-slider">
-                            <div class="content-slider">
-                                <ul>
-                                    <li class="active">
-                                        <!-- 1 -->
-                                        <div class="title-main">
-                                            <div class="title-wrapper">
-                                                <h1 class="t-stroke italic">flexibility flexibility flexibility
-                                                    flexibility flexibility flexibility</h1>
-                                                <h1>left click left click left click left click left click left click
-                                                </h1>
-                                                <h1 class="t-stroke italic">flexibility flexibility flexibility
-                                                    flexibility flexibility flexibility</h1>
-                                                <h1>right click right click right click right click right click right
-                                                    click
-                                                </h1>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- 2 -->
-                                        <div class="title-main">
-                                            <div class="title-wrapper">
-                                                <h1 class="t-stroke italic">left click left click left click left click
-                                                    left click left click</h1>
-                                                <h1>creative creative creative creative creative creative creative</h1>
-                                                <h1 class="t-stroke italic">right click right click right click right
-                                                    click right click right
-                                                    click</h1>
-                                                <h1>creative creative creative creative creative creative creative</h1>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- 3 -->
-                                        <div class="title-main">
-                                            <div class="title-wrapper">
-                                                <h1 class="t-stroke italic">continuous learning continuous learning
-                                                    continuous learning continuous learning continuous learning
-                                                    continuous learning
-                                                </h1>
-                                                <h1>left click left click left click left click
-                                                    left click left click</h1>
-                                                <h1 class="t-stroke italic">
-                                                    continuous learning continuous learning
-                                                    continuous learning continuous learning continuous learning
-                                                    continuous learning
-                                                </h1>
-                                                <h1>right click right click right click right
-                                                    click right click right
-                                                    click</h1>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- 4 -->
-                                        <div class="title-main">
-                                            <div class="title-wrapper">
-                                                <h1 class="t-stroke italic">left click left click left click left click
-                                                    left click left click</h1>
-                                                <h1>patience patience patience patience patience patience patience
-                                                    patience</h1>
-                                                <h1 class="t-stroke italic">right click right click right click right
-                                                    click right click right
-                                                    click</h1>
-                                                <h1>patience patience patience patience patience patience patience
-                                                    patience</h1>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- 5 -->
-                                        <div class="title-main">
-                                            <div class="title-wrapper">
-                                                <h1 class="t-stroke italic">communicate communicate communicate
-                                                    communicate communicate communicate</h1>
-                                                <h1>left click left click left click left click
-                                                    left click left click</h1>
-                                                <h1 class="t-stroke italic">communicate communicate communicate
-                                                    communicate communicate communicate</h1>
-                                                <h1>right click right click right click right
-                                                    click right click right
-                                                    click</h1>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- 6 -->
-                                        <div class="title-main">
-                                            <div class="title-wrapper">
-                                                <h1 class="t-stroke italic">left click left click left click left click
-                                                    left click left click</h1>
-                                                <h1>resilience resilience resilience resilience resilience resilience
-                                                </h1>
-                                                <h1 class="t-stroke italic">right click right click right click right
-                                                    click right click right
-                                                    click</h1>
-                                                <h1>resilience resilience resilience resilience resilience resilience
-                                                </h1>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- 7 -->
-                                        <div class="title-main">
-                                            <div class="title-wrapper">
-                                                <h1 class="t-stroke italic">responsibility responsibility responsibility
-                                                    responsibility responsibility responsibility
-                                                </h1>
-                                                <h1>left click left click left click left click
-                                                    left click left click</h1>
-                                                <h1 class="t-stroke italic">responsibility responsibility responsibility
-                                                    responsibility responsibility responsibility
-                                                </h1>
-                                                <h1>right click right click right click right
-                                                    click right click right
-                                                    click</h1>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <!-- 8 -->
-                                        <div class="title-main">
-                                            <div class="title-wrapper">
-                                                <h1 class="t-stroke italic">left click left click left click left click
-                                                    left click left click</h1>
-                                                <h1>passion passion passion passion passion passion passion passion
-                                                </h1>
-                                                <h1 class="t-stroke italic">right click right click right click right
-                                                    click right click right
-                                                    click</h1>
-                                                <h1>passion passion passion passion passion passion passion passion
-                                                </h1>
-                                            </div>
-
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="third-img-slider">
-                                <ul>
-                                    <li class="active">
-                                        <img src="img/z12.jpg" alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>유연한</h6>
-                                            <span>flexibility</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my18.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>창의적인</h6>
-                                            <span>creative</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my5.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>지속적인 학습</h6>
-                                            <span>continuous learning</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my21.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>인내심</h6>
-                                            <span>patience</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://raw.githubusercontent.com/gogoringhye/my/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my20.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>소통하는</h6>
-                                            <span>communicative</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my8.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>회복탄력성</h6>
-                                            <span>resilience</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/z8.jpg" alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>책임감</h6>
-                                            <span>responsibility</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/m2.jpg" alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>열정</h6>
-                                            <span>passion</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="img-slider">
-                                <ul>
-                                    <li class="active show_class">
-                                        <img src="img/z12.jpg" alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>유연한</h6>
-                                            <span>flexibility</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my18.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>창의적인</h6>
-                                            <span>creative</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my5.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>지속적인 학습</h6>
-                                            <span>continuous learning</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my21.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>인내심</h6>
-                                            <span>patience</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://raw.githubusercontent.com/gogoringhye/my/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my20.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>소통하는</h6>
-                                            <span>communicative</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my8.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>회복탄력성</h6>
-                                            <span>resilience</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/z8.jpg" alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>책임감</h6>
-                                            <span>responsibility</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/m2.jpg" alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>열정</h6>
-                                            <span>passion</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="second-img-slider">
-                                <ul>
-                                    <li>
-                                        <img src="img/z12.jpg" alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>유연한</h6>
-                                            <span>flexibility</span>
-                                        </div>
-                                    </li>
-                                    <li class="active">
-                                        <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my18.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>창의적인</h6>
-                                            <span>creative</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my5.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>지속적인 학습</h6>
-                                            <span>continuous learning</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my21.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>인내심</h6>
-                                            <span>patience</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://raw.githubusercontent.com/gogoringhye/my/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my20.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>소통하는</h6>
-                                            <span>communicative</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my8.jpg"
-                                            alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>회복탄력성</h6>
-                                            <span>resilience</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/z8.jpg" alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>책임감</h6>
-                                            <span>responsibility</span>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <img src="img/m2.jpg" alt="images" class="img-fluid">
-                                        <div class="img-details">
-                                            <h6>열정</h6>
-                                            <span>passion</span>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
-                    <!-- //해시태그 -->
-
-                </div><!-- //aboutme -->
             </div>
-        </div>
-    </div>
-    <!-- skill -->
-
-    <div class="header__marq">
-        <div class="header__marq-wrapp">
-            <span class="header__marq-txt">html
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">css
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">javascript
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">jquery
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">react
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">PHP
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">figma
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">photoshop
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">illustrate
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">dorarun
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">spline
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">html
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">css
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-            <span class="header__marq-txt">javascript
-                <span class="header__marq-star">
-                    <img src="img/star.svg" alt="" />
-                </span>
-            </span>
-        </div>
-    </div>
-    <!-- //skill -->
-
-    <!-- 🧷어바웃 -->
-    <section id="about" class="about">
-        <div class="about__wrapp">
-            <div class="about__txt">
-                <h2 class="section-title">abo<span class="stroke">ut</span>
-                    <span class="section-title__square"></span>
-                </h2>
-
-                <div class="lfme">
-
-                    <!-- 채팅 -->
-                    <div class="msger">
-                        <div class="msger-header">
-                            <div class="msger-header-title">
-                                <i class="fas fa-comment-alt"></i>iMessage
-                            </div>
-                            <div class="msger-header-options">
-                                <span><i class="fas fa-cog"></i></span>
-                            </div>
+            <!-- skill -->
+            <div class="skill">
+                <div class="skill_inner">
+                    <div class="aboutme">
+                        <!-- 왼쪽 -->
+                        <div class="left">
+                            <ul>
+                                <li class="wow animate__animated animate__fadeInLeft magnet-target">
+                                    <a href="javascript:void(0)">웹디자인개발기능사(필기)</a>
+                                </li>
+                                <li class="wow animate__animated animate__fadeInLeft magnet-target">
+                                    <a href="javascript:void(0)">컴퓨터그래픽기능사(필기)</a>
+                                </li>
+                                <li class="wow animate__animated animate__fadeInLeft magnet-target">
+                                    <a href="javascript:void(0)">FAT 회계정보처리 1급</a>
+                                </li>
+                                <li class="wow animate__animated animate__fadeInLeft magnet-target">
+                                    <a href="javascript:void(0)">CS Leaders</a>
+                                </li>
+                                <li class="wow animate__animated animate__fadeInLeft magnet-target">
+                                    <a href="javascript:void(0)">2종 보통 면허</a>
+                                </li>
+                                <li class="wow animate__animated animate__fadeInLeft magnet-target">
+                                    <a href="javascript:void(0)">ITQ 엑셀</a>
+                                </li>
+                                <li class="wow animate__animated animate__fadeInLeft magnet-target">
+                                    <a href="javascript:void(0)">ITQ 한글</a>
+                                </li>
+                                <li class="wow animate__animated animate__fadeInLeft magnet-target">
+                                    <a href="javascript:void(0)">ITQ 파워포인트</a>
+                                </li>
+                            </ul>
                         </div>
-
-                        <div class="msger-chat">
-                            <div class="msg right-msg">
-                                <div class="msg-bubble">
-                                    <div class="msg-text">
-                                        어떤 웹퍼블리셔가 되고 싶어?
+                        <!-- //왼쪽-->
+                        <!-- 오른쪽 -->
+                        <div class="right">
+                            <!-- 해시태그 -->
+                            <!-- hashtag -->
+                            <div class="hashtag">
+                                <div class="arrow">
+                                    <div class="arrow-img-wrapper">
+                                        <img src="https://www.yudiz.com/codepen/gsap-slider/left-arrow.png" alt="arrow"
+                                            class="img-fluid dark-arrow">
                                     </div>
-                                    <div class="msg-info-time"></div> <!-- 시간은 스크립트에서 추가 -->
+                                </div>
+
+                                <div class="word-slider">
+                                    <div class="content-slider">
+                                        <ul>
+                                            <li class="active">
+                                                <div class="title-main">
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">Adapting flexibly to</h1>
+                                                        <h1>changing technologies</h1>
+                                                        <h1 class="t-stroke italic">and trends,</h1>
+                                                        <h1>we continuously evolve and improve.</h1>
+                                                    </div>
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">Adapting flexibly to</h1>
+                                                        <h1>changing technologies</h1>
+                                                        <h1 class="t-stroke italic">and trends,</h1>
+                                                        <h1>we continuously evolve and improve.</h1>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title-main">
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">We reconstruct</h1>
+                                                        <h1>existing design elements</h1>
+                                                        <h1 class="t-stroke italic">and create a website</h1>
+                                                        <h1>in a creative way.</h1>
+                                                    </div>
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">We reconstruct</h1>
+                                                        <h1>existing design elements</h1>
+                                                        <h1 class="t-stroke italic">and create a website</h1>
+                                                        <h1>in a creative way.</h1>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title-main">
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">Continuously learning,</h1>
+                                                        <h1>adapting to the changing</h1>
+                                                        <h1 class="t-stroke italic">web environment,</h1>
+                                                        <h1>and reflecting this in our projects.</h1>
+                                                    </div>
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">Continuously learning,</h1>
+                                                        <h1>adapting to the changing</h1>
+                                                        <h1 class="t-stroke italic">web environment,</h1>
+                                                        <h1>and reflecting this in our projects.</h1>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title-main">
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">I solve any problem</h1>
+                                                        <h1>with patience,</h1>
+                                                        <h1 class="t-stroke italic">tackling it</h1>
+                                                        <h1>step by step.</h1>
+                                                    </div>
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">I solve any problem</h1>
+                                                        <h1>with patience,</h1>
+                                                        <h1 class="t-stroke italic">tackling it</h1>
+                                                        <h1>step by step.</h1>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title-main">
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">I share diverse opinions</h1>
+                                                        <h1>through collaboration</h1>
+                                                        <h1 class="t-stroke italic">and strive to create</h1>
+                                                        <h1>better results.</h1>
+                                                    </div>
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">I share diverse opinions</h1>
+                                                        <h1>through collaboration</h1>
+                                                        <h1 class="t-stroke italic">and strive to create</h1>
+                                                        <h1>better results.</h1>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title-main">
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">I solve problems</h1>
+                                                        <h1>with a positive mindset</h1>
+                                                        <h1 class="t-stroke italic">even in difficult situations,</h1>
+                                                        <h1>and I have the resilience to rise again.</h1>
+                                                    </div>
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">I solve problems</h1>
+                                                        <h1>with a positive mindset</h1>
+                                                        <h1 class="t-stroke italic">even in difficult situations,</h1>
+                                                        <h1>and I have the resilience to rise again.</h1>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title-main">
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">Taking responsibility</h1>
+                                                        <h1>for tasks</h1>
+                                                        <h1 class="t-stroke italic">and will strive to improve</h1>
+                                                        <h1>the quality of the website to the best of my ability.</h1>
+                                                    </div>
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">Taking responsibility</h1>
+                                                        <h1>for tasks</h1>
+                                                        <h1 class="t-stroke italic">and will strive to improve</h1>
+                                                        <h1>the quality of the website to the best of my ability.</h1>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="title-main">
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">With a passion for</h1>
+                                                        <h1>web design and development,</h1>
+                                                        <h1 class="t-stroke italic">I will strive to create</h1>
+                                                        <h1>a better web little by little every day.</h1>
+                                                    </div>
+                                                    <div class="title-wrapper">
+                                                        <h1 class="t-stroke italic">With a passion for</h1>
+                                                        <h1>web design and development,</h1>
+                                                        <h1 class="t-stroke italic">I will strive to create</h1>
+                                                        <h1>a better web little by little every day.</h1>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="third-img-slider">
+                                        <ul>
+                                            <li class="active">
+                                                <img src="img/z12.jpg" alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>유연한</h6>
+                                                    <span>flexibility</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my18.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>창의적인</h6>
+                                                    <span>creative</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my5.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>지속적인 학습</h6>
+                                                    <span>continuous learning</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my21.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>인내심</h6>
+                                                    <span>patience</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://raw.githubusercontent.com/gogoringhye/my/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my20.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>소통하는</h6>
+                                                    <span>communicative</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my8.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>회복탄력성</h6>
+                                                    <span>resilience</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="img/z8.jpg" alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>책임감</h6>
+                                                    <span>responsibility</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="img/m2.jpg" alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>열정</h6>
+                                                    <span>passion</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="img-slider">
+                                        <ul>
+                                            <li class="active show_class">
+                                                <img src="img/z12.jpg" alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>유연한</h6>
+                                                    <span>flexibility</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my18.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>창의적인</h6>
+                                                    <span>creative</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my5.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>지속적인 학습</h6>
+                                                    <span>continuous learning</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my21.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>인내심</h6>
+                                                    <span>patience</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://raw.githubusercontent.com/gogoringhye/my/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my20.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>소통하는</h6>
+                                                    <span>communicative</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my8.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>회복탄력성</h6>
+                                                    <span>resilience</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="img/z8.jpg" alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>책임감</h6>
+                                                    <span>responsibility</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="img/m2.jpg" alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>열정</h6>
+                                                    <span>passion</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="second-img-slider">
+                                        <ul>
+                                            <li>
+                                                <img src="img/z12.jpg" alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>유연한</h6>
+                                                    <span>flexibility</span>
+                                                </div>
+                                            </li>
+                                            <li class="active">
+                                                <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my18.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>창의적인</h6>
+                                                    <span>creative</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my5.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>지속적인 학습</h6>
+                                                    <span>continuous learning</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my21.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>인내심</h6>
+                                                    <span>patience</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://raw.githubusercontent.com/gogoringhye/my/6a69c91fa8906f22215dd639c8a600e5b76d6507/img/my20.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>소통하는</h6>
+                                                    <span>communicative</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="https://github.com/gogoringhye/my/raw/b82f876ba629107d5f92d02d017607f20e806627/img/my8.jpg"
+                                                    alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>회복탄력성</h6>
+                                                    <span>resilience</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="img/z8.jpg" alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>책임감</h6>
+                                                    <span>responsibility</span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="img/m2.jpg" alt="images" class="img-fluid">
+                                                <div class="img-details">
+                                                    <h6>열정</h6>
+                                                    <span>passion</span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
                                 </div>
                             </div>
+                            <!-- //hashtag -->
+                            <!-- //해시태그 -->
+
                         </div>
-
-                        <form class="msger-inputarea">
-                            <input type="text" class="msger-input" placeholder="Please type your message.">
-                            <button type="submit" class="msger-send-btn">Send</button>
-                        </form>
+                        <!-- //오른쪽 -->
                     </div>
-                    <!-- //채팅 -->
+                    <!-- //aboutme -->
+                </div>
+            </div>
+            <!-- skill -->
 
+            <!-- 마큐 -->
+            <div class="header__marq">
+                <div class="header__marq-wrapp">
+                    <span class="header__marq-txt">html
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">css
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">javascript
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">jquery
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">react
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">PHP
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">figma
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">photoshop
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">illustrate
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">dorarun
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">spline
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">html
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">css
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                    <span class="header__marq-txt">javascript
+                        <span class="header__marq-star">
+                            <img src="img/star.svg" alt="" />
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <!-- //마큐 -->
+
+            <div id="homemain">
+                <h1>I wanna be a <span class="magnet-target">frontend developer</span></h1>
+                <div class="headings">
+                    <h1 class="hvr magnet-target">web</h1>
+                    <h1 class="hvr magnet-target">publisher</h1>
+                    <h1 class="hvr magnet-target">Portfolio</h1>
+                </div>
+            </div>
+            <div id="homelast">
+                <p>탄탄한 마크업을 바탕으로 효율적인 <span class="magnet-target">CSS</span>와 동적인 <span
+                        class="magnet-target">JavaScript</span>를 <br> 활용하여 직관적이고 매력적인 웹사이트를 구축하겠습니다.</p><br>
+                <p>다양한 <span class="magnet-target">프레임워크</span>와 <span class="magnet-target">라이브러리</span>를 지속적으로 학습하며
+                    꾸준히 성장하는 <span class="magnet-target">웹 퍼블리셔</span>가 되고자 합니다.</p>
+            </div>
+        </div><!-- home -->
+
+    </div><!-- 마그넷 -->
+
+    <!-- 퍼블리싱 -->
+    <div id="myprojects">
+        <!-- 메인프로젝트 -->
+        <div class="goal__col">
+            <div class="list flex__col">
+                <div class="list__item flex">
+                    <img
+                        src="https://images.unsplash.com/photo-1680268719962-acaffc32c3cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80">
+                    <div class="list__item__title">Lorem ipsum</div>
+                    <div class="list__item__titleOutline">Lorem ipsum</div>
+                    <ul class="list__item__infos flex">
+                        <li><span>AGENCY</span> OKADA AGENTS</li>
+                        <li><span>ROLE</span> LEAD DESIGNER / DEVELOPER</li>
+                        <li><span>CLIENT</span> ROBERTO STUDIO</li>
+                        <li><span>YEAR</span> 2023</li>
+                    </ul>
+                    <div class="list__item__type">WEBSITE</div>
+                    <div class="list__item__project">PORTFOLIO</div>
+                </div>
+            </div>
+
+            <div class="list__item flex">
+                <img
+                    src="https://images.unsplash.com/photo-1681068634386-50f0e81f50cd?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80">
+                <div class="list__item__title">Lorem ipsum</div>
+                <div class="list__item__titleOutline">Lorem ipsum</div>
+                <ul class="list__item__infos flex">
+                    <li><span>AGENCY</span> OKADA AGENTS</li>
+                    <li><span>ROLE</span> LEAD DESIGNER / DEVELOPER</li>
+                    <li><span>CLIENT</span> ROBERTO STUDIO</li>
+                    <li><span>YEAR</span> 2023</li>
+                </ul>
+                <div class="list__item__type">WEBSITE</div>
+                <div class="list__item__project">PORTFOLIO</div>
+            </div>
+
+            <div class="list__item flex">
+                <img
+                    src="https://images.unsplash.com/photo-1680978560866-481aff9fd6f9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80">
+                <div class="list__item__title">Lorem ipsum</div>
+                <div class="list__item__titleOutline">Lorem ipsum</div>
+                <ul class="list__item__infos flex">
+                    <li><span>AGENCY</span> OKADA AGENTS</li>
+                    <li><span>ROLE</span> LEAD DESIGNER / DEVELOPER</li>
+                    <li><span>CLIENT</span> ROBERTO STUDIO</li>
+                    <li><span>YEAR</span> 2023</li>
+                </ul>
+                <div class="list__item__type">WEBSITE</div>
+                <div class="list__item__project">PORTFOLIO</div>
+            </div>
+
+        </div>
+        <!-- 메인프로젝트 -->
+
+        <section class="pjWrap">
+            <!-- 1 -->
+            <div class="section1">
+
+                <a href="https://responsivesushi.netlify.app" target="_blank">
+                    <img class="nana img-size-1" src="img/sushi.png">
+                </a>
+
+                <div class="desc-container">
+                    <span class="desc">01 responsive</span>
+                    <p class="desc">Sushi 사이트와 GDWEB, Awwwards 등 레퍼런스 사이트를 참고하여 만든 <br> Sushi 브랜딩 페이지 반응형 웹사이트 입니다.
+                    </p>
+                    <div class="desc gosite">
+                        <a href="javascript:void(0)"
+                            onclick="window.open('https://responsivesushi.netlify.app','웹표준 모바일 사이트', 'top=100,left=300,width=400,height=818')">mobile
+                            ver.</a>
+                        <a href="javascript:void(0)"
+                            onclick="window.open('https://responsivesushi.netlify.app','웹표준 모바일 사이트', 'top=100,left=300,width=780,height=818')">tablet
+                            ver.</a>
+                        <a href="https://responsivesushi.netlify.app" target="_blank">pc
+                            ver.</a>
+                        <a href="https://responsivesushi.netlify.app" target="_blank">프로젝트 바로가기</a>
+                    </div>
+                    <div class="desc tools">
+                        <span># 시맨틱 마크업</span>
+                        <span># CSS</span>
+                        <span># 미디어 쿼리</span>
+                        <span># JavaScript</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="section2">
+
+                <a href="https://responsivemusign.netlify.app/" target="_blank">
+                    <img class="nana img-size-2" src="img/musign.png">
+                </a>
+
+                <div class="desc-container2">
+                    <span class="desc">02 responsive</span>
+                    <p class="desc">뮤자인 공식 사이트와 GDWEB, Awwwards 등 레퍼런스 사이트를 참고하여 만든 <br> 뮤자인 반응형 버전 웹 사이트입니다.</p>
+                    <div class="desc gosite">
+                        <a href="javascript:void(0)"
+                            onclick="window.open('https://responsivemusign.netlify.app/','웹표준 모바일 사이트', 'top=100,left=300,width=400,height=818')">mobile
+                            ver.</a>
+                        <a href="javascript:void(0)"
+                            onclick="window.open('https://responsivemusign.netlify.app/','웹표준 모바일 사이트', 'top=100,left=300,width=780,height=818')">tablet
+                            ver.</a>
+                        <a href="https://responsivemusign.netlify.app/" target="_blank">pc
+                            ver.</a>
+                        <a href="https://responsivemusign.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                    </div>
+                    <div class="desc tools">
+                        <span># 시맨틱 마크업</span>
+                        <span># CSS</span>
+                        <span># 미디어 쿼리</span>
+                        <span># JavaScript</span>
+                        <span># JQuery</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="section3">
+
+                <a href="https://reactshoppinghnm.netlify.app/" target="_blank">
+                    <img class="nana img-position-r" src="img/react.png">
+                </a>
+
+                <div class="desc-container">
+                    <span class="desc">03 React</span>
+                    <p class="desc">reactjs.org 등 레퍼런스 사이트와 H&M 공식 사이트를 참고하여 <br> 디자인보다 react 활용에 초점을 맞춘 웹사이트를
+                        만들었습니다.
+                    </p>
+                    <div class="desc gosite">
+                        <a href="https://reactshoppinghnm.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                    </div>
+                    <div class="desc tools">
+                        <span># Node.js</span>
+                        <span># React</span>
+                        <span># JSX</span>
+                        <span># CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="section4">
+
+                <a href="https://cyberfiction2.netlify.app/" target="_blank">
+                    <img class="nana img-size-2" src="img/cyberfiction2.gif">
+                </a>
+
+                <div class="desc-container2">
+                    <span class="desc">04 Gsap</span>
+                    <p class="desc">CYBER FICTION 공식 사이트와 GDWEB, Awwwards 같은 레퍼런스 사이트를 참고하여 <br> JavaScript 기반의
+                        라이브러리
+                        활용에
+                        초점을 맞춘 웹사이트입니다.</p>
+                    <div class="desc gosite">
+                        <a href="javascript:void(0)"
+                            onclick="window.open('https://cyberfiction2.netlify.app/','웹표준 모바일 사이트', 'top=100,left=300,width=400,height=818')">mobile
+                            ver.</a>
+                        <a href="javascript:void(0)"
+                            onclick="window.open('https://cyberfiction2.netlify.app/','웹표준 모바일 사이트', 'top=100,left=300,width=780,height=818')">tablet
+                            ver.</a>
+                        <a href="https://cyberfiction2.netlify.app/" target="_blank">pc ver.</a>
+                        <a href="https://cyberfiction2.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                    </div>
+                    <div class="desc tools">
+                        <span># JavaScript</span>
+                        <span># GSAP(ScrollTrigger)</span>
+                        <span># Locomotive Scroll</span>
+                        <span># 미디어 쿼리</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="section5">
+
+                <a href="https://realmagma.netlify.app/" target="_blank">
+                    <img class="nana img-position-r img-position-l" src="img/magma.gif">
+                </a>
+
+                <div class="desc-container">
+                    <span class="desc">05 Gsap</span>
+                    <p class="desc">Magma 공식 사이트와 GDWEB, Awwwards 같은 레퍼런스 사이트를 참고하여 <br> JavaScript 기반의 라이브러리 활용에
+                        초점을
+                        맞춘 웹사이트입니다.</p>
+                    <div class="desc gosite">
+                        <a href="https://realmagma.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                    </div>
+                    <div class="desc tools">
+                        <span># JavaScript</span>
+                        <span># GSAP(ScrollTrigger)</span>
+                        <span># CSS</span>
+                        <span># Locomotive Scroll</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="section6">
+
+                <a href="https://hanacardzzizone.netlify.app/" target="_blank">
+                    <img class="nana img-position-l img-size-2" src="img/hanacard.jpg">
+                </a>
+
+                <div class="desc-container3">
+                    <span class="desc">06 Clone</span>
+                    <p class="desc">jQuery 기반으로 만들어진 Slick Slider 라이브러리를 활용하여 <br> 시멘틱 마크업, 웹 접근성,다양한 스크립트 구현을 연습하기
+                        위해
+                        <br>PC 버전에 최적화된 적응형 웹사이트를 구축하였습니다.
+                    </p>
+                    <div class="desc gosite">
+                        <a href="https://hanacardzzizone.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                    </div>
+                    <div class="desc tools">
+                        <span># 시맨틱 마크업</span>
+                        <span># JQuery</span>
+                        <span># slick slider</span>
+                        <span># 웹 접근성</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- 7 -->
+            <div class="section7">
+
+                <a href="https://lotteworld.netlify.app/" target="_blank">
+                    <img class="nana img-position-l img-size-1" src="img/lotteworld.jpg">
+                </a>
+
+                <div class="desc-container">
+                    <span class="desc">07 Clone</span>
+                    <p class="desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, delectus?
+                    </p>
+                    <div class="desc gosite">
+                        <a href="https://lotteworld.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                    </div>
+                    <div class="desc tools">
+                        <span># Css</span>
+                        <span># JQuery</span>
+                        <span># JavaScript</span>
+
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <img class="nana img-size-1 img-position-l"
+                src="https://images.unsplash.com/photo-1663094615740-322d2a238949?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+
+            <img class="nana img-size-full"
+                src="https://images.unsplash.com/photo-1516575150278-77136aed6920?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+
+            <img class="nana img-size-1 img-position-r"
+                src="https://images.unsplash.com/photo-1516575150278-77136aed6920?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+
+            <img class="nana img-position-l img-size-2"
+                src="https://images.unsplash.com/photo-1638395976479-edd103e980bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+
+            <img class="nana img-position-r img-size-2"
+                src="https://images.unsplash.com/photo-1647635423038-5ba662f9da6e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+
+            <img class="nana img-size-full" data-u-scale="1.25"
+                src="https://images.unsplash.com/photo-1647627573078-d8f5b48ab85a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+
+            <img class="nana img-size-1 img-position-l" data-u-scale="1.35"
+                src="https://images.unsplash.com/photo-1604882355165-4450cb6155b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+
+            <img class="nana img-position-r img-size-2"
+                src="https://images.unsplash.com/photo-1561948955-570b270e7c36?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80">
+        </section>
+
+    </div>
+    <!-- //퍼블리싱 -->
+
+    <!-- 디자인 -->
+    <section id="design" class="design">
+        <div class="content">
+            <h2 class="section-title">design</span>
+                <span class="section-title__square"></span>
+            </h2>
+        </div>
+        <!-- 디자인 -->
+        <div class="dfilter dim">
+            <ul>
+                <li class="dlist active" data-filter="ditem1">spline</li>
+                <li class="dlist" data-filter="ditem2">dorarun</li>
+                <li class="dlist" data-filter="ditem3">photoshop</li>
+                <li class="dlist" data-filter="ditem4">illustrate</li>
+                <li class="dlist" data-filter="ditem5">figma</li>
+
+            </ul>
+
+            <div class="designs">
+
+                <!-- 스플라인 -->
+                <div class="ditem ditem1">
+                    <p>스플라인을 이용하여 간단한 3D 모델링을 구현하였으며,<br> 화면의 키패드를 클릭하거나 숫자 및 엔터 키를 누르면 작동되도록 만들었습니다.</p>
+                    <iframe class="keyboard" src='https://my.spline.design/untitled-63c60b07e6e1d5d659ef8afb73ab6e1f/'
+                        frameborder='0' width='150%' height='150%'></iframe>
                 </div>
 
-            </div><!-- //about__txt -->
-            <div class="about__img">
-                <!-- about me -->
-                <div class="inform-box">
-                    <section class="inform">
-                        <table>
-                            <tr>
-                                <td rowspan=3> <span>education</span></td>
-                                <td><span>2023.09-2024.02</span></td>
-                                <td><span>UI/UX 반응형 웹퍼블리셔&디자인 양성과정</span></td>
-                                <td><time>수료</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2019.03-2023.08</span></td>
-                                <td><span>경성대학교 회계학과</span></td>
-                                <td><time>학사</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2016.03-2019.02</span></td>
-                                <td><span>중앙고등학교</span></td>
-                                <td><time>졸업</time></td>
-                            </tr>
-                            <tr>
-                                <td rowspan=7> <span>certificate</span></td>
-                                <td><span>2024.11</span></td>
-                                <td><span>FAT(회계정보처리) 1급</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2023.09</span></td>
-                                <td><span>CS Leaders 관리사</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2023.01</span></td>
-                                <td><span>2종보통운전면허</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2023.01</span></td>
-                                <td><span>자동차운전면허 2종 보통</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2018.03</span></td>
-                                <td><span>정보기술자격 ITQ 엑셀</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2018.02</span></td>
-                                <td><span>정보기술자격 ITQ 한글</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2018.02</span></td>
-                                <td><span>정보기술자격 ITQ 파워포인트</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td rowspan=2> <span>career</span></td>
-                                <td><span>2024.05-2024.12</span></td>
-                                <td><span>(주)아이마케팅 디자인위브</span></td>
-                                <td><time>경영지원</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2022.12-2023.05</span></td>
-                                <td><span>YMATH수학학원</span></td>
-                                <td><time>행정</time></td>
-                            </tr>
-                        </table>
-                    </section>
-                    <section class="inform" data-clone>
-                        <table>
-                            <colgroup>
-                                <col />
-                                <col />
-                                <col />
-                                <col />
-                            </colgroup>
-                            <tr>
-                                <td rowspan=3> <span>education</span></td>
-                                <td><span>2023.09-2024.02</span></td>
-                                <td><span>UI/UX 반응형 웹퍼블리셔&디자인 양성과정</span></td>
-                                <td><time>수료</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2019.03-2023.08</span></td>
-                                <td><span>경성대학교 회계학과</span></td>
-                                <td><time>학사</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2016.03-2019.02</span></td>
-                                <td><span>중앙고등학교</span></td>
-                                <td><time>졸업</time></td>
-                            </tr>
-                            <td rowspan=7> <span>certificate</span></td>
-                            <td><span>2024.11</span></td>
-                            <td><span>FAT(회계정보처리) 1급</span></td>
-                            <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2023.09</span></td>
-                                <td><span>CS Leaders 관리사</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2023.01</span></td>
-                                <td><span>2종보통운전면허</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2023.01</span></td>
-                                <td><span>자동차운전면허 2종 보통</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2018.03</span></td>
-                                <td><span>정보기술자격 ITQ 엑셀</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2018.02</span></td>
-                                <td><span>정보기술자격 ITQ 한글</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2018.02</span></td>
-                                <td><span>정보기술자격 ITQ 파워포인트</span></td>
-                                <td><time>취득</time></td>
-                            </tr>
-                            <tr>
-                                <td rowspan=2> <span>career</span></td>
-                                <td><span>2024.05-2024.12</span></td>
-                                <td><span>(주)아이마케팅 디자인위브</span></td>
-                                <td><time>경영지원</time></td>
-                            </tr>
-                            <tr>
-                                <td><span>2022.12-2023.05</span></td>
-                                <td><span>YMATH수학학원</span></td>
-                                <td><time>행정</time></td>
-                            </tr>
-                            <tr>
-                        </table>
-                    </section>
+                <!-- 도라런 -->
+                <div class="ditem ditem2">
+                    <a href="https://khlaw1np.dora.run/" target='_blank'>
+                        <p>디자이너를 위해 코딩 없이 웹사이트를 손쉽게 만들 수 있는 노코드 플랫폼을 이용하여, <br> 간단한 3D 애니메이션이 적용된 웹사이트를 제작했습니다.</p>
+                        <div class="dorarun_wrap"></div>
+                    </a>
+                    <a class="gosite2" href="https://khlaw1np.dora.run/" target="_blank">
+                        프로젝트 바로가기</a>
+                    <a class="gosite2" href="img/dorarun draft.jpg" target="_blank">Design draft</a>
+                    <a class="gosite2" href="img/dorarun 3D draft.jpg" target="_blank">3D draft</a>
                 </div>
-                <!-- //about me -->
+
+                <!-- 포토샵 -->
+                <div class="ditem ditem3">
+                    <a href="https://photoshopweb.netlify.app/" target='_blank'>
+                        <p>포토샵을 활용하여 직접 제작한 시안과 가이드라인을 바탕으로 웹사이트를 퍼블리싱하였습니다.</p>
+                        <div class="photoshop_wrap"></div>
+
+                    </a>
+                    <a class="gosite2" href="https://photoshopweb.netlify.app/" target="_blank">
+                        프로젝트 바로가기</a>
+                    <a class="gosite2" href="img/photoshop_web.png" target="_blank">Design draft</a>
+                    <a class="gosite2" href="img/photoshop_site.png" target="_blank">
+                        Guideline</a>
+                </div>
+
+                <!-- 일러스트 -->
+                <div class="ditem ditem4">
+                    <p>곡선을 조절하며 펜툴의 활용에 익숙해지는 데 중점을 두었고, 디지털 드로잉에서 세밀한 디테일을 표현하는 기술을 연습하였습니다.</p>
+                    <a href="img/maru.png" target='_blank'>
+                        <div class="illustrate_wrap1">
+                        </div>
+                    </a>
+                    <a href="img/aineko.png" target='_blank'>
+                        <div class="illustrate_wrap2">
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 피그마 -->
+                <div class="ditem ditem5">
+                    <a href="https://figmaportfoliogogoring.netlify.app/" target='_blank'>
+                        <p>피그마를 활용하여 직접 제작한 시안을 바탕으로 간단히 퍼블리싱하였습니다.</p>
+                        <div class="figma_wrap1">
+                        </div>
+                    </a>
+                    <a class="gosite2 figma" href="https://figmaportfoliogogoring.netlify.app/" target="_blank">
+                        프로젝트 바로가기</a>
+                </div>
             </div>
         </div>
+        <!-- //디자인 -->
     </section>
+    <!-- //디자인 -->
+
+
+ <!-- 이메일 -->
+<!--  <div class="email">
+    <div class="form-container">
+        <h2>Contact</h2>
+        <form action="https://formsubmit.co/kimnahye1313@naver.com" method="POST">
+            <input type="text" name="name" placeholder="이름, 문의사항" required>
+            <input type="email" name="email" placeholder="이메일" required>
+            <button type="submit">send</button>
+        </form>
+    </div>
+</div> -->
+<!-- //이메일 -->
+
+
+
+    <div class="footer">
+        <!-- 타이핑 -->
+        <div class="typing-text"></div>
+        <!-- //타이핑 -->
+        <!-- 시계 -->
+        <div class="time">
+            2022.01.02
+        </div>
+        <!-- //시계 -->
+    </div>
+
+
 
     <!-- 스티커 -->
-    <div class="stickers">
+    <!--   <div class="stickers">
         <div class="sticker" style="left: 71.4773px; bottom: 2%; top: 556.75px;">
             <img src="https://emojigraph.org/media/joypixels/laptop_1f4bb.png">
         </div>
-        <div class="sticker" style="left: 1094.68px; top: 461.761px;">
+        <div class="sticker" style="left: 1179.68px; top: 161.675px;">
             <img src="https://emojigraph.org/media/apple/soccer-ball_26bd.png">
         </div>
-        <div class="sticker" style="left: 607.3px; bottom: 2%; top: 278.8px;">
+        <div class="sticker" style="left: 306.288px; bottom: 2%; top: 156.45px;">
             <img src="https://emojigraph.org/media/apple/ticket_1f3ab.png">
         </div>
-        <div class="sticker" style="left: 1260.3px; bottom: 2%; top: 699.738px;">
+        <div class="sticker" style="left: 1270.3px; bottom: 2%; top: 565.062px;">
             <img src="https://emojigraph.org/media/apple/small-airplane_1f6e9-fe0f.png">
         </div>
-        <div class="sticker" style="left: 253.675px; top: 624.6px;">
+        <div class="sticker" style="left: 580.675px; top: 623.65px;">
             <img src="https://emojigraph.org/media/apple/memo_1f4dd.png">
         </div>
-    </div>
+    </div> -->
     <!-- //스티커 -->
 
-    <!-- 타이핑 -->
-    <div class="typing-text"></div>
-    <!-- //타이핑 -->
 
 
-    <!-- 🧷퍼블리싱 -->
-    <section id="webpublishing" class="webpublishing">
-        <div class="content">
-            <h2 class="section-title">webpublish<span class="stroke">ing</span>
-                <span class="section-title__square"></span>
-            </h2>
-        </div>
-
-        <div class="webpublishing__wrapp">
-            <!-- 웹리스트 -->
-            <div class="web-list">
-                <ul>
-                    <!-- gentlemonster,크아,라나,circleani -->
-
-                    <!-- sushi -->
-                    <li>
-                        <div class="index">
-                            <span>반응형</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="sushi">sushi</h2>
-                        </div>
-                        <div class="genere">
-                            <a href="javascript:void(0)" class="mobilebtn"
-                                onclick="window.open('https://responsivesushi.netlify.app','웹표준 모바일 사이트', 'top=100,left=300,width=400,height=818')">mobile
-                                ver.</a>
-                            <a href="javascript:void(0)" class="tabletbtn"
-                                onclick="window.open('https://responsivesushi.netlify.app','웹표준 모바일 사이트', 'top=100,left=300,width=780,height=818')">tablet
-                                ver.</a>
-                            <a href="https://responsivesushi.netlify.app" target="_blank">pc
-                                ver.</a>
-                        </div>
-                        <div class="redirect-link">
-                            <a href="https://responsivesushi.netlify.app/" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/sushi.png" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- musign -->
-                    <li>
-                        <div class="index">
-                            <span>반응형</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="musign">musign</h2>
-                        </div>
-                        <div class="genere">
-                            <a href="javascript:void(0)" class="mobilebtn2"
-                                onclick="window.open('https://responsivemusign.netlify.app/','웹표준 모바일 사이트', 'top=100,left=300,width=400,height=818')">mobile
-                                ver.</a>
-                            <a href="javascript:void(0)" class="tabletbtn2"
-                                onclick="window.open('https://responsivemusign.netlify.app/','웹표준 모바일 사이트', 'top=100,left=300,width=780,height=818')">tablet
-                                ver.</a>
-                            <a href="https://responsivemusign.netlify.app/" target="_blank">pc ver.</a>
-                        </div>
-                        <div class="redirect-link">
-                            <a href="https://responsivemusign.netlify.app/" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/musign.png" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- react -->
-                    <li onclick="window.open('https://reactshoppinghnm.netlify.app/')">
-                        <div class="index">
-                            <span>react</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="h&m">h&m</h2>
-                        </div>
-                        <div class="genere">
-                            <span>디자인보다 react에 초점을 맞춘 웹사이트를 만들었습니다.</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://reactshoppinghnm.netlify.app/" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/react.png" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- php -->
-                    <li onclick="window.open('http://sugang7979.dothome.co.kr/web/main/index.php')">
-                        <div class="index">
-                            <span>php</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="green company">green company</h2>
-                        </div>
-                        <div class="genere">
-                            <span>디자인보다 PHP에 초점을 맞춘 웹사이트를 만들었습니다.</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="http://sugang7979.dothome.co.kr/web/main/index.php" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/php.png" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- cyberfiction1 -->
-                    <li onclick="window.open('https://cyberfiction1.netlify.app')">
-                        <div class="index">
-                            <span>gsap</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="cyberfiction ver.1">cyberfiction ver.1</h2>
-                        </div>
-                        <div class="genere">
-                            <span>웹 페이지의 스크롤에 반응하는 동적 애니메이션 효과를 구현</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://cyberfiction1.netlify.app" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/cyberfiction1.gif" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- cyberfiction2 -->
-                    <li onclick="window.open('https://cyberfiction2.netlify.app')">
-                        <div class="index">
-                            <span>gsap</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="cyberfiction ver.2">cyberfiction ver.2</h2>
-                        </div>
-                        <div class="genere">
-                            <span>gsap, scrolltrigger, locomotive scroll</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://cyberfiction2.netlify.app" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/cyberfiction2.gif" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- magma -->
-                    <li onclick="window.open('https://realmagma.netlify.app/')">
-                        <div class="index">
-                            <span>gsap</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="magma">magma</h2>
-                        </div>
-                        <div class="genere">
-                            <span>gsap, scrolltrigger, locomotive scroll, scroll.js</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://realmagma.netlify.app/" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/magma.gif" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- duda -->
-                    <li onclick="window.open('https://dudagsap.netlify.app')">
-                        <div class="index">
-                            <span>gsap</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="duda">duda</h2>
-                        </div>
-                        <div class="genere">
-                            <span>gsap, scrolltrigger, scrolltoplugin, lenis, splitting.js </span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://dudagsap.netlify.app" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/duda.png" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- hanacard -->
-                    <li onclick="window.open('https://hanacardzzizone.netlify.app/')">
-                        <div class="index">
-                            <span>클론코딩</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="hanacard">hanacard</h2>
-                        </div>
-                        <div class="genere">
-                            <span>html, css, javascript, jquery</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://hanacardzzizone.netlify.app/" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/hanacard.jpg" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- lotteworld -->
-                    <li onclick="window.open('https://lotteworld.netlify.app/')">
-                        <div class="index">
-                            <span>클론코딩</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="lotteworld">lotteworld</h2>
-                        </div>
-                        <div class="genere">
-                            <span>html, css, jquery</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://lotteworld.netlify.app/" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/lotteworld.jpg" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- cookat -->
-                    <li onclick="window.open('https://cookat.netlify.app/')">
-                        <div class="index">
-                            <span>클론코딩</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="cookat">cookat</h2>
-                        </div>
-                        <div class="genere">
-                            <span>html, css, jquery</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://cookat.netlify.app/" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/cookat.png" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- webstandard -->
-                    <li onclick="window.open('https://snazzy-semolina-173468.netlify.app/')">
-                        <div class="index">
-                            <span>클론코딩</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="webstandard">webstandard</h2>
-                        </div>
-                        <div class="genere">
-                            <span>html, css, javaScript, jquery</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://snazzy-semolina-173468.netlify.app/" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/webstandard.gif" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                    <!-- naver -->
-                    <li onclick="window.open('https://loginnaver.netlify.app/')">
-                        <div class="index">
-                            <span>정규식</span>
-                        </div>
-                        <div class="web-name">
-                            <h2 data-value="naver">naver</h2>
-                        </div>
-                        <div class="genere">
-                            <span>회원가입</span>
-                        </div>
-
-                        <div class="redirect-link">
-                            <a href="https://loginnaver.netlify.app/" target="_blank">
-                                <i class="ri-arrow-right-up-fill"></i>
-                            </a>
-                        </div>
-                        <div class="hover-img">
-                            <img src="img/naver.png" alt="web-img" class="img-fluid">
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <!-- //웹리스트 -->
-        </div>
-
-    </section>
-    <!-- //🧷퍼블리싱 -->
-
-    <section id="design" class="design">
-        <div class="content">
-            <h2 class="section-title">desi<span class="stroke">gn</span>
-                <span class="section-title__square"></span>
-            </h2>
-            <!-- 디자인 -->
-            <div class="dfilter dim">
-                <ul>
-                    <li class="dlist active" data-filter="ditem1">photoshop</li>
-                    <li class="dlist" data-filter="ditem4">dorarun</li>
-                    <li class="dlist" data-filter="ditem3">illustrate</li>
-                    <li class="dlist" data-filter="ditem2">figma</li>
-                    <li class="dlist" data-filter="ditem5">spline</li>
-                </ul>
-
-                <div class="designs">
-                    <div class="ditem ditem1">
-                        <a href="https://photoshopweb.netlify.app/" target='_blank'>
-                            <div class="photoshop_wrap1">
-                            </div>
-                        </a>
-                        <a href="https://photoshopweb.netlify.app/" style="position: absolute;
-                         left: 44%;" target="_blank">
-                            바로가기</a>
-                        <a href="img/photoshop_web.png" style="position: absolute;
-                        left: 49%;" target="_blank">시안</a>
-                        <a href="img/photoshop_site.png" style="position: absolute;
-                         left: 53%;" target="_blank">
-                            가이드</a>
-                    </div>
-                    <div class="ditem ditem2">
-                        <a href="https://figmaportfoliogogoring.netlify.app/" target='_blank'>
-                            <div class="figma_wrap1">
-                            </div>
-                        </a>
-                        <a href="https://figmaportfoliogogoring.netlify.app/" style="position: absolute;
-                        left: 32%;" target="_blank">
-                            바로가기</a>
-                        <a href="img/figma_site.png" style="position: absolute;
-                       left: 38%;" target="_blank">시안</a>
-                    </div>
-                    <div class="ditem ditem4">
-                        <a href="https://khlaw1np.dora.run/" target='_blank'>
-                            <div class="dorarun_wrap">
-                            </div>
-                        </a>
-                        <a href="https://khlaw1np.dora.run/" style="position: absolute;
-                        left: 44%;" target="_blank">
-                            바로가기</a>
-                        <a href="img/dorarun draft.jpg" style="position: absolute;
-                        left: 49%;" target="_blank">시안</a>
-
-                        <a href="img/dorarun 3D draft.jpg" style="position: absolute;
-                        left: 52%;" target="_blank">3D 가이드</a>
-                    </div>
-                    <div class="ditem ditem2">
-                        <a href="img/figma_draft2.jpg" target='_blank'>
-                            <div class="figma_wrap2">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="ditem ditem2">
-                        <a href="img/figma_draft3.jpg" target='_blank'>
-                            <div class="figma_wrap3">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="ditem ditem5"><img src="img/spline1.gif"></div>
-                    <div class="ditem ditem3">
-                        <a href="img/maru.png" target='_blank'>
-                            <div class="illustrate_wrap1">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="ditem ditem3">
-                        <a href="img/aineko.png" target='_blank'>
-                            <div class="illustrate_wrap2">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="ditem ditem5"><img src="img/spline2.gif"></div>
-                    <div class="ditem ditem5"><img src="img/spline3.gif"></div>
-                    <div class="ditem ditem5"><img src="img/spline4.gif"></div>
-                    <div class="ditem ditem5"><img src="img/spline6.gif"></div>
+    <!-- gentlemonster,크아,라나,circleani -->
+    <!--   <div class="etc">
+        <ul>
+            <li onclick="window.open('http://sugang7979.dothome.co.kr/web/main/index.php')">
+                <div class="index">
+                    <span>php</span>
                 </div>
-            </div>
-            <!-- //디자인 -->
-    </section>
-
-    <!-- ☎️컨택 -->
-    <section id="contact" class="contact">
-        <div class="content">
-            <h2 class="section-title">conta<span class="stroke">ct</span>
-                <span class="section-title__square"></span>
-            </h2>
-
-            <div class="contact__list">
-                <div class="contact__item">
-                    <span class="contact__item-arrow" data-speed="500">
-                        <img src="https://dmitrinaumov.github.io/Paralax-effect-with-gsap-scrolltrigger/img/arrow.svg"
-                            alt="">
-                    </span>
-                    <div class="contact__item-txt">
-                        <span class="contact__item-text">infrom</span>
-                    </div>
+                <div class="web-name">
+                    <h2 data-value="green company">green company</h2>
                 </div>
-                <div class="contact__item">
-                    <span class="contact__item-arrow" data-speed="400">
-                        <img src="https://dmitrinaumov.github.io/Paralax-effect-with-gsap-scrolltrigger/img/arrow.svg"
-                            alt="">
-                    </span>
-                    <div class="contact__item-txt">
-                        <span class="contact__item-text">김나혜</span>
-                    </div>
+                <div class="genere">
+                    <span>디자인보다 PHP에 초점을 맞춘 웹사이트를 만들었습니다.</span>
                 </div>
-                <div class="contact__item">
-                    <span class="contact__item-arrow" data-speed="800">
-                        <img src="https://dmitrinaumov.github.io/Paralax-effect-with-gsap-scrolltrigger/img/arrow.svg"
-                            alt="">
-                    </span>
-                    <div class="contact__item-txt">
-                        <span class="contact__item-text">kimnahye1313@naver.com</span>
-                    </div>
+
+                <div class="redirect-link">
+                    <a href="http://sugang7979.dothome.co.kr/web/main/index.php" target="_blank">
+                        <i class="ri-arrow-right-up-fill"></i>
+                    </a>
                 </div>
-                <div class="contact__item">
-                    <span class="contact__item-arrow" data-speed="600">
-                        <img src="https://dmitrinaumov.github.io/Paralax-effect-with-gsap-scrolltrigger/img/arrow.svg"
-                            alt="">
-                    </span>
-                    <div class="contact__item-txt">
-                        <span class="contact__item-text">+82 (0)10 9236 7560</span>
-                    </div>
+                <div class="hover-img">
+                    <img src="img/php.png" alt="web-img" class="img-fluid">
                 </div>
-            </div>
-        </div>
-    </section>
-    <!-- //☎️컨택 -->
+            </li>
 
-    <!-- 🧷푸터 -->
-    <footer class="footer">
-        <div class="footer__div">
-            <span data-speed="-300">n</span>
-            <span data-speed="100">a</span>
-            <span data-speed="300">n</span>
-            <span data-speed="-300">a</span>
-            <span data-speed="350">'</span>
-            <span data-speed="200">s</span>
-            <span data-speed="-310">p</span>
-            <span data-speed="200">o</span>
-            <span data-speed="-340">r</span>
-            <span data-speed="-100">t</span>
-            <span data-speed="300">f</span>
-            <span data-speed="-300">o</span>
-            <span data-speed="350">l</span>
-            <span data-speed="200">i</span>
-            <span data-speed="-310">o</span>
-        </div>
-    </footer>
-    <!-- //🧷푸터 -->
+            <li onclick="window.open('https://dudagsap.netlify.app')">
+                <div class="index">
+                    <span>gsap</span>
+                </div>
+                <div class="web-name">
+                    <h2 data-value="duda">duda</h2>
+                </div>
+                <div class="genere">
+                    <span>gsap, scrolltrigger, scrolltoplugin, lenis, splitting.js </span>
+                </div>
 
+                <div class="redirect-link">
+                    <a href="https://dudagsap.netlify.app" target="_blank">
+                        <i class="ri-arrow-right-up-fill"></i>
+                    </a>
+                </div>
+                <div class="hover-img">
+                    <img src="img/duda.png" alt="web-img" class="img-fluid">
+                </div>
+            </li>
 
+            <li onclick="window.open('https://lotteworld.netlify.app/')">
+                <div class="index">
+                    <span>클론코딩</span>
+                </div>
+                <div class="web-name">
+                    <h2 data-value="lotteworld">lotteworld</h2>
+                </div>
+                <div class="genere">
+                    <span>html, css, jquery</span>
+                </div>
+
+                <div class="redirect-link">
+                    <a href="https://lotteworld.netlify.app/" target="_blank">
+                        <i class="ri-arrow-right-up-fill"></i>
+                    </a>
+                </div>
+                <div class="hover-img">
+                    <img src="img/lotteworld.jpg" alt="web-img" class="img-fluid">
+                </div>
+            </li>
+
+            <li onclick="window.open('https://cookat.netlify.app/')">
+                <div class="index">
+                    <span>클론코딩</span>
+                </div>
+                <div class="web-name">
+                    <h2 data-value="cookat">cookat</h2>
+                </div>
+                <div class="genere">
+                    <span>html, css, jquery</span>
+                </div>
+
+                <div class="redirect-link">
+                    <a href="https://cookat.netlify.app/" target="_blank">
+                        <i class="ri-arrow-right-up-fill"></i>
+                    </a>
+                </div>
+                <div class="hover-img">
+                    <img src="img/cookat.png" alt="web-img" class="img-fluid">
+                </div>
+            </li>
+
+            <li onclick="window.open('https://snazzy-semolina-173468.netlify.app/')">
+                <div class="index">
+                    <span>클론코딩</span>
+                </div>
+                <div class="web-name">
+                    <h2 data-value="webstandard">webstandard</h2>
+                </div>
+                <div class="genere">
+                    <span>html, css, javaScript, jquery</span>
+                </div>
+
+                <div class="redirect-link">
+                    <a href="https://snazzy-semolina-173468.netlify.app/" target="_blank">
+                        <i class="ri-arrow-right-up-fill"></i>
+                    </a>
+                </div>
+                <div class="hover-img">
+                    <img src="img/webstandard.gif" alt="web-img" class="img-fluid">
+                </div>
+            </li>
+
+            <li onclick="window.open('https://loginnaver.netlify.app/')">
+                <div class="index">
+                    <span>정규식</span>
+                </div>
+                <div class="web-name">
+                    <h2 data-value="naver">naver</h2>
+                </div>
+                <div class="genere">
+                    <span>회원가입</span>
+                </div>
+
+                <div class="redirect-link">
+                    <a href="https://loginnaver.netlify.app/" target="_blank">
+                        <i class="ri-arrow-right-up-fill"></i>
+                    </a>
+                </div>
+                <div class="hover-img">
+                    <img src="img/naver.png" alt="web-img" class="img-fluid">
+                </div>
+            </li>
+        </ul>
+    </div> -->
 
 
     <!-- 탑버튼 -->
     <button id="scrollToTopBtn">top</button>
     <!-- //탑버튼 -->
 
-    <!-- 이메일 -->
 
-    <div class="email">
 
-        <div class="form-container">
-            <h2>문의하기</h2>
-            <form action="https://formsubmit.co/kimnahye1313@naver.com" method="POST">
-                <input type="text" name="name" placeholder="이름, 문의사항" required>
-                <input type="email" name="email" placeholder="이메일" required>
-                <button type="submit">보내기</button>
-            </form>
-        </div>
-
-    </div>
-
-    <!-- //이메일 -->
-
-    <!-- 시계 -->
-    <div class="time">
-        2022.01.02
-    </div>
-    <!-- //시계 -->
 
     <!-- wow -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-
+   
     <!-- Script Tags -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
@@ -1266,7 +1084,11 @@
     <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>
     <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
     <script src='https://unpkg.com/split-type'></script>
+    <!-- test3 -->
+    <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <!-- test3 -->
     <script src="main.js"></script>
+
 
 </body>
 
