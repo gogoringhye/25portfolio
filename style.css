@@ -229,14 +229,12 @@ div#homemain2 {
 
 .sticker {
   position: absolute;
-  width: 100px;
-  height: 100px;
   cursor: grab;
   z-index: 100;
 }
 
 .sticker img {
-  width: 80px;
+  width: 180px;
 }
 
 #stickerboard {
@@ -983,3 +981,5 @@ a.gosite2.figma {
 }
 
 /* //프리로더  */
+
+
