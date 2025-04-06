@@ -287,3 +287,5 @@ document.getElementById("contactButton").addEventListener("click", function(even
 document.getElementById("closePopup").addEventListener("click", function() {
   document.getElementById("emailPopup").style.display = "none"; // 팝업을 숨깁니다
 });
+
+
