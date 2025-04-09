@@ -99,7 +99,7 @@ var items = document.querySelectorAll(".list__item")
 items.forEach(item => {
   var itemTitle = item.querySelector(".list__item__title")
   var itemTitleOutline = item.querySelector(".list__item__titleOutline")
-  var itemImg = item.querySelector(".list__item img")
+  var itemImg = item.querySelector(".list__item img, .keyboard")
   
   var itemTL = gsap.timeline({scrollTrigger: {
     trigger: item,
@@ -287,5 +287,13 @@ document.getElementById("contactButton").addEventListener("click", function(even
 document.getElementById("closePopup").addEventListener("click", function() {
   document.getElementById("emailPopup").style.display = "none"; // 팝업을 숨깁니다
 });
+
+
+
+
+
+
+
+
 
 
