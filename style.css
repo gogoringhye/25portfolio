@@ -3,11 +3,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @font-face {
-  font-family: "SDGothicNeo";
-  src: url("https://www.gentlemonster.com/kr/assets/fonts/KR/SDGothicNeoaTTF-eMd.woff2") format("woff2"),
-    url("https://www.gentlemonster.com/kr/assets/fonts/KR/SDGothicNeoaTTF-eMd.woff") format("woff");
-  font-weight: normal;
+  font-family: 'Pretendard-Regular';
+  src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
   font-style: normal;
+}
+
+:root {
+  --header-height: 2rem;
+
+  /* colors */
+  --first-color: rgb(51 51 51);
+  --second-color: rgb(51 51 51);
+  --title-color: rgb(0 0 0);
+  --text-color: rgb(255, 255, 255);
+  --text-color-light: rgb(255 0 0);
+  --body-color: rgb(23 23 23);
+  --container-color: rgb(255, 255, 255);
+
+  /* font and typography */
+  /* 1rem = 16px, 0.5rem = 8px */
+  --body-font: 'Fahkwang';
+  --title-font: 'Fahkwang';
+  --subtitle-font: 'Pretendard-Regular';
+  --biggest-font-size: 2.25rem;
+  --h1-font-size: 15rem;
+  --h2-font-size: 7rem;
+  --h3-font-size: 2rem;
+  --h4-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /* font weight */
+  --font-medium: lighter;
+  --font-semi-bold: 600;
+  --font-bold: bold;
+
+  /* z-index */
+  --z-index: 10;
+  --z-fixed: 100;
 }
 
 * {
@@ -16,34 +51,46 @@
   box-sizing: border-box;
 }
 
-/* Poppins 폰트를 기본 폰트로 지정 */
 body {
   overflow: hidden;
   font-family: 'Fahkwang';
-  background-color: white;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--body-color);
+  color: var(--text-color);
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Fahkwang';
+  line-height: 1.4em;
+  color: var(--text-color);
+}
+
+ul,
+li {
+  list-style: none;
 }
 
 a {
-  text-decoration: none;
   font-family: 'Poppins';
+  text-decoration: none;
 }
 
-
-li {
-  list-style: none;
+img {
+  width: 100%;
 }
 
 
 /* 마그넷 */
 #cursor {
   width: 100%;
-  background-color: white;
-}
-
-#home {
-  position: relative;
-  width: 100%;
-  height: 100vh;
+  background-color: var(--body-color);
 }
 
 #nav {
@@ -51,7 +98,9 @@ li {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 2vw 10vw 1vw 10vw
+  padding: 2vw 10vw 1vw 10vw;
+  font-size: var(--h4-font-size);
+  text-transform: uppercase;
 }
 
 #nav .magnet-target {
@@ -67,7 +116,7 @@ li {
 #nav a {
   text-decoration: none;
   font-weight: 400;
-  color: #000;
+  color: var(--text-color);
   font-size: 1vw;
   letter-spacing: -1px;
 }
@@ -80,7 +129,8 @@ li {
 #home {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: auto;
+
 }
 
 #nav {
@@ -104,7 +154,7 @@ li {
 #nav a {
   text-decoration: none;
   font-weight: 400;
-  color: #000;
+  color: var(--text-color);
   font-size: 1vw;
   letter-spacing: -1px;
 }
@@ -114,13 +164,7 @@ li {
   font-size: 20px;
 }
 
-div#homemain2 {
-  position: relative;
-  left: 50%;
-}
-
-#home #homemain1,
-#home #homemain2 {
+#homemain1, #homemain2 {
   width: 100%;
   padding: 5vw 10vw;
 }
@@ -130,6 +174,7 @@ div#homemain2 {
   font-weight: 500;
   letter-spacing: -.1vw;
   font-size: 1.34vw;
+  color: var(--text-color-light);
 }
 
 .headings {
@@ -138,25 +183,15 @@ div#homemain2 {
 }
 
 /* 스타일을 #homemain1과 #homemain2에 맞게 다르게 설정 */
-#homemain1 .headings h1 {
-  color: transparent;
-  -webkit-text-stroke: 2px #171717;
-  font-size: 6.5vw;
+#homemain1 .headings h1, #homemain2 .headings h1 {
+  color: var(--text-color);
+  -webkit-text-stroke: 2px #ffffff;
+  font-size: var(--h2-font-size);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -3px;
 }
 
-#homemain2 .headings h1 {
-
-  color: transparent;
-  -webkit-text-stroke: 2px #ff6347;
-  /* 다른 색상으로 설정 */
-  font-size: 6.5vw;
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -3px;
-}
 
 /* 호버 효과도 다르게 설정 */
 #homemain1 .headings h1:hover {
@@ -168,22 +203,9 @@ div#homemain2 {
   /* 호버 시 다른 색상 */
 }
 
-#homemain h1 span {
-  color: #3F51B5;
-  font-weight: bold;
-}
-
-요
-
 /* #homemain1과 #homemain2의 <span> 색상 */
-#homemain1 h1 span {
-  color: #3F51B5;
+#homemain1 h1 span, #homemain2 h1 span {
   /* 기존 색상 */
-}
-
-#homemain2 h1 span {
-  color: #ff6347;
-  /* 다른 색상 */
 }
 
 #homelast {
@@ -195,13 +217,14 @@ div#homemain2 {
 #homelast p {
   width: 70%;
   font-size: 1.6vw;
-  font-weight: 400;
+  font-weight: var(--font-medium);
   letter-spacing: -.08vw;
+  font-family: var(--subtitle-font);
 }
 
 #homelast p span {
-  color: #3F51B5;
-  font-weight: bold;
+  font-weight: var(--font-bold);
+  line-height: 1.5;
 }
 
 #homelast p::selection {
@@ -216,7 +239,7 @@ div#homemain2 {
 /* 시계 */
 .time {
   position: relative;
-  left: 2%;
+  left: 15rem;
 }
 
 /* //시계 */
@@ -389,65 +412,12 @@ a.gosite2 {
   margin-right: 50px;
 }
 
-/* 스플라인 */
-.ditem1 {
-  overflow: hidden;
-  width: 800px;
-  height: 500px;
-  border-radius: 8px;
-  margin-top: 10px;
-}
-
-iframe.keyboard {
-  width: 100%;
-  margin-top: -20%;
-}
-
-/* //스플라인 */
-
-/* 도라런 */
-.dorarun_wrap {
-  position: absolute;
-  left: 2%;
-  bottom: -4%;
-  width: 800px;
-  height: 440px;
-  background: url(img/dorarun_site.jpg) no-repeat;
-  background-size: cover;
-  background-position: top;
-  border: 1px solid #ccc;
-  transition: 0.8s;
-  transform: translate(40%, 0);
-}
-
-.dorarun_wrap:hover {
-  background-position: bottom;
-}
-
-/* //도라런 */
 
 
-/* 포토샵 */
 
-.photoshop_wrap {
-  position: absolute;
-  left: 2%;
-  bottom: -2%;
-  width: 800px;
-  height: 440px;
-  background: url(img/photoshop_web.png) no-repeat;
-  background-size: cover;
-  background-position: top;
-  border: 1px solid #ccc;
-  transition: 0.8s;
-  transform: translate(40%, 0);
-}
 
-.photoshop_wrap:hover {
-  background-position: bottom;
-}
 
-/* //포토샵 */
+
 
 /* 일러스트 */
 
@@ -489,32 +459,7 @@ iframe.keyboard {
 
 /* //일러스트 */
 
-/* 피그마 */
 
-/* 1 */
-.figma_wrap1 {
-  position: absolute;
-  left: 2%;
-  bottom: -2%;
-  width: 800px;
-  height: 440px;
-  background: url(https://i.pinimg.com/originals/25/24/f5/2524f5a2a72c6d1ca001cd27894aae46.jpg) no-repeat;
-  background-size: cover;
-  background-position: top;
-  border: 1px solid #ccc;
-  transition: 0.8s;
-  transform: translate(40%, 0);
-}
-
-.figma_wrap1:hover {
-  background-position: bottom;
-}
-
-a.gosite2.figma {
-  left: 45%;
-}
-
-/* //피그마 */
 
 
 /* //필터 */
@@ -712,28 +657,20 @@ a.gosite2.figma {
   padding-bottom: 40px;
 }
 
-.list__item__title,
-.list__item__titleOutline {
+.list__item__title {
   position: absolute;
   z-index: 1;
   top: 50%;
   left: 50%;
-  font-family: var(--font2);
-  font-size: 21vw;
+  font-family: var( --title-font);
+  font-size: var(--h1-font-size);
   font-weight: 700;
   line-height: 80%;
-  color: var(--dark);
   text-align: center;
   transform: translate(-50%, -50%);
 }
 
-.list__item__titleOutline {
-  z-index: 3;
-  color: transparent;
-  -webkit-text-stroke: 2px var(--dark);
-}
-
-.list__item img {
+.list__item img, .keyboard {
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -752,10 +689,6 @@ a.gosite2.figma {
 
 .list__item__infos li {
   font-size: 1vw;
-}
-
-.list__item__infos li span {
-  color: #818181;
 }
 
 .list__item__type,
@@ -785,12 +718,13 @@ a.gosite2.figma {
 #myprojects {
   position: relative;
   z-index: 2;
-  margin: 0 60px;
+  background-color: var(--body-color);
 }
 
 .phWrap {}
 
 .nana {
+ 
   margin-top: 12.5em;
 }
 
@@ -861,7 +795,7 @@ a.gosite2.figma {
 
 .desc {
   font-size: 20px;
-  color: #171717;
+  color:var(--text-color);
   line-height: 1.4;
   margin-bottom: 2vw;
   margin-top: 1vw;
@@ -878,7 +812,6 @@ a.gosite2.figma {
   align-items: center;
   margin-top: 20px;
   gap: 1rem;
-
 }
 
 .gosite a {
@@ -911,8 +844,8 @@ a.gosite2.figma {
 
 .tools span {
   padding: 8px 16px;
-  color: #333;
-  font-weight: bold;
+  color:var(--second-color);
+  font-weight:var(--font-bold);
   text-align: center;
 }
 
@@ -981,5 +914,3 @@ a.gosite2.figma {
 }
 
 /* //프리로더  */
-
-
