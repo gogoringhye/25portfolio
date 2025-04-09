@@ -31,7 +31,7 @@
   --h2-font-size: 7rem;
   --h3-font-size: 2rem;
   --h4-font-size: 1rem;
-  --normal-font-size: 0.938rem;
+  --normal-font-size: 1.2rem;
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
@@ -164,7 +164,8 @@ img {
   font-size: 20px;
 }
 
-#homemain1, #homemain2 {
+#homemain1,
+#homemain2 {
   width: 100%;
   padding: 5vw 10vw;
 }
@@ -183,7 +184,8 @@ img {
 }
 
 /* 스타일을 #homemain1과 #homemain2에 맞게 다르게 설정 */
-#homemain1 .headings h1, #homemain2 .headings h1 {
+#homemain1 .headings h1,
+#homemain2 .headings h1 {
   color: var(--text-color);
   -webkit-text-stroke: 2px #ffffff;
   font-size: var(--h2-font-size);
@@ -204,7 +206,8 @@ img {
 }
 
 /* #homemain1과 #homemain2의 <span> 색상 */
-#homemain1 h1 span, #homemain2 h1 span {
+#homemain1 h1 span,
+#homemain2 h1 span {
   /* 기존 색상 */
 }
 
@@ -610,7 +613,7 @@ a.gosite2 {
 
 /* //탑버튼 */
 
-/* 메인프로젝트 */
+/* 디자인 */
 .flex,
 .goal__col {
   display: flex;
@@ -662,7 +665,7 @@ a.gosite2 {
   z-index: 1;
   top: 50%;
   left: 50%;
-  font-family: var( --title-font);
+  font-family: var(--title-font);
   font-size: var(--h1-font-size);
   font-weight: 700;
   line-height: 80%;
@@ -670,7 +673,8 @@ a.gosite2 {
   transform: translate(-50%, -50%);
 }
 
-.list__item img, .keyboard {
+.list__item img,
+.keyboard {
   position: absolute;
   z-index: 2;
   top: 50%;
@@ -682,13 +686,17 @@ a.gosite2 {
   transform: translate(-50%, -50%);
 }
 
+.keyboard{z-index: 50;}
+
+
+
 .menu__right.list__item__infos {
   width: calc(100% - 80px);
   justify-content: space-between;
 }
 
-.list__item__infos li {
-  font-size: 1vw;
+.list__item__infos p {
+  font-size: var(--normal-font-size)
 }
 
 .list__item__type,
@@ -711,7 +719,7 @@ a.gosite2 {
 }
 
 
-/* //메인프로젝트 */
+/* //디자인 */
 
 
 /* 퍼블리싱 */
@@ -724,7 +732,7 @@ a.gosite2 {
 .phWrap {}
 
 .nana {
- 
+
   margin-top: 12.5em;
 }
 
@@ -795,7 +803,7 @@ a.gosite2 {
 
 .desc {
   font-size: 20px;
-  color:var(--text-color);
+  color: var(--text-color);
   line-height: 1.4;
   margin-bottom: 2vw;
   margin-top: 1vw;
@@ -844,8 +852,8 @@ a.gosite2 {
 
 .tools span {
   padding: 8px 16px;
-  color:var(--second-color);
-  font-weight:var(--font-bold);
+  color: var(--second-color);
+  font-weight: var(--font-bold);
   text-align: center;
 }
 
