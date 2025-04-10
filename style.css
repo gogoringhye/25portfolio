@@ -374,10 +374,10 @@ img {
   position: absolute;
   padding: 12px 20px;
   text-decoration: none;
-  color: #333;
-  background-color: #f0f0f0;
-  border: 1px solid #171717;
-  font-weight: bold;
+  color: var(--text-color);
+  background-color: var(--body-color);
+  border: 1px solid var(--text-color);
+  font-weight: var(--font-bold);
   text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 1;
@@ -387,8 +387,9 @@ img {
 }
 
 .gosite2:hover {
-  background-color: #171717;
-  color: #f0f0f0;
+  color: var(--body-color);
+  background-color: var(--text-color);
+  border: 1px solid var(--body-color);
 }
 
 /* //공통 버튼2 */
@@ -402,10 +403,9 @@ img {
 
 /* 버튼 위치 */
 a.gosite2 {
-  left: 32%;
-  top: 3%;
   position: relative;
-  border-radius: 50px;
+  left: 8rem;
+  top: 20rem;
 }
 
 .ditem.ditem2 a:nth-child(2),
@@ -676,7 +676,6 @@ a.gosite2 {
 .list__item img,
 .keyboard {
   position: absolute;
-  z-index: 2;
   top: 50%;
   left: 50%;
   width: 33%;
@@ -684,9 +683,12 @@ a.gosite2 {
   aspect-ratio: 9/14;
   object-fit: cover;
   transform: translate(-50%, -50%);
+  /* z-index: 2; */
 }
 
-.keyboard{z-index: 50;}
+.keyboard {
+  z-index: 10;
+}
 
 
 
@@ -696,7 +698,9 @@ a.gosite2 {
 }
 
 .list__item__infos p {
-  font-size: var(--normal-font-size)
+  position: relative;
+  font-size: var(--normal-font-size);
+  bottom: 7rem;
 }
 
 .list__item__type,
@@ -826,19 +830,20 @@ a.gosite2 {
   display: inline-block;
   padding: 12px 20px;
   text-decoration: none;
-  color: #333;
-  background-color: white;
-  border: 1px solid #171717;
+  color: var(--text-color);
+  background-color: var(--body-color);
+  border: 1px solid var(--text-color);
   font-weight: bold;
   text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 1;
-  border-radius: 50px;
+  margin-left: 1.5rem;
 }
 
 .gosite a:hover {
-  background-color: #171717;
-  color: white;
+  color: var(--body-color);
+  background-color: var(--text-color);
+  border: 1px solid var(--body-color);
 }
 
 /* 프로젝트 툴 */
