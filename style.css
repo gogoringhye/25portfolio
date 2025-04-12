@@ -335,6 +335,7 @@ img {
 
 .desc-container {
   position: absolute;
+  width: 42%;
   top: 20%;
   left: 5%;
 }
@@ -394,7 +395,6 @@ img {
   text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 1;
-  margin-left: 1.5rem;
 }
 
 .gosite a:hover {
