@@ -342,18 +342,16 @@ img {
 
 .desc-container2 {
   position: absolute;
-  width: 37%;
+  width: 28%;
   top: 22%;
   right: 5%;
 }
 
 .desc-container3 {
-  position: absolute;
-  top: 30%;
-  left: 20%;
-  /*   position: absolute;
-  top: 2%;
-  right: 2%; */
+ position: absolute;
+  width: 42%;
+  top: 20%;
+  right: 3%;
 }
 
 .desc-container4 {
@@ -376,7 +374,7 @@ img {
 }
 
 /* 공통 버튼 */
-.gosite {
+.desc.gosite, .gosite2 {
   position: relative;
   display: flex;
   justify-content: center;
@@ -385,24 +383,33 @@ img {
   gap: 1rem;
 }
 
-.gosite a {
+.desc.gosite a,
+.desc.gosite2 a {
   display: inline-block;
   padding: 12px 20px;
-  text-decoration: none;
   color: var(--text-color);
   background-color: var(--body-color);
   border: 1px solid var(--text-color);
-  font-weight: bold;
+  font-weight: var(--font-bold);
   text-align: center;
   transition: background-color 0.3s ease, color 0.3s ease;
   z-index: 1;
 }
 
-.gosite a:hover {
+.desc.gosite a:hover,
+.desc.gosite2 a:hover {
   color: var(--body-color);
   background-color: var(--text-color);
   border: 1px solid var(--body-color);
 }
+
+.desc.gosite2 {
+  right: 1vw;
+} 
+/* 공통 버튼2 */
+
+/* //공통 버튼2 */
+
 
 /* 프로젝트 툴 */
 .tools {
@@ -507,40 +514,7 @@ img {
   right: 36px;
 }
 
-/* 공통 버튼2 */
-.gosite2 {
-  position: absolute;
-  padding: 12px 20px;
-  text-decoration: none;
-  color: var(--text-color);
-  background-color: var(--body-color);
-  border: 1px solid var(--text-color);
-  font-weight: var(--font-bold);
-  text-align: center;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  z-index: 1;
-  transform: translateX(10%);
-  left: 55%;
-  /*  top: 3% */
-}
 
-.gosite2:hover {
-  color: var(--body-color);
-  background-color: var(--text-color);
-  border: 1px solid var(--body-color);
-}
-
-/* //공통 버튼2 */
-
-
-/* 버튼 위치 */
-a.gosite2 {
-  position: relative;
-  left: 8rem;
-  top: 20rem;
-}
-
-/* //버튼 위치 */
 
 /* 스티커 */
 
