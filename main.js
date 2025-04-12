@@ -202,7 +202,7 @@ var items = document.querySelectorAll(".list__item")
 items.forEach(item => {
   var itemTitle = item.querySelector(".list__item__title")
   var itemTitleOutline = item.querySelector(".list__item__titleOutline")
-  var itemImg = item.querySelector(".list__item img, .keyboard")
+  var itemImg = item.querySelector(".list__item img")
 
   var itemTL = gsap.timeline({
     scrollTrigger: {
@@ -277,6 +277,8 @@ function makeDraggable(sticker) {
 }
 /* //스티커 */
 
+
+
 /* 시계 */
 var $time = $('.time');
 setInterval(function () {
@@ -287,6 +289,7 @@ setInterval(function () {
 
 }, 200);
 /* //시계 */
+
 
 /* 이메일 */
 // 팝업 열기 및 닫기 기능
