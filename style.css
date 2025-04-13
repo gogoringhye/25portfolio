@@ -196,7 +196,6 @@ img {
   color: transparent;
 }
 
-
 #homelast {
   position: relative;
   width: 100%;
@@ -216,11 +215,65 @@ img {
   line-height: 1.8;
 }
 
-#homelast p::selection {
+#homelast p::selection,
+#textlast p::selection {
   /* // 드래그하여 선택했을때 */
-  color: white;
-  background-color: #000;
+  color: var(--text-color);
+  background-color: var(--body-color);
 }
+
+#textlast {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  z-index: 1;
+}
+
+#textlast p {
+  position: relative;
+  width: 38%;
+  left: 30%;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  letter-spacing: -0.15rem;
+}
+
+#textlast p span {
+  font-weight: var(--font-bold);
+  line-height: 1.8;
+}
+
+/* 스티커 */
+
+#stickerboard {
+  position: relative;
+  width: 100vw;
+  /*  height: calc(100vh - 100px);
+  background-color: #171717;
+  z-index: 1; */
+}
+
+.sticker {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  cursor: grab;
+  z-index: 2;
+}
+
+.sticker:active {
+  cursor: grabbing;
+}
+
+.sticker img {
+  width: 80px;
+}
+
+/* //스티커 */
+
+
+
+
 
 /* 스플라인 */
 .keyboard {
@@ -348,7 +401,7 @@ img {
 }
 
 .desc-container3 {
- position: absolute;
+  position: absolute;
   width: 42%;
   top: 20%;
   right: 3%;
@@ -356,8 +409,14 @@ img {
 
 .desc-container4 {
   position: absolute;
-  bottom: 22rem;
-  right: 50rem;
+  top: 70%;
+  right: 30%;
+}
+
+.desc-container5 {
+  position: absolute;
+  bottom: 10%;
+  right: 40%;
 }
 
 /* 스크롤 */
@@ -374,7 +433,8 @@ img {
 }
 
 /* 공통 버튼 */
-.desc.gosite, .gosite2 {
+.desc.gosite,
+.gosite2 {
   position: relative;
   display: flex;
   justify-content: center;
@@ -405,7 +465,8 @@ img {
 
 .desc.gosite2 {
   right: 1vw;
-} 
+}
+
 /* 공통 버튼2 */
 
 /* //공통 버튼2 */
@@ -428,6 +489,42 @@ img {
 }
 
 /* //퍼블리싱 */
+
+/* 시계 */
+.time {
+  position: relative;
+  left: 13vw;
+}
+
+/* //시계 */
+
+/* 줌 */
+
+.zoom {
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.zoom-reveal {
+  background-color: var(--text-color-light);
+  min-width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: url(https://images.unsplash.com/photo-1614247262098-76459e80e152?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1539&q=80);
+  transform: scale(0.75);
+
+}
+
+.scroll {
+  display: flex;
+  color: var(--text-color);
+}
+
+/* //줌 */
 
 /* 디자인 */
 .flex,
@@ -462,10 +559,10 @@ img {
   z-index: 1;
   top: 50%;
   left: 50%;
-  font-family: var(--title-font);
+  font-family: var(--body-font);
   font-size: var(--h1-font-size);
-  font-weight: 700;
-  line-height: 80%;
+  font-weight: var(--font-bold);
+  line-height: 1;
   text-align: center;
   transform: translate(-50%, -50%);
 }
@@ -474,25 +571,26 @@ img {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 33%;
+  width: 20%;
   height: auto;
   aspect-ratio: 9/14;
   object-fit: cover;
   transform: translate(-50%, -50%);
-  /* z-index: 2; */
+
 }
 
-
-
-.menu__right.list__item__infos {
-  width: calc(100% - 80px);
-  justify-content: space-between;
+.list__item__infos {
+  width: 100%;
 }
 
 .list__item__infos p {
-  position: relative;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: var(--normal-font-size);
-  bottom: 7rem;
+  text-align: center;
+  width: 100%;
 }
 
 .list__item__type,
@@ -513,27 +611,6 @@ img {
 .list__item__project {
   right: 36px;
 }
-
-
-
-/* 스티커 */
-
-.stickers {
-  /*   position: relative;
- */
-}
-
-.sticker {
-  position: absolute;
-  cursor: grab;
-  z-index: var(--z-fixed);
-}
-
-.sticker img {
-  width: 180px;
-}
-
-/* //스티커 */
 
 /* //디자인 */
 
@@ -575,13 +652,7 @@ img {
   /* 색상 호버 효과 */
 }
 
-/* 시계 */
-.time {
-  position: relative;
-  left: 15rem;
-}
 
-/* //시계 */
 
 /* 이메일 */
 .email-popup {
