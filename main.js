@@ -196,6 +196,76 @@ gsap.utils.toArray(".nana").forEach((el) => {
 });
 /* //스크롤 */
 
+/* 줌 */
+gsap.set(".zoom-reveal", {
+  scale: 0.75
+});
+
+
+gsap.to(".zoom-reveal", {
+  scale: 1,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".zoom",
+    scrub: 1,
+    pin: true,
+    end: "+=1000",
+  },
+});
+
+
+gsap.to(".left-img", {
+  yPercent: -30,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".art-wrapper",
+    scrub: 1,
+  },
+});
+gsap.to(".right-img", {
+  yPercent: -10,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".art-wrapper",
+    scrub: 1,
+  },
+});
+gsap.to(".titel", {
+  yPercent: -0,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".art-wrapper",
+    scrub: 1,
+    end: "100px;",
+  },
+});
+gsap.to(".left-scroll", {
+  xPercent: -100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".artist",
+    scrub: 1,
+    start: "-50%",
+    pin: true,
+    end: "+=1000"
+
+  },
+});
+gsap.to(".right-scroll", {
+  xPercent: 100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".artist",
+    scrub: 1,
+    pin: true,
+    start: "-50%",
+    end: "+=1000"
+
+  },
+});
+
+/* //줌 */
+
 /* 디자인 */
 var items = document.querySelectorAll(".list__item")
 
@@ -250,6 +320,7 @@ items.forEach(item => {
 /* //디자인 */
 
 /* 스티커 */
+
 document.querySelectorAll('.sticker').forEach(makeDraggable);
 
 function makeDraggable(sticker) {
@@ -257,24 +328,31 @@ function makeDraggable(sticker) {
 
   sticker.addEventListener("mousedown", (e) => {
     isDragging = true;
-    offsetX = e.clientX - sticker.getBoundingClientRect().left;
-    offsetY = e.clientY - sticker.getBoundingClientRect().top;
+    sticker.style.cursor = "grabbing";
+    const rect = sticker.getBoundingClientRect();
+    offsetX = e.clientX - rect.left;
+    offsetY = e.clientY - rect.top;
   });
 
   document.addEventListener("mousemove", (e) => {
     if (!isDragging) return;
 
-    const x = e.clientX - offsetX;
-    const y = e.clientY - offsetY;
+    const boardRect = document.getElementById('stickerboard').getBoundingClientRect();
+    const x = e.clientX - boardRect.left - offsetX;
+    const y = e.clientY - boardRect.top - offsetY;
 
     sticker.style.left = `${x}px`;
     sticker.style.top = `${y}px`;
+    sticker.style.right = "auto";
+    sticker.style.bottom = "auto";
   });
 
   document.addEventListener("mouseup", () => {
     isDragging = false;
+    sticker.style.cursor = "grab";
   });
 }
+
 /* //스티커 */
 
 
@@ -290,8 +368,6 @@ setInterval(function () {
 }, 200);
 /* //시계 */
 
-
-
 /* 이메일 */
 // 팝업 열기 및 닫기 기능
 document.getElementById("contactButton").addEventListener("click", function (event) {
@@ -305,3 +381,4 @@ document.getElementById("closePopup").addEventListener("click", function () {
 });
 
 /* //이메일 */
+
