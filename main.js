@@ -196,6 +196,18 @@ gsap.utils.toArray(".nana").forEach((el) => {
 });
 /* //스크롤 */
 
+/* 시계 */
+var $time = $('.time');
+setInterval(function () {
+  var dday = new Date();
+  var $write = dday.toLocaleString(
+    'en-US');
+  $time.text($write);
+
+}, 200);
+/* //시계 */
+
+
 /* 줌 */
 gsap.set(".zoom-reveal", {
   scale: 0.75
@@ -355,19 +367,6 @@ function makeDraggable(sticker) {
 
 /* //스티커 */
 
-
-
-/* 시계 */
-var $time = $('.time');
-setInterval(function () {
-  var dday = new Date();
-  var $write = dday.toLocaleString(
-    'en-US');
-  $time.text($write);
-
-}, 200);
-/* //시계 */
-
 /* 이메일 */
 // 팝업 열기 및 닫기 기능
 document.getElementById("contactButton").addEventListener("click", function (event) {
@@ -381,4 +380,3 @@ document.getElementById("closePopup").addEventListener("click", function () {
 });
 
 /* //이메일 */
-
