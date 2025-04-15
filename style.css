@@ -763,7 +763,154 @@ img {
 
 
 /* 태블릿 이하 */
-@media (max-width: 1023px) {}
+@media (max-width: 1023px) {
+  .percentage {
+    font-size: var(--h1-font-size);
+    /* 또는 적절한 크기로 조정 */
+  }
+
+  html,
+  body {
+    overflow-y: auto;
+    /* 세로 스크롤 활성화 */
+    -webkit-overflow-scrolling: touch;
+    /* 부드러운 스크롤을 위한 설정 */
+  }
+
+  /* nav */
+  #nav {
+    padding: 3vw 5vw;
+    font-size: var(--h4-font-size);
+  }
+
+  #nav .magnet-target {
+    width: 100px;
+  }
+
+  #nav #right {
+    gap: 10px;
+  }
+
+  #nav a {
+    font-size: var(--h4-font-size);
+  }
+
+  /* about */
+
+
+  #homemain1 {}
+
+  #homemain1 .headings h1 {
+    font-size: var(--biggest-font-size);
+  }
+
+  #homelast {
+    padding: 10vw;
+    line-height: 2;
+  }
+
+
+  #homelast p {
+    width: 45%;
+    font-size: 1.2rem;
+    font-weight: var(--font-medium);
+    letter-spacing: -0.05rem;
+  }
+
+  #homelast p span {
+    font-weight: var(--font-semi-bold);
+    line-height: 1.5;
+  }
+
+  .headings {
+    gap: 10px;
+    -webkit-text-stroke: 1px var(--text-color);
+    letter-spacing: 1px;
+  }
+
+  .keyboard {
+    top: 10%;
+    left: 2%;
+    width: 55%;
+    aspect-ratio: 9 / 14;
+    transform: translate(2%, 25%);
+  }
+
+  /* 말풍선 */
+  .mine.messages {
+    position: relative;
+  }
+
+  .message {
+    margin-top: 10%;
+  }
+
+
+
+
+  /* 퍼블리싱 */
+
+  .desc-container2,
+  .desc-container4 {
+    width: 46%;
+  }
+
+  .desc.gosite,
+  .desc.gosite2,
+  .desc.gosite3 {
+    gap: 2.2rem;
+    right: 1vw;
+  }
+
+  .gosite a:nth-child(1),
+  /* mobile */
+  .gosite a:nth-child(3) {
+    /* pc */
+    display: none;
+  }
+
+  .tools {
+    display: none;
+  }
+
+  /* //퍼블리싱 */
+
+  /* 시계 */
+  .time {
+    display: none;
+  }
+
+  /* 디자인 */
+  .list .list__item:nth-child(6) {
+    display: none;
+  }
+  
+  .list__item img {
+    top: 30%;
+    left: 60%;
+    width: 30%;
+  }
+
+  .list__item__title {
+    font-size: var(--h2-font-size);
+  }
+
+
+  
+  .list__item__infos p {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    top: 83%;
+    width: 70%;
+
+  }
+
+  .list__item__type,
+  .list__item__project {
+    font-size: 1.5vw;
+  }
+
+}
 
 /* 모바일 */
 @media (max-width: 768px) {
