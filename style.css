@@ -622,6 +622,10 @@ img {
   right: 36px;
 }
 
+.rights{color: var(--first-color);
+  font-size: var(--small-font-size);
+  margin-bottom: 1vw;}
+
 /* //디자인 */
 
 /* 🧷푸터 */
@@ -677,12 +681,12 @@ img {
   0%,
   100% {
     color: var(--text-color);
-    text-shadow: 0 0 5px var(--first-color);
+    text-shadow: 0 0 0 1px var(--text-color);
   }
 
   50% {
     color: var(--text-color);
-    text-shadow: 0 0 1px var(--text-color), 0 0 1px var(--text-color);
+    text-shadow: 0 0 1px var(--text-color), 1px 0 0 var(--text-color);
   }
 }
 
