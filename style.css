@@ -844,7 +844,7 @@ a.gosite.btn-review {
 
 
   .keyboard {
-    top: 8%;
+    top: 15%;
     left: -5%;
     width: 50%;
     aspect-ratio: 9 / 14;
@@ -856,8 +856,7 @@ a.gosite.btn-review {
   }
 
   .message {
-    margin-top: 13%;
-    font-size: var(--small-font-size);
+    margin-top: 10%;
   }
 
 
