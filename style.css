@@ -32,7 +32,7 @@
   --h3-font-size: 2rem;
   --h4-font-size: 1rem;
   --normal-font-size: 1.5rem;
-  --small-font-size: 0.7rem;
+  --small-font-size: 0.8rem;
   --smaller-font-size: 0.5rem;
 
   /* font weight */
@@ -903,6 +903,7 @@ img {
   .desc.gosite2 a,
   .desc.gosite3 a {
     padding: 10px 15px;
+    font-size: var(--small-font-size);
   }
 
   .gosite a:nth-child(2),
@@ -1115,6 +1116,7 @@ img {
   .desc.gosite2 a,
   .desc.gosite3 a {
     padding: 10px 15px;
+    font-size: var(--small-font-size);
   }
 
   .gosite a:nth-child(2),
