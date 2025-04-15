@@ -763,7 +763,6 @@ img {
 
 /* 반응형 */
 /* 기본값: 데스크탑 이상에서 모두 보이게 */
-/* ✅ 기본값: 데스크탑 이상에서는 모든 버튼 다 보임 */
 a.gosite.btn-mobile,
 a.gosite.btn-table,
 a.gosite.btn-pc,
@@ -805,7 +804,9 @@ a.gosite.btn-review {
   }
 
   /* about */
-
+  #about {
+    height: 100vh;
+  }
 
   #homemain1 {
     width: 100%;
@@ -843,11 +844,10 @@ a.gosite.btn-review {
 
 
   .keyboard {
-    top: 5%;
-    left: 2%;
+    top: 8%;
+    left: -5%;
     width: 50%;
     aspect-ratio: 9 / 14;
-    transform: translate(8%, 35%);
   }
 
   /* 말풍선 */
@@ -856,7 +856,8 @@ a.gosite.btn-review {
   }
 
   .message {
-    margin-top: 10%;
+    margin-top: 13%;
+    font-size: var(--small-font-size);
   }
 
 
