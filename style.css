@@ -32,8 +32,8 @@
   --h3-font-size: 2rem;
   --h4-font-size: 1rem;
   --normal-font-size: 1.5rem;
-  --small-font-size: 0.813rem;
-  --smaller-font-size: 0.75rem;
+  --small-font-size: 0.7rem;
+  --smaller-font-size: 0.5rem;
 
   /* font weight */
   --font-medium: lighter;
@@ -140,13 +140,18 @@ img {
 
 #nav {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   justify-content: space-between;
   width: 100%;
   padding: 2vw 10vw 1vw 10vw;
   font-size: var(--h4-font-size);
   font-weight: var(--font-bold);
   text-transform: uppercase;
+}
+
+#nav .logo {
+  width: 20px;
+  height: 20px;
 }
 
 #nav .magnet-target {
@@ -248,26 +253,26 @@ img {
 
 #stickerboard {
   position: relative;
-  width: 100vw;
-  /*  height: calc(100vh - 100px);
-  background-color: #171717;
-  z-index: 1; */
 }
 
 .sticker {
   position: absolute;
-  width: 100px;
-  height: 100px;
-  cursor: grab;
-  z-index: 2;
+  width: 180px;
 }
 
-.sticker:active {
-  cursor: grabbing;
+.sticker1 {
+  right: 10%;
+  bottom: 20%;
 }
 
-.sticker img {
-  width: 200px;
+.sticker2 {
+  left: 17%;
+  top: 30%;
+}
+
+.sticker3 {
+  left: 15%;
+  bottom: 2%;
 }
 
 /* //스티커 */
@@ -563,6 +568,7 @@ img {
   height: calc(100vh - 40px);
   align-items: flex-end;
   padding-bottom: 40px;
+  overflow: hidden;
 }
 
 .list__item__title {
@@ -583,10 +589,11 @@ img {
   top: 50%;
   left: 50%;
   width: 20%;
-  height: auto;
-  aspect-ratio: 9/14;
+  aspect-ratio: 8/13;
   object-fit: cover;
   transform: translate(-50%, -50%);
+  will-change: transform;
+  backface-visibility: hidden;
 }
 
 .list__item__infos {
@@ -595,7 +602,7 @@ img {
 
 .list__item__infos p {
   position: absolute;
-  top: 30%;
+  top: 25%;
   left: 50%;
   transform: translateX(-50%);
   font-size: var(--normal-font-size);
@@ -631,7 +638,7 @@ img {
   align-items: center;
   padding: 20px 40px;
   background-color: #333;
-  color: #fff;
+  color: var(--text-color);
   font-size: 16px;
 }
 
@@ -643,7 +650,7 @@ img {
 
 .footer .github,
 .footer .email {
-  color: #fff;
+  color: var(--text-color);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -658,7 +665,7 @@ img {
 
 .footer .github:hover,
 .footer .email:hover {
-  color: #1e90ff;
+  color: var(--first-color);
   /* 색상 호버 효과 */
 }
 
@@ -674,7 +681,6 @@ img {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
-  /* 배경을 어둡게 */
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -687,7 +693,7 @@ img {
   max-width: 400px;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  color: #fff;
+  color: var(--text-color);
 }
 
 .email-popup .form-container h2 {
@@ -703,14 +709,8 @@ img {
   border: 1px solid #555;
   border-radius: 5px;
   background-color: #333;
-  color: #fff;
+  color: var(--text-color);
   font-size: 16px;
-}
-
-.email-popup input:focus,
-.email-popup button:focus {
-  border-color: #1e90ff;
-  outline: none;
 }
 
 .email-popup button {
@@ -736,3 +736,429 @@ img {
 /* //이메일 */
 
 /* //🧷푸터 */
+
+
+/* 반응형 */
+
+
+/* 태블릿 이하 */
+@media (max-width: 1023px) {}
+
+/* 모바일 */
+@media (max-width: 767px) {
+
+  /* nav */
+  #nav {
+    padding: 3vw 5vw;
+    font-size: var(--h4-font-size);
+  }
+
+  #nav .magnet-target {
+    width: 100px;
+  }
+
+  #nav #right {
+    gap: 10px;
+  }
+
+  #nav a {
+    font-size: var(--h4-font-size);
+  }
+
+  /* about */
+
+
+  #homemain1 {}
+
+  #homemain1 .headings h1 {
+    font-size: 3rem;
+  }
+
+  #homelast {
+    right: 47%;
+    padding: 2vw 12vw;
+  }
+
+
+  #homelast p {
+    width: 95%;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    letter-spacing: -0.05rem;
+  }
+
+  #homelast p span {
+    font-weight: var(--font-semi-bold);
+    line-height: 1.5;
+  }
+
+  .headings {
+    gap: 10px;
+    -webkit-text-stroke: 1px var(--text-color);
+    letter-spacing: 1px;
+  }
+
+  .keyboard {
+    display: none;
+    /*     top: -20%;
+    left: 30%;
+    width: 70%;
+    aspect-ratio: 9 / 14;
+    transform: translate(2%, 25%); */
+  }
+
+  /* 말풍선 */
+  .mine.messages {
+    display: none;
+  }
+
+  /* 퍼블리싱 */
+
+  section.pjWrap {
+    margin-top: 35%;
+  }
+
+  /* 스크롤 */
+  #projects {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+
+  .nana {
+    position: relative;
+    bottom: 40vh;
+  }
+
+  /* 이미지 */
+  .img-size-2,
+  .img-position-l {
+    width: 70%;
+    height: 60vh;
+    margin-left: 10%;
+
+  }
+
+  .desc-container,
+  .desc-container2,
+  .desc-container3,
+  .desc-container4 {
+    position: absolute;
+    width: 90%;
+    top: 18%;
+    left: 11%;
+  }
+
+  .desc {
+    font-size: var(--h4-font-size);
+    width: 80%;
+    line-height: 1.6;
+
+  }
+
+  .desc.gosite,
+  .desc.gosite2,
+  .desc.gosite3 {
+    z-index: 0;
+  }
+
+  .desc.gosite a,
+  .desc.gosite2 a,
+  .desc.gosite3 a {
+    padding: 10px 15px;
+  }
+
+  .gosite a:nth-child(2),
+  /* tablet */
+  .gosite a:nth-child(3) {
+    /* pc */
+    display: none;
+  }
+
+  .tools {
+    display: none;
+  }
+
+  /* //퍼블리싱 */
+
+  /* 줌 */
+
+  #homemain2 .headings h1 {
+    font-size: 2.8rem;
+    line-height: 1.5;
+    left: 0;
+    text-align: justify;
+  }
+
+  /* 시계 */
+  .time {
+    display: none;
+  }
+
+  /* 디자인 */
+
+  .list .list__item:nth-child(6) {
+    display: none;
+  }
+
+  .list .list__item:nth-child(6) .list__item__title {}
+
+  .list__item img {
+    width: 50%;
+    z-index: 1;
+  }
+
+  .list__item__title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    line-height: 1;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .desc-container5 {
+    display: none;
+  }
+
+  .list__item__infos p {
+
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    position: absolute;
+    top: 83%;
+    left: 50%;
+    width: 80%;
+
+  }
+
+  .list__item__type,
+  .list__item__project {
+    display: none;
+  }
+
+  #textlast {
+    right: 20vw;
+  }
+
+  #textlast p {
+    width: 76%;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
+    letter-spacing: -0.05rem;
+  }
+
+  /* 스티커 */
+
+  #stickerboard {
+    display: none;
+  }
+
+  .footer .email {}
+}
+
+/* 작은 모바일 */
+@media (max-width: 479px) {
+
+  /* nav */
+  #nav {
+    padding: 2vw 5vw;
+    font-size: var(--small-font-size);
+  }
+
+  #nav .magnet-target {
+    width: 80px;
+  }
+
+  #nav #right {
+    gap: 10px;
+  }
+
+  #nav a {
+    font-size: var(--small-font-size);
+  }
+
+  /* about */
+
+  #homemain1 .headings h1 {
+    font-size: var(--h3-font-size)
+  }
+
+  #homelast {
+    right: 47%;
+    padding: 2vw 12vw;
+  }
+
+
+  #homelast p {
+    width: 90%;
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-medium);
+    letter-spacing: -0.05rem;
+  }
+
+  .headings {
+    display: flex;
+    gap: 10px;
+    -webkit-text-stroke: 1px var(--text-color);
+    letter-spacing: -1px;
+  }
+
+  .keyboard {
+    display: none;
+    /*     top: -20%;
+    left: 30%;
+    width: 70%;
+    aspect-ratio: 9 / 14;
+    transform: translate(2%, 25%); */
+  }
+
+  /* 말풍선 */
+  .mine.messages {
+    display: none;
+  }
+
+  /* 퍼블리싱 */
+
+  section.pjWrap {
+    margin-top: 35%;
+  }
+
+  /* 스크롤 */
+  #projects {
+    position: relative;
+    z-index: 2;
+    background-color: transparent;
+  }
+
+  .nana {
+    position: relative;
+    bottom: 40vh;
+  }
+
+  /* 이미지 */
+  .img-size-2,
+  .img-position-l {
+    width: 70%;
+    height: 60vh;
+    margin-left: 10%;
+
+  }
+
+  .desc-container,
+  .desc-container2,
+  .desc-container3,
+  .desc-container4 {
+    position: absolute;
+    width: 90%;
+    top: 18%;
+    left: 11%;
+  }
+
+  .desc {
+    font-size: var(--h4-font-size);
+    width: 80%;
+    line-height: 1.6;
+
+  }
+
+  .desc.gosite,
+  .desc.gosite2,
+  .desc.gosite3 {
+    z-index: 0;
+  }
+
+  .desc.gosite a,
+  .desc.gosite2 a,
+  .desc.gosite3 a {
+    padding: 10px 15px;
+  }
+
+  .gosite a:nth-child(2),
+  /* tablet */
+  .gosite a:nth-child(3) {
+    /* pc */
+    display: none;
+  }
+
+  .tools {
+    display: none;
+  }
+
+  /* //퍼블리싱 */
+
+  /* 줌 */
+
+  #homemain2 .headings h1 {
+    font-size: 2.8rem;
+    line-height: 1.5;
+    left: 0;
+    text-align: justify;
+  }
+
+  /* 시계 */
+  .time {
+    display: none;
+  }
+
+  /* 디자인 */
+
+  .list .list__item:nth-child(6) {
+    display: none;
+  }
+
+  .list .list__item:nth-child(6) .list__item__title {}
+
+  .list__item img {
+    width: 50%;
+    z-index: 1;
+  }
+
+  .list__item__title {
+    font-size: var(--biggest-font-size);
+    font-weight: var(--font-bold);
+    line-height: 1;
+    text-align: center;
+    transform: translate(-50%, -50%);
+  }
+
+  .desc-container5 {
+    display: none;
+  }
+
+  .list__item__infos p {
+    /*  font-size: var(--h4-font-size);
+    width: 75%; */
+    font-size: var(--h4-font-size);
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    width: 87%;
+  }
+
+  .list__item__type,
+  .list__item__project {
+    display: none;
+  }
+
+  #textlast {
+    right: 25vw;
+  }
+
+  #textlast p {
+    width: 90%;
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-medium);
+    letter-spacing: -0.05rem;
+  }
+
+  /* 스티커 */
+
+  #stickerboard {
+    display: none;
+  }
+
+  .footer .email {
+    font-size: 10px;
+    margin-bottom: -35px;
+  }
+}
