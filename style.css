@@ -744,17 +744,13 @@ img {
 /* 태블릿 이하 */
 @media (max-width: 1023px) {}
 
-/* 모바일에서만 스크롤을 허용 */
+/* 모바일 */
 @media (max-width: 768px) {
+
   html, body {
-    height: 100%;
     overflow-y: auto; /* 세로 스크롤 활성화 */
     -webkit-overflow-scrolling: touch; /* 부드러운 스크롤을 위한 설정 */
   }
-}
-
-/* 모바일 */
-@media (max-width: 767px) {
 
   /* nav */
   #nav {
