@@ -832,7 +832,7 @@ img {
 
   .nana {
     position: relative;
-    bottom: 20vh;
+    bottom: 30vh;
   }
 
   /* 이미지 */
@@ -1037,7 +1037,7 @@ img {
 
   .nana {
     position: relative;
-    bottom: 20vh;
+    bottom: 30vh;
   }
 
   /* 이미지 */
@@ -1057,6 +1057,7 @@ img {
     width: 90%;
     top: 35%;
     left: 11%;
+    z-index: 0;
   }
 
   .desc {
