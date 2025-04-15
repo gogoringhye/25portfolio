@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 @import url('https://fonts.googleapis.com/css2?family=Fahkwang:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 @font-face {
@@ -45,28 +44,24 @@
   --z-fixed: 100;
 }
 
+/* 기본 리셋, 공통 스타일 */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   overflow: hidden;
   font-family: var(--body-font);
   background-color: var(--body-color);
   color: var(--text-color);
 }
-
-ul,
-li {
+ul, li {
   list-style: none;
 }
-
 a {
   text-decoration: none;
 }
-
 img {
   width: 100%;
 }
@@ -862,8 +857,7 @@ img {
     right: 1vw;
   }
 
-  .gosite a:nth-child(1),
-  /* mobile */
+
   .gosite a:nth-child(3) {
     /* pc */
     display: none;
@@ -884,10 +878,8 @@ img {
   .list .list__item:nth-child(6) {
     display: none;
   }
-  
+
   .list__item img {
-    top: 30%;
-    left: 60%;
     width: 30%;
   }
 
@@ -1138,7 +1130,7 @@ img {
     display: none;
   }
 
-  .footer .email {}
+
 }
 
 /* 작은 모바일 */
@@ -1153,10 +1145,6 @@ img {
   #nav {
     padding: 2vw 5vw;
     font-size: var(--small-font-size);
-  }
-
-  #nav .magnet-target {
-    width: 80px;
   }
 
   #nav #right {
@@ -1259,12 +1247,6 @@ img {
     z-index: 0;
   }
 
-  .desc.gosite a,
-  .desc.gosite2 a,
-  .desc.gosite3 a {
-    padding: 10px 15px;
-    font-size: var(--small-font-size);
-  }
 
   .gosite a:nth-child(2),
   /* tablet */
@@ -1300,8 +1282,7 @@ img {
   }
 
   .list__item img {
-    width: 50%;
-    z-index: 1;
+
   }
 
   .list__item__title {
@@ -1348,8 +1329,4 @@ img {
     display: none;
   }
 
-  .footer .email {
-    font-size: 10px;
-    margin-bottom: -35px;
-  }
 }
