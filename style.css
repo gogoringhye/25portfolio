@@ -841,10 +841,10 @@ a.gosite.btn-review {
 
 
   .keyboard {
-    top: 2%;
+    top: 20%;
     left: -5%;
-    width: 45%;
-    aspect-ratio: 8 / 14;
+    width: 50%;
+    aspect-ratio: 9 / 14;
   }
 
   /* 말풍선 */
@@ -853,8 +853,8 @@ a.gosite.btn-review {
   }
 
   .message {
-    margin-top: 4%;
-    font-size: 18px;
+    margin-top: 15%;
+    font-size: 16px;
   }
 
 
