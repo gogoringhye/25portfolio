@@ -747,9 +747,14 @@ img {
 /* 모바일에서만 스크롤을 허용 */
 @media (max-width: 768px) {
   html, body {
+    height: 100%;
     overflow-y: auto; /* 세로 스크롤 활성화 */
     -webkit-overflow-scrolling: touch; /* 부드러운 스크롤을 위한 설정 */
   }
+}
+
+/* 모바일 */
+@media (max-width: 767px) {
 
   /* nav */
   #nav {
@@ -770,6 +775,10 @@ img {
   }
 
   /* about */
+
+
+  #homemain1 {}
+
   #homemain1 .headings h1 {
     font-size: 3rem;
   }
@@ -779,11 +788,17 @@ img {
     padding: 2vw 12vw;
   }
 
+
   #homelast p {
     width: 95%;
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     letter-spacing: -0.05rem;
+  }
+
+  #homelast p span {
+    font-weight: var(--font-semi-bold);
+    line-height: 1.5;
   }
 
   .headings {
@@ -794,16 +809,25 @@ img {
 
   .keyboard {
     display: none;
+    /*     top: -20%;
+    left: 30%;
+    width: 70%;
+    aspect-ratio: 9 / 14;
+    transform: translate(2%, 25%); */
   }
 
+  /* 말풍선 */
   .mine.messages {
     display: none;
   }
+
+  /* 퍼블리싱 */
 
   section.pjWrap {
     margin-top: 35%;
   }
 
+  /* 스크롤 */
   #projects {
     position: relative;
     z-index: 2;
@@ -815,11 +839,13 @@ img {
     bottom: 20vh;
   }
 
+  /* 이미지 */
   .img-size-2,
   .img-position-l {
     width: 70%;
     height: 60vh;
     margin-left: 10%;
+
   }
 
   .desc-container,
@@ -836,6 +862,7 @@ img {
     font-size: var(--h4-font-size);
     width: 80%;
     line-height: 1.6;
+
   }
 
   .desc.gosite,
@@ -851,13 +878,19 @@ img {
   }
 
   .gosite a:nth-child(2),
+  /* tablet */
   .gosite a:nth-child(3) {
+    /* pc */
     display: none;
   }
 
   .tools {
     display: none;
   }
+
+  /* //퍼블리싱 */
+
+  /* 줌 */
 
   #homemain2 .headings h1 {
     font-size: 2.8rem;
@@ -866,169 +899,18 @@ img {
     text-align: justify;
   }
 
+  /* 시계 */
   .time {
     display: none;
   }
+
+  /* 디자인 */
 
   .list .list__item:nth-child(6) {
     display: none;
   }
 
-  .list .list__item img {
-    width: 50%;
-    z-index: 1;
-  }
-
-  .list__item__title {
-    font-size: var(--biggest-font-size);
-    font-weight: var(--font-bold);
-    line-height: 1;
-    text-align: center;
-    transform: translate(-50%, -50%);
-  }
-
-  .list__item__infos p {
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    position: absolute;
-    top: 83%;
-    left: 50%;
-    width: 80%;
-  }
-
-  #textlast {
-    right: 20vw;
-  }
-
-  #textlast p {
-    width: 76%;
-    font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
-    letter-spacing: -0.05rem;
-  }
-
-  #stickerboard {
-    display: none;
-  }
-
-  .footer .email {}
-}
-
-/* 작은 모바일 */
-@media (max-width: 479px) {
-  #nav {
-    padding: 2vw 5vw;
-    font-size: var(--small-font-size);
-  }
-
-  #nav .magnet-target {
-    width: 80px;
-  }
-
-  #nav a {
-    font-size: var(--small-font-size);
-  }
-
-  #homemain1 .headings h1 {
-    font-size: var(--h3-font-size);
-  }
-
-  #homelast {
-    right: 47%;
-    padding: 2vw 12vw;
-  }
-
-  #homelast p {
-    width: 90%;
-    font-size: var(--h4-font-size);
-    font-weight: var(--font-medium);
-    letter-spacing: -0.05rem;
-  }
-
-  .headings {
-    display: flex;
-    gap: 10px;
-    -webkit-text-stroke: 1px var(--text-color);
-    letter-spacing: -1px;
-  }
-
-  .keyboard {
-    display: none;
-  }
-
-  section.pjWrap {
-    margin-top: 35%;
-  }
-
-  #projects {
-    position: relative;
-    z-index: 2;
-    background-color: transparent;
-  }
-
-  .nana {
-    position: relative;
-    bottom: 40vh;
-  }
-
-  .img-size-2,
-  .img-position-l {
-    width: 70%;
-    height: 60vh;
-    margin-left: 10%;
-  }
-
-  .desc-container,
-  .desc-container2,
-  .desc-container3,
-  .desc-container4 {
-    position: absolute;
-    width: 90%;
-    top: 18%;
-    left: 11%;
-  }
-
-  .desc {
-    font-size: var(--h4-font-size);
-    width: 80%;
-    line-height: 1.6;
-  }
-
-  .desc.gosite,
-  .desc.gosite2,
-  .desc.gosite3 {
-    z-index: 0;
-  }
-
-  .desc.gosite a,
-  .desc.gosite2 a,
-  .desc.gosite3 a {
-    padding: 10px 15px;
-  }
-
-  .gosite a:nth-child(2),
-  .gosite a:nth-child(3) {
-    display: none;
-  }
-
-  .tools {
-    display: none;
-  }
-
-  #homemain2 .headings h1 {
-    font-size: 2.8rem;
-    line-height: 1.5;
-    left: 0;
-    text-align: justify;
-  }
-
-  .time {
-    display: none;
-  }
-
-  .list .list__item:nth-child(6) {
-    display: none;
-  }
+  .list .list__item:nth-child(6) .list__item__title {}
 
   .list__item img {
     width: 50%;
@@ -1043,33 +925,44 @@ img {
     transform: translate(-50%, -50%);
   }
 
+  .desc-container5 {
+    display: none;
+  }
+
   .list__item__infos p {
-    font-size: var(--h4-font-size);
+
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-medium);
     position: absolute;
-    top: 85%;
+    top: 83%;
     left: 50%;
-    width: 87%;
+    width: 80%;
+
+  }
+
+  .list__item__type,
+  .list__item__project {
+    display: none;
   }
 
   #textlast {
-    right: 25vw;
+    right: 20vw;
   }
 
   #textlast p {
-    width: 90%;
-    font-size: var(--h4-font-size);
+    width: 76%;
+    font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
     letter-spacing: -0.05rem;
   }
+
+  /* 스티커 */
 
   #stickerboard {
     display: none;
   }
 
-  .footer .email {
-    font-size: 10px;
-    margin-bottom: -35px;
-  }
+  .footer .email {}
 }
 
 /* 작은 모바일 */
@@ -1148,7 +1041,7 @@ img {
 
   .nana {
     position: relative;
-    bottom: 40vh;
+    bottom: 20vh;
   }
 
   /* 이미지 */
