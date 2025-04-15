@@ -816,7 +816,7 @@ img {
 
   #homelast p {
     width: 100%;
-    font-size: var(--normal-font-size);
+    font-size: 1.3rem;
     font-weight: var(--font-medium);
     letter-spacing: -0.05rem;
   }
@@ -1031,7 +1031,7 @@ img {
 
   #homelast p {
     width: 100%;
-    font-size: var(--normal-font-size);
+    font-size: 1.2rem;
     font-weight: var(--font-medium);
     letter-spacing: -0.05rem;
   }
