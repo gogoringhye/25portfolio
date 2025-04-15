@@ -59,16 +59,16 @@ const colorStages = [{
     text: "rgb(255, 255, 255)"
   }, // Stage 1: black background, white text
   {
-    bg: "rgb(255, 255, 255)",
-    text: "rgb(0, 0, 0)"
+    bg: "rgb(23 23 23)",
+    text: "rgb(255, 255, 255)"
   }, // Stage 2: white background, black text
   {
     bg: "rgb(0, 0, 0)",
     text: "rgb(255, 255, 255)"
   }, // Stage 3: black background, white text
   {
-    bg: "rgb(255, 255, 255)",
-    text: "rgb(0, 0, 0)"
+    bg: "rgb(23 23 23)",
+    text: "rgb(255, 255, 255)"
   } // Stage 4: white background, black text
 ];
 
