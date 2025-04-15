@@ -943,6 +943,11 @@ a.gosite.btn-review {
     font-size: 1.5vw;
   }
 
+   /* 스티커 */
+
+   #stickerboard {
+    display: none;
+  }
 }
 
 /* 모바일 */
