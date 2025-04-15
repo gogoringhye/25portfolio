@@ -50,18 +50,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   overflow: hidden;
   font-family: var(--body-font);
   background-color: var(--body-color);
   color: var(--text-color);
 }
-ul, li {
+
+ul,
+li {
   list-style: none;
 }
+
 a {
   text-decoration: none;
 }
+
 img {
   width: 100%;
 }
@@ -622,9 +627,11 @@ img {
   right: 36px;
 }
 
-.rights{color: var(--first-color);
+.rights {
+  color: var(--first-color);
   font-size: var(--small-font-size);
-  margin-bottom: 1vw;}
+  margin-bottom: 1vw;
+}
 
 /* //디자인 */
 
@@ -787,7 +794,7 @@ img {
   }
 
   #nav #right {
-    gap: 10px;
+    display: none;
   }
 
   #nav a {
@@ -799,13 +806,18 @@ img {
 
   #homemain1 {}
 
+  .headings {
+    gap: 10px;
+    -webkit-text-stroke: 1px var(--text-color);
+  }
+
   #homemain1 .headings h1 {
     font-size: var(--biggest-font-size);
   }
 
   #homelast {
     padding: 10vw;
-    line-height: 2;
+    line-height: 1.5;
   }
 
 
@@ -821,11 +833,7 @@ img {
     line-height: 1.5;
   }
 
-  .headings {
-    gap: 10px;
-    -webkit-text-stroke: 1px var(--text-color);
-    letter-spacing: 1px;
-  }
+
 
   .keyboard {
     top: 10%;
@@ -849,6 +857,12 @@ img {
 
   /* 퍼블리싱 */
 
+  .desc-container {
+    width: 60%;
+    top: 17%;
+    left: 5%;
+}
+
   .desc-container2,
   .desc-container4 {
     width: 46%;
@@ -861,7 +875,11 @@ img {
     right: 1vw;
   }
 
+  .desc.gosite a, .desc.gosite2 a, .desc.gosite3 a {
+    font-size: var(--h4-font-size);
+}
 
+  .gosite a:nth-child(1),
   .gosite a:nth-child(3) {
     /* pc */
     display: none;
@@ -892,7 +910,7 @@ img {
   }
 
 
-  
+
   .list__item__infos p {
     font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
@@ -926,8 +944,8 @@ img {
 
   /* nav */
   #nav {
-    padding: 3vw 5vw;
-    font-size: var(--h4-font-size);
+        padding: 2vw 9vw;
+        font-size: var(--h4-font-size);
   }
 
   #nav .magnet-target {
@@ -935,7 +953,6 @@ img {
   }
 
   #nav #right {
-    gap: 10px;
   }
 
   #nav a {
@@ -1146,10 +1163,6 @@ img {
   }
 
   /* nav */
-  #nav {
-    padding: 2vw 5vw;
-    font-size: var(--small-font-size);
-  }
 
   #nav #right {
     gap: 10px;
@@ -1285,9 +1298,7 @@ img {
     display: none;
   }
 
-  .list__item img {
-
-  }
+  .list__item img {}
 
   .list__item__title {
     font-size: 4rem;
