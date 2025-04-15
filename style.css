@@ -821,8 +821,8 @@ a.gosite.btn-review {
   }
 
   #homelast {
-    padding: 10vw;
-    line-height: 1.5;
+    padding: 5vw;
+    line-height: 2;
   }
 
 
@@ -841,7 +841,7 @@ a.gosite.btn-review {
 
 
   .keyboard {
-    top: 15%;
+    top: 12%;
     left: -5%;
     width: 50%;
     aspect-ratio: 8 / 14;
@@ -853,7 +853,8 @@ a.gosite.btn-review {
   }
 
   .message {
-    margin-top: 20%;
+    margin-top: 18%;
+    font-size: 15px;
   }
 
 
