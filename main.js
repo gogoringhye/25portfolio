@@ -283,52 +283,47 @@ var items = document.querySelectorAll(".list__item")
 
 items.forEach(item => {
   var itemTitle = item.querySelector(".list__item__title")
-  var itemTitleOutline = item.querySelector(".list__item__titleOutline")
-  var itemImg = item.querySelector(".list__item img")
+  var itemImg = item.querySelector("img")
 
-  var itemTL = gsap.timeline({
-    scrollTrigger: {
-      trigger: item,
-      start: "0% 75%",
-      end: "25% 50%",
-      scrub: 3,
-    }
-  })
+  // 텍스트 등장 애니메이션
+  if (itemTitle) {
+    gsap.fromTo(itemTitle, {
+      scale: 2,
+      y: "100%"
+    }, {
+      scale: 1,
+      y: "0%",
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: item,
+        start: "0% 75%",
+        end: "25% 50%",
+        scrub: 1.5
+      }
+    })
+  }
 
-  itemTL.fromTo(itemTitle, {
-    scale: 2,
-    y: "100%"
-  }, {
-    scale: 1,
-    y: "0%",
-    ease: "power2.inOut"
-  }, 0)
-  itemTL.fromTo(itemTitleOutline, {
-    scale: 2,
-    y: "100%"
-  }, {
-    scale: 1,
-    y: "0%",
-    ease: "power2.inOut"
-  }, 0)
-
-  gsap.fromTo(itemImg, {
-    x: "60vw",
-    y: "60vh",
-    rotate: -30
-  }, {
-    x: "-60vw",
-    y: "-60vh",
-    rotate: 30,
-    ease: "none",
-    scrollTrigger: {
-      trigger: item,
-      start: "50% 100%",
-      end: "100% 50%",
-      scrub: 3,
-    }
-  })
+  // 이미지 이동 애니메이션 (범위 축소)
+  if (itemImg) {
+    gsap.fromTo(itemImg, {
+      x: "30vw",
+      y: "30vh",
+      rotate: -15
+    }, {
+      x: "-30vw",
+      y: "-30vh",
+      rotate: 15,
+      ease: "none",
+      scrollTrigger: {
+        trigger: item,
+        start: "50% 100%",
+        end: "100% 50%",
+        scrub: 1.5
+      }
+    })
+  }
 })
+
 /* //디자인 */
 
 /* 스티커 */
