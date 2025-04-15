@@ -372,7 +372,7 @@ img {
 
 .img-position-l {
   width: 50%;
-  height: 75vh;
+  height: 65vh;
 }
 
 .section1,
@@ -847,7 +847,7 @@ a.gosite.btn-review {
     left: 2%;
     width: 50%;
     aspect-ratio: 9 / 14;
-    transform: translate(2%, 25%);
+    transform: translate(8%, 35%);
   }
 
   /* 말풍선 */
@@ -865,21 +865,29 @@ a.gosite.btn-review {
   /* 퍼블리싱 */
 
   .desc-container {
-    width: 60%;
-    top: 17%;
-    left: 5%;
+    width: 41%;
+
   }
 
   .desc-container2,
   .desc-container4 {
     width: 46%;
+
+  }
+
+  .desc-container5 {
+    right: 20%;
+  }
+
+  .img-size-2 {
+    width: 45%;
+    height: 65vh;
   }
 
   .desc.gosite,
   .desc.gosite2,
   .desc.gosite3 {
     gap: 2.2rem;
-    right: 1vw;
   }
 
   .desc.gosite a,
@@ -928,11 +936,10 @@ a.gosite.btn-review {
 
 
   .list__item__infos p {
-    font-size: var(--normal-font-size);
+    font-size: 1.2rem;
     font-weight: var(--font-medium);
-    top: 83%;
-    width: 70%;
-
+    top: 12%;
+    width: 72%
   }
 
   .list__item__type,
@@ -1042,13 +1049,14 @@ a.gosite.btn-review {
     bottom: 30vh;
   }
 
+
+
   /* 이미지 */
   .img-size-2,
   .img-position-l {
-    width: 70%;
+    width: 75%;
     height: 60vh;
-    margin-left: 10%;
-
+    margin-left: 12%;
   }
 
   .desc-container,
@@ -1056,10 +1064,12 @@ a.gosite.btn-review {
   .desc-container3,
   .desc-container4 {
     position: absolute;
-    width: 90%;
-    top: 35;
+    width: 100%;
+    top: 35%;
     left: 11%;
+    z-index: 0;
   }
+
 
   .desc {
     font-size: var(--h4-font-size);
@@ -1071,7 +1081,8 @@ a.gosite.btn-review {
   .desc.gosite,
   .desc.gosite2,
   .desc.gosite3 {
-    z-index: 0;
+    gap: 2.2rem;
+    left: -2vw
   }
 
   .desc.gosite a,
@@ -1258,10 +1269,9 @@ a.gosite.btn-review {
   /* 이미지 */
   .img-size-2,
   .img-position-l {
-    width: 70%;
-    height: 60vh;
+    width: 80%;
+    height: 65vh;
     margin-left: 10%;
-
   }
 
   .desc-container,
@@ -1269,7 +1279,7 @@ a.gosite.btn-review {
   .desc-container3,
   .desc-container4 {
     position: absolute;
-    width: 90%;
+    width: 100%;
     top: 35%;
     left: 11%;
     z-index: 0;
