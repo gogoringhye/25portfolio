@@ -762,7 +762,14 @@ img {
 
 
 /* 반응형 */
-
+/* 기본값: 데스크탑 이상에서 모두 보이게 */
+/* ✅ 기본값: 데스크탑 이상에서는 모든 버튼 다 보임 */
+a.gosite.btn-mobile,
+a.gosite.btn-table,
+a.gosite.btn-pc,
+a.gosite.btn-review {
+  display: inline-block;
+}
 
 /* 태블릿 이하 */
 @media (max-width: 1023px) {
@@ -833,10 +840,13 @@ img {
     line-height: 1.5;
   }
 
+
+
   .keyboard {
-    top: 12%;
-    left: 3%;
+    top: 5%;
+    left: 2%;
     width: 50%;
+    aspect-ratio: 9 / 14;
     transform: translate(2%, 25%);
   }
 
@@ -869,8 +879,7 @@ img {
   .desc.gosite2,
   .desc.gosite3 {
     gap: 2.2rem;
-    left: 12vw;
-    bottom: 5vw
+    right: 1vw;
   }
 
   .desc.gosite a,
@@ -879,7 +888,6 @@ img {
     font-size: var(--h4-font-size);
   }
 
-  /* 기본 숨김 처리 */
   a.gosite.btn-mobile,
   a.gosite.btn-pc {
     display: none;
@@ -892,11 +900,6 @@ img {
     display: inline-block;
   }
 
-  .section2 a.gosite.btn-mobile,
-  .section3 a.gosite.btn-mobile,
-  .section6 a.gosite.btn-mobile {
-    display: inline-block;
-  }
 
   .tools {
     display: none;
@@ -925,10 +928,11 @@ img {
 
 
   .list__item__infos p {
-    font-size: 1.2rem;
+    font-size: var(--normal-font-size);
     font-weight: var(--font-medium);
-    top: 20%;
+    top: 83%;
     width: 70%;
+
   }
 
   .list__item__type,
@@ -1057,6 +1061,12 @@ img {
     left: 11%;
   }
 
+  .desc {
+    font-size: var(--h4-font-size);
+    width: 80%;
+    line-height: 1.6;
+
+  }
 
   .desc.gosite,
   .desc.gosite2,
@@ -1064,22 +1074,26 @@ img {
     z-index: 0;
   }
 
-  /* 기본 숨김 처리 */
+  .desc.gosite a,
+  .desc.gosite2 a,
+  .desc.gosite3 a {
+    padding: 10px 15px;
+    font-size: var(--small-font-size);
+  }
+
   a.gosite.btn-table,
   a.gosite.btn-pc {
     display: none;
+  }
+
+  a.gosite.btn-mobile {
+    display: inline-block;
   }
 
   /* section2, section3, section6의 pc버튼만 다시 보이게 */
   .section2 a.gosite.btn-pc,
   .section3 a.gosite.btn-pc,
   .section6 a.gosite.btn-pc {
-    display: inline-block;
-  }
-
-  .section2 a.gosite.btn-mobile,
-  .section3 a.gosite.btn-mobile,
-  .section6 a.gosite.btn-mobile {
     display: inline-block;
   }
 
@@ -1108,6 +1122,8 @@ img {
   .list .list__item:nth-child(6) {
     display: none;
   }
+
+  .list .list__item:nth-child(6) .list__item__title {}
 
   .list__item img {
     width: 50%;
@@ -1248,26 +1264,35 @@ img {
 
   }
 
+  .desc-container,
+  .desc-container2,
+  .desc-container3,
+  .desc-container4 {
+    position: absolute;
+    width: 90%;
+    top: 35%;
+    left: 11%;
+    z-index: 0;
+  }
+
+  .desc {
+    font-size: var(--h4-font-size);
+    width: 80%;
+    line-height: 1.6;
+
+  }
+
   .desc.gosite,
   .desc.gosite2,
   .desc.gosite3 {
     z-index: 0;
   }
 
-  /* section2, section3, section6의 pc버튼만 다시 보이게 */
-  .section2 a.gosite.btn-pc,
-  .section3 a.gosite.btn-pc,
-  .section6 a.gosite.btn-pc {
-    display: inline-block;
-  }
 
-  .section2 a.gosite.btn-mobile,
-  .section3 a.gosite.btn-mobile,
-  .section6 a.gosite.btn-mobile {
-    display: inline-block;
-  }
-
-  .tools {
+  .gosite a:nth-child(2),
+  /* tablet */
+  .gosite a:nth-child(3) {
+    /* pc */
     display: none;
   }
 
