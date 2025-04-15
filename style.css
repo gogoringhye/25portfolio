@@ -804,7 +804,11 @@ img {
   /* about */
 
 
-  #homemain1 {}
+  #homemain1 {
+    width: 100%;
+    padding: 0 5vw;
+  }
+
 
   .headings {
     gap: 10px;
@@ -861,7 +865,7 @@ img {
     width: 60%;
     top: 17%;
     left: 5%;
-}
+  }
 
   .desc-container2,
   .desc-container4 {
@@ -875,9 +879,11 @@ img {
     right: 1vw;
   }
 
-  .desc.gosite a, .desc.gosite2 a, .desc.gosite3 a {
+  .desc.gosite a,
+  .desc.gosite2 a,
+  .desc.gosite3 a {
     font-size: var(--h4-font-size);
-}
+  }
 
   .gosite a:nth-child(1),
   .gosite a:nth-child(3) {
@@ -944,16 +950,15 @@ img {
 
   /* nav */
   #nav {
-        padding: 2vw 9vw;
-        font-size: var(--h4-font-size);
+    padding: 2vw 9vw;
+    font-size: var(--h4-font-size);
   }
 
   #nav .magnet-target {
     width: 100px;
   }
 
-  #nav #right {
-  }
+  #nav #right {}
 
   #nav a {
     font-size: var(--h4-font-size);
