@@ -1615,7 +1615,9 @@ body.logo-wrap .cursor3.hover {
    화면 너비가 960px 이하일 때, 모바일 디바이스에서 시각적 요소를 표시합니다.
 ================================================================ */
 @media (max-width: 960px) {
-
+  body, html {
+    overflow: auto; /* 또는 scroll */
+  }
 
   .mobile-visual {
     inline-size: 75%;
