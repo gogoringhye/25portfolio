@@ -1311,7 +1311,7 @@ body.logo-wrap .cursor3.hover {
   }
 
   .section-fluid-main {
-    width: 80%;
+    width: 70%;
     text-align: justify;
   }
 
@@ -1430,7 +1430,8 @@ body.logo-wrap .cursor3.hover {
 ================================================================ */
 @media screen and (max-width: 576px) {
   #homemain1 .headings h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    top: 2vw;
   }
 
   .text {
