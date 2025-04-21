@@ -85,11 +85,11 @@ img {
   justify-content: center;
   align-items: center;
   font-family: var(--subtitle-font);
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-bold);
   font-size: 20vw;
   line-height: 1;
-  color: var(--title-color);
   overflow: hidden;
+  background-color: var(--body-color);
   background-image: url('img/glitter.gif');
 }
 
@@ -113,6 +113,7 @@ img {
   color: rgba(255, 255, 255, 0.671);
   text-shadow: 0 0 1vw rgba(255, 255, 255, 0.116);
   filter: blur(0.3px);
+  z-index: 1;
 }
 
 /* //프리로더 */
@@ -158,7 +159,7 @@ img {
 #section4.event::before,
 #section5.event::before,
 #section6.event::before {
-  background-color: var(--body-color)
+  background-color: var(--body-color);
 }
 
 
@@ -341,112 +342,6 @@ img {
   }
 }
 
-/* Media Query */
-@media screen and (max-width: 1399px) {
-  h2 {
-    font-size: 22px;
-  }
-
-  p {
-    font-size: 38px;
-  }
-
-  .text {
-    transform: translate(60px, -50%);
-    -webkit-transform: translate(60px, -50%);
-  }
-
-  .image:not(#loaderPhoto) {
-    height: 450px;
-    width: 450px;
-    right: 80px;
-    transform: translate(0%, -50%);
-    -webkit-transform: translate(0%, -50%);
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  h2 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 34px;
-  }
-
-  .text {
-    transform: translate(40px, -50%);
-    -webkit-transform: translate(40px, -50%);
-    width: 44%;
-  }
-
-  .image:not(#loaderPhoto) {
-    height: 400px;
-    width: 400px;
-    right: 60px;
-    transform: translate(0%, -50%);
-    -webkit-transform: translate(0%, -50%);
-  }
-}
-
-@media screen and (max-width: 991px) {
-  h2 {
-    font-size: 18px;
-  }
-
-  p {
-    font-size: 26px;
-  }
-
-  .text {
-    transform: translate(24px, -50%);
-    -webkit-transform: translate(24px, -50%);
-    width: 44%;
-  }
-
-  .image:not(#loaderPhoto) {
-    height: 310px;
-    width: 310px;
-    right: 40px;
-    transform: translate(0%, -50%);
-    -webkit-transform: translate(0%, -50%);
-  }
-}
-
-@media screen and (max-width: 767px) {
-  h2 {
-    font-size: 16px;
-  }
-
-  p {
-    font-size: 22px;
-  }
-
-  .image:not(#loaderPhoto) {
-    height: 220px;
-    width: 220px;
-  }
-}
-
-@media screen and (max-width: 576px) {
-  .text {
-    top: -36%;
-    width: 100%;
-    width: calc(100% - 80px);
-  }
-
-  #section1 .text {
-    top: 64%;
-  }
-
-  .image:not(#loaderPhoto) {
-    top: -75%;
-    left: 24px;
-    right: auto;
-    transform: translate(0%, -25%);
-    -webkit-transform: translate(0%, -25%);
-  }
-}
 
 /* //디자인  */
 
@@ -479,10 +374,9 @@ img {
 }
 
 #nav #right {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-
+  position: relative;
+  top: 6vw;
+  right: 68%;
 }
 
 #nav a {
@@ -525,7 +419,7 @@ img {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background-color: var(--yellow);
+  background-color: rgb(76 175 80);
   margin: 0 7px;
 }
 
@@ -690,21 +584,7 @@ img {
   color: transparent;
 }
 
-@media (max-width: 768px) {
 
-  #homemain2 {
-    left: 1vw;
-    top: 12vw;
-  }
-
-  #homemain2 .headings h1 {
-    font-size: 2.8rem;
-    line-height: 1.5;
-    left: 0;
-    text-align: justify;
-  }
-
-}
 
 
 
@@ -1167,65 +1047,6 @@ body.logo-wrap .cursor3.hover {
   display: grid;
 }
 
-@media (min-width: 960px) {
-  .section-wrapper {
-    grid-template-columns: 1fr 1fr;
-    /* 960px 이상에서 2열 레이아웃 */
-  }
-}
-
-@media (max-width: 960px) {
-
-  /* .content 내부 레이아웃은 그대로 */
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem;
-  }
-
-  .meta {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    width: 100%;
-  }
-
-  .desc.tools {
-    display: flex;
-    justify-content: center;
-    gap: 0.8rem;
-    flex-wrap: wrap;
-  }
-
-  .desc.gosite {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    width: 100%;
-  }
-
-  .desc.gosite a {
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: var(--h4-font-size);
-    font-weight: var(--font-bold);
-    color: var(--text-color);
-    background-color: var(--body-color);
-    border: 1px solid var(--text-color);
-    border-radius: var(--radius-2);
-    transition: background-color 0.3s ease, color 0.3s ease;
-    text-align: center;
-    min-width: max-content;
-    flex-shrink: 0;
-  }
-}
-
 .content-wrapper {
   display: grid;
 }
@@ -1333,11 +1154,7 @@ body.logo-wrap .cursor3.hover {
   container-type: size;
 }
 
-@media (max-width: 960px) {
-  .visual {
-    display: none;
-  }
-}
+
 
 .card-wrapper {
   container-type: size;
@@ -1443,3 +1260,390 @@ body.logo-wrap .cursor3.hover {
 
 
 /* //흠 */
+
+
+/* 반응형 */
+/* ================================================================
+   PC 버전 (화면 너비 1399px 이하)
+   이 스타일은 화면 너비가 1399px 이하인 경우 PC 화면에서의 레이아웃을 적용합니다.
+================================================================ */
+@media screen and (max-width: 1399px) {
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 38px;
+  }
+
+  .text {
+    transform: translate(60px, -50%);
+    -webkit-transform: translate(60px, -50%);
+  }
+
+  .image:not(#loaderPhoto) {
+    height: 450px;
+    width: 450px;
+    right: 80px;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+  }
+}
+
+/* ================================================================
+   태블릿 (화면 너비 1199px 이하)
+   화면 너비가 1199px 이하일 때, 일반적인 태블릿 레이아웃을 적용합니다.
+   (예: iPad, 큰 Android 태블릿 등)
+================================================================ */
+@media screen and (max-width: 1199px) {
+
+  #nav .magnet-target {
+    display: none;
+  }
+
+  #homemain1 {
+    position: relative;
+    left: 5vw;
+    top: -2vw;
+  }
+
+  .headings {
+    text-align: justify;
+    width: 90%;
+  }
+
+  .background {
+    top: 14%;
+    left: 18%;
+    width: 70%;
+  }
+
+  .section-fluid-main {
+    width: 62%;
+    text-align: justify;
+  }
+
+
+  .text {
+    transform: translate(40px, -50%);
+    -webkit-transform: translate(40px, -50%);
+    width: 44%;
+  }
+
+  .image:not(#loaderPhoto) {
+    height: 400px;
+    width: 400px;
+    right: 60px;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+  }
+
+  #nav #right {
+    position: absolute;
+    top: 80vw;
+    right: 31%;
+  }
+
+  .inner {
+    line-height: 2;
+  }
+}
+
+/* ================================================================
+   작은 태블릿 또는 큰 모바일 (화면 너비 991px 이하)
+   이 스타일은 화면 너비가 991px 이하일 때 적용됩니다.
+   (예: 작은 태블릿, 큰 스마트폰 등)
+================================================================ */
+@media screen and (max-width: 991px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 26px;
+  }
+
+  .text {
+    transform: translate(24px, -50%);
+    -webkit-transform: translate(24px, -50%);
+    width: 44%;
+  }
+
+  .image:not(#loaderPhoto) {
+    height: 310px;
+    width: 310px;
+    right: 40px;
+    transform: translate(0%, -50%);
+    -webkit-transform: translate(0%, -50%);
+  }
+}
+
+/* ================================================================
+   모바일 (화면 너비 767px 이하)
+   화면 너비가 767px 이하일 때, 모바일 디바이스에 맞는 스타일을 적용합니다.
+   (예: 일반적인 스마트폰)
+================================================================ */
+@media screen and (max-width: 767px) {
+  h2 {
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  .char {
+    font-size: 2rem;
+  }
+
+  .js-page-subtitle {
+    font-size: 0.7rem;
+  }
+
+  #homemain1 .headings h1 {
+    font-size: 4rem;
+    left: -7vw;
+    bottom: 50vw;
+  }
+
+  #nav #right {
+    position: absolute;
+    top: 50%;
+    right: 13%;
+    transform: translate(3%, 120vw);
+  }
+
+  .inner,
+  .inner .coordinates {
+    font-size: var(--smaller-font-size);
+  }
+
+  .background {
+    top: 15%;
+    left: 5%;
+    width: 90%;
+  }
+
+  .section-fluid-main {
+    width: 88%;
+    text-align: justify;
+  }
+
+  .tools span {
+    padding: 4px 7px;
+    font-size: 0.6rem;
+  }
+
+  /* 버튼 */
+  /* 1. 일단 전부 숨김 - !important로 강제 적용 */
+  .section .gosite a {
+    display: none !important;
+  }
+
+  /* 2. 버튼이 4개일 때: 1번, 4번만 보이기 */
+  .section .gosite a:nth-child(1),
+  .section .gosite a:nth-child(4) {
+    display: inline-block !important;
+  }
+
+  /* 3. 버튼이 2개일 때: 둘 다 보이기 */
+  .section .gosite a:nth-child(1):only-child,
+  .section .gosite a:nth-child(2):only-child,
+  .section .gosite a:nth-child(2):nth-last-child(1) {
+    display: inline-block !important;
+  }
+
+  /* //버튼 */
+
+  #homemain2 {
+    width: 100%;
+    padding: 2vw;
+    left: 0vw;
+    top: 20vw;
+  }
+
+  .headings {
+    width: 100%;
+  }
+
+  .image:not(#loaderPhoto) {
+    height: 220px;
+    width: 220px;
+  }
+
+  .goal {
+    font-size: 20px;
+  }
+}
+
+/* ================================================================
+   작은 모바일 (화면 너비 576px 이하)
+   화면 너비가 576px 이하일 때, 작은 모바일 화면에서의 레이아웃을 적용합니다.
+   (예: 작은 화면 스마트폰, 기본적인 모바일 화면)
+================================================================ */
+@media screen and (max-width: 576px) {
+
+
+  .text {
+    top: -36%;
+    width: 100%;
+    width: calc(100% - 80px);
+    /* 왼쪽과 오른쪽 여백을 고려한 폭 설정 */
+  }
+
+
+  .image:not(#loaderPhoto) {
+    top: -75%;
+    left: 20%;
+    right: auto;
+    transform: translate(0%, -25%);
+    -webkit-transform: translate(0%, -25%);
+  }
+
+  .mine.messages {
+    display: none;
+  }
+}
+
+/* ================================================================
+   태블릿 (세로, 화면 너비 768px 이하)
+   화면 너비가 768px 이하일 때, 세로 방향의 태블릿에서 스타일을 적용합니다.
+================================================================ */
+@media (max-width: 768px) {
+  #homemain2 {
+    left: 1vw;
+    top: 12vw;
+  }
+
+  #homemain2 .headings h1 {
+    font-size: 2.8rem;
+    line-height: 1.5;
+    left: 0;
+    text-align: justify;
+  }
+}
+
+/* ================================================================
+   2열 레이아웃 (화면 너비 960px 이상)
+   화면 너비가 960px 이상일 때 2열 레이아웃을 적용합니다.
+   (예: 데스크탑과 큰 화면을 위한 스타일)
+================================================================ */
+@media (min-width: 960px) {
+
+  .section-wrapper {
+    grid-template-columns: 1fr 1fr;
+    /* 960px 이상에서는 2열 레이아웃 */
+  }
+
+
+}
+
+/* ================================================================
+   모바일 및 작은 화면 (960px 이하)
+   화면 너비가 960px 이하일 때, 모바일 또는 작은 화면에 적합한 레이아웃을 적용합니다.
+================================================================ */
+@media (max-width: 960px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem;
+  }
+
+  .meta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .desc.tools {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+
+  .desc.gosite {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .desc.gosite a {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: var(--h4-font-size);
+    font-weight: var(--font-bold);
+    color: var(--text-color);
+    background-color: var(--body-color);
+    border: 1px solid var(--text-color);
+    border-radius: var(--radius-2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+    min-width: max-content;
+    flex-shrink: 0;
+
+    /* 기본값: PC & 태블릿에서 전부 보이기 */
+    display: inline-block;
+  }
+
+  .visual {
+    display: none;
+    /* 960px 이하에서는 .visual 요소 숨김 */
+  }
+}
+
+/* ================================================================
+   모바일 시각 요소 숨김 (960px 이상)
+   화면 너비가 960px 이상일 때, 모바일 관련 시각적 요소를 숨깁니다.
+================================================================ */
+@media (min-width: 960px) {
+  .mobile-visual {
+    display: none;
+  }
+}
+
+/* ================================================================
+   모바일 관련 시각적 요소 (960px 이하)
+   화면 너비가 960px 이하일 때, 모바일 디바이스에서 시각적 요소를 표시합니다.
+================================================================ */
+@media (max-width: 960px) {
+
+
+  .mobile-visual {
+    inline-size: 75%;
+    aspect-ratio: var(--ratio-square);
+    /* 비율 유지 */
+  }
+
+  .text .desc {
+    font-size: var(--h4-font-size);
+  }
+
+  .text .desc.gosite a {
+    padding: 9px;
+    font-size: 0.7rem;
+  }
+
+  .message {
+    font-size: 12px;
+    margin-top: -2%;
+    margin-left: 5%;
+  }
+
+  #homemain2 {
+    width: 100%;
+    padding: 2vw;
+    left: 2vw;
+    top: 20vw;
+  }
+}
+
+/* //반응형 */
