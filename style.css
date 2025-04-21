@@ -1286,6 +1286,7 @@ body.logo-wrap .cursor3.hover {
    태블릿 (화면 너비 1199px 이하)
 ================================================================ */
 @media screen and (max-width: 1199px) {
+
   #nav .magnet-target,
   #nav #right {
     display: none;
@@ -1383,7 +1384,7 @@ body.logo-wrap .cursor3.hover {
   }
 
   .section-fluid-main {
-    width: 88%;
+    width: 70%;
     text-align: justify;
   }
 
