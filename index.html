@@ -1,536 +1,620 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PORTFOLIO</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel='preload preconnect prefetch prerender'
+    href="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js" as='script'>
+  <link rel='preconnect prefetch' href='https://picsum.photos/'>
+  <link rel="stylesheet" href="https://public.codepenassets.com/css/normalize-5.0.0.min.css">
   <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
   <!-- 마그넷 -->
   <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
   <!-- //마그넷 -->
 
-  <style>
-    /* 드래그한 텍스트 색상 변경*/
-    ::selection {
-      background-color: var(--second-color);
-      color: var(--text-color-light);
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css">
+
 </head>
 
 <body>
 
-
   <!-- 프리로더 -->
- <div class="pre-stage">
-    <div class="roll-wrap">
-      <div class="roll-col">
-        <ul class="roll-list col-a">
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-        </ul>
-      </div>
-      <div class="roll-col">
-        <ul class="roll-list col-b">
-          <li class="char-unit">A</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-        </ul>
-      </div>
-      <div class="roll-col">
-        <ul class="roll-list col-c">
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-        </ul>
-      </div>
-      <div class="roll-col">
-        <ul class="roll-list col-d">
-          <li class="char-unit">A</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-          <li class="char-unit">N</li>
-          <li class="char-unit">A</li>
-        </ul>
+ <div class="preloader">
+    <div class="terminal">
+      <div class="terminal-content">
+        <div class="commands-container">
+          <div class="command-line" id="cmd1">
+            <span class="prompt">$</span>
+            <span class="command">git clone https://github.com/my-portfolio.git</span>
+            <span class="cursor"></span>
+          </div>
+          <div class="command-line" id="cmd2">
+            <span class="prompt">$</span>
+            <span class="command">npm install --save react react-dom</span>
+            <span class="cursor"></span>
+          </div>
+          <div class="command-line" id="cmd3">
+            <span class="prompt">$</span>
+            <span class="command">npm run dev</span>
+            <span class="cursor"></span>
+          </div>
+          <div class="command-line" id="cmd4">
+            <span class="prompt">$</span>
+            <span class="command">git commit -m "Add responsive design to homepage</span>
+            <span class="cursor"></span>
+          </div>
+        </div>
+        <div class="loading-container">
+          <div class="loading-bar">
+            <div class="loading-progress"></div>
+          </div>
+        </div>
+        <div class="percentage-wrap">
+          <div class="percentage">00%</div>
+        </div>
       </div>
     </div>
   </div> 
   <!-- //프리로더 -->
 
-  <!-- 마그넷 -->
-  <div id="cursor">
+  <!-- 헤더 -->
+  <header>
+    <!-- 로고 -->
+    <div class="page__logo" role="layout">
+      <h1 class="js-page-title">Portfolio</h1>
+      <h2><span class="js-page-subtitle">©2025 NANA All rights reserved.</span></h2>
+    </div>
+    <!-- //로고 -->
 
-    <div id="nav">
-      <div class="magnet-target">
-        <img class="logo" src="img/logo.png" alt="로고">
-        nana's</div>
-      <div id="right">
-        <!-- 시계 및 위도/경도 -->
-        <div class="time-area">
-          <div class="inner kor">
-            <span class="dot"><span class="dot-in"></span></span>
-            <em>KOR</em>
-            <div class="time" id="koTime">17:39:20</div>
-            <div class="coordinates" id="koCoordinates">Latitude: 37.5665, Longitude: 126.9780</div>
-          </div>
-          <div class="inner london">
-            <span class="dot"><span class="dot-in"></span></span>
-            <em>GBR</em>
-            <div class="time" id="londonTime">09:39:20</div>
-            <div class="coordinates" id="londonCoordinates">Latitude: 51.5074, Longitude: -0.1278</div>
-          </div>
-        </div>
-        <!-- //시계 및 위도/경도 -->
+    <div class="first">
+      <!-- 햄버거 -->
+      <div class="hero__images">
+        <img class="burger-image" src="img/figma-html-burger.png" alt="Burger 1" />
+        <img class="cup-image-1" src="img/html-cup.png" alt="Cup 1" />
+        <img class="cup-image-2" src="img/css-cup.png" alt="Cup 2" />
       </div>
+      <!-- //햄버거 -->
+
+      <!-- 마그넷 -->
+      <div class="homemain">
+        <div class="headings">
+          <h1 class="hvr">I wanna be a</h1>
+          <h1 class="hvr">frontend</h1>
+          <h1 class="hvr">developer</h1>
+        </div>
+      </div>
+      <!-- //마그넷 -->
+
+      <!-- 스크롤 다운 -->
+      <div id="mainVisual" class="scroll_banner">
+        <p class="scroll">
+          <span></span>
+          scroll down
+        </p>
+      </div>
+      <!-- //스크롤 다운 -->
     </div>
 
-    <!-- 퍼블리싱 -->
-    <section class="home__section">
+  </header>
+  <!-- //헤더 -->
 
-      <!-- Logo -->
-      <div class="page__logo" role="layout">
-        <h1 class="js-page-title">Portfolio</h1>
-        <h2><span class="js-page-subtitle">©2025 NANA All rights reserved.</span></h2>
-      </div>
+  <!-- 슝슝 -->
+  <section id="aspiration">
 
-      <!-- Big Text -->
-      <div class="page__text">
-        <div class="page__text__trigger"></div>
-        <div id="homemain1">
-          <div class="headings">
-            <h1 class="hvr magnet-target">I wanna be a</h1>
-          </div>
-          <div class="headings">
-            <h1 class="hvr magnet-target">frontend</h1>
-            <h1 class="hvr magnet-target">developer</h1>
-          </div>
+    <!-- 1 -->
+    <div class="aos-block" data-aos="fade-up">
+      <figure class="aspiration-item reverse">
+        <h2 class="hero-text">
+          <span class="hvr">탄탄한 마크업</span>을 바탕으로 직관적이고 매력적인 웹사이트를 구축하겠습니다.
+        </h2>
+        <div class="img_box observe rotate-1">
+          <div class="img"><img src="img/Rotate_one.gif" alt="Sustainability"></div>
         </div>
-      </div>
-
-      <!-- Parallax -->
-      <div class="background">
-        <img src="img/earth.gif" alt="background" class="background">
-      </div>
-      <!-- //Parallax -->
-
-
-
-
-    </section>
-    <!-- //퍼블리싱 -->
-
-
-    <!--설명-->
-    <div class="section-fluid-main">
-      <div class="section-row">
-        <div class="section-col">
-          <p class="goal"> 탄탄한 마크업을 바탕으로 효율적인 CSS와 동적인 <a href="javascript:void(0)"
-              class="hover-target img-1">JavaScript</a>를 사용하여 직관적이고
-            매력적인 웹사이트를 구축하겠습니다. 또한 <a href="javascript:void(0)" class="hover-target img-2">일관된 사용자 경험</a> 제공을 위해, 미디어
-            쿼리를 활용하여 반응형 디자인을
-            적용하고 기기별 화면 크기에 최적화된 UI를 구현하겠습니다.다양한 프레임워크와 라이브러리를
-            <a href="javascript:void(0)" class="hover-target img-3">지속적으로 학습</a>하며, 웹의 트렌드에 맞춰
-            <a href="javascript:void(0)" class="hover-target img-4">꾸준히 성장하는</a> 웹 퍼블리셔가 되고 싶습니다.</p>
-        </div>
-      </div>
-
-      <div class='cursor' id="cursor"></div>
-      <div class='cursor2' id="cursor2"></div>
-      <div class='cursor3' id="cursor3"></div>
+      </figure>
     </div>
-    <!-- //설명 -->
 
-    <!-- 흠 -->
-    <!-- 카드 섹션 시작 -->
-    <div class="section">
-      <div class="section-wrapper">
-        <div class="visual">
-          <div class="card-wrapper">
-            <a href="https://cyberfiction1.netlify.app/" target="_blank" class="card card-1">
-              <img class="card-img" src="img/cyberfiction.jpg" alt="cyberfiction" />
+    <!-- 2 -->
+    <div class="aos-block" data-aos="fade-up">
+      <figure class="aspiration-item reverse">
+        <h2 class="hero-text">
+          효율적인 CSS와 동적인<span class="hvr">JavaScript</span>로 완성도 있는 사용자 경험을 만들겠습니다.
+        </h2>
+        <div class="img_box observe rotate-2">
+          <div class="img"><img src="img/Rotate_two.gif" alt="Sustainability"></div>
+        </div>
+      </figure>
+    </div>
+
+    <!-- 3 -->
+    <div class="aos-block" data-aos="fade-up">
+      <figure class="aspiration-item reverse">
+        <h2 class="hero-text">일관된 UX 제공을 위해, <span class="hvr">미디어 쿼리</span>를 활용한 반응형 디자인으로 다양한 기기 화면에
+          최적화하겠습니다.
+        </h2>
+        <div class="img_box observe rotate-3">
+          <div class="img"><img src="img/Rotate_three.gif" alt="Sustainability"></div>
+        </div>
+      </figure>
+    </div>
+
+    <!-- 4 -->
+    <div class="aos-block" data-aos="fade-up">
+      <figure class="aspiration-item reverse">
+        <h2 class="hero-text">
+          <span class="hvr">프레임워크</span>와 라이브러리를 꾸준히 학습하며, 웹의 트렌드에 발맞춰 성장하겠습니다.
+        </h2>
+        <div class="img_box observe rotate-4">
+          <div class="img"><img src="img/Rotate_four.gif" alt="Sustainability"></div>
+        </div>
+      </figure>
+    </div>
+
+    <!-- 5 -->
+    <div class="aos-block" data-aos="fade-up">
+      <figure class="aspiration-item reverse">
+        <h2 class="hero-text">
+          단순한 스타일링을 넘어, <span class="hvr">프론트엔드</span>의 흐름과 구조를 이해하며 완성도 높은 UI를 구현하는 퍼블리셔가 되겠습니다.
+        </h2>
+        <div class="img_box observe rotate-5">
+          <div class="img"><img src="img/Rotate_five.gif" alt="Sustainability"></div>
+        </div>
+      </figure>
+    </div>
+
+
+  </section>
+  <!-- //슝슝 -->
+
+  <!-- 여정 -->
+  <div class="journey-transition">
+    <div class="journey-wrap">
+      <div class="journey-text">
+        <span class="journey-en">MY JOURNEY</span>
+        <h2 class="journey-title">소비자에서 창작자로의 전환</h2>
+        <ul class="journey-category">
+          <li class="step01">즐기는 사람에서</li>
+          <li class="step02">관찰하고 배우는 사람으로</li>
+          <li class="step03">창작하는 사람으로</li>
+        </ul>
+      </div>
+      <ul class="journey-content scrolling-wrap" data-aos="fade-up" data-aos-duration="800">
+        <li class="journey-step01">
+          <a href="javascript:void(0)">
+            <div class="journey-image">
+              <img src="https://cdn.pixabay.com/photo/2017/08/25/10/52/faces-2679740_1280.jpg"
+                alt="콘텐츠를 즐기는 열정적인 소비자 시절">
+            </div>
+            <div class="journey-text-container">
+              <h3 class="journey-subtitle">즐기는 것에서 시작됐습니다.</h3>
+              <p class="journey-description">OTT 서비스, 스포츠 경기, 공연, 음악 등 다양한 콘텐츠를 즐기며 자라온 저는 언제나 감상에 몰입하는 데 익숙한 소비자였습니다.
+                창작물이 주는 즐거움과 감동은 제 일상 속 소중한 쉼표가 되어 주었죠. 그러던 어느 날, 문득 이런 생각이 들었습니다. '나도 누군가에게 이런 즐거움과 감동을 줄 수 있는 방법은
+                없을까?' 이 질문을 시작으로, 단순히 감상하는
+                사람에서 벗어나 창작자가 되어, 사용자가 경험하고 감동을 느낄 수 있는 공간을 디자인하고, 그 안에 의미를 담아내고 싶다는 욕심이 생겼습니다.
+              </p>
+              <a href="javascript:void(0)">감상의 시작이 궁금하다면?</a>
+            </div>
+          </a>
+        </li>
+        <li class="journey-step02">
+          <a href="javascript:void(0)">
+            <div class="journey-image">
+              <img src="https://cdn.pixabay.com/photo/2022/03/23/11/23/bulletin-board-7086961_1280.jpg"
+                alt="콘텐츠를 분석하며 창의적 시선을 키워감">
+            </div>
+            <div class="journey-text-container">
+              <h3 class="journey-subtitle">관찰하고 배우는 시간이었습니다.</h3>
+              <p class="journey-description">좋아하던 콘텐츠를 단순히 즐기기보다, 그 안에 담긴 이야기의 구조나 감정을 끌어내는 연출 방식 등을 관찰하게 됐습니다. 이러한 시선은
+                제가
+                만든 화면이나 콘텐츠에도 자연스럽게 녹아들었고, 사용자 중심의 웹 화면을 구성하는 데 중요한 밑거름이 되었습니다.</p>
+              <a href="javascript:void(0)">내가 배운 콘텐츠의 힘은?</a>
+            </div>
+          </a>
+        </li>
+        <li class="journey-step03">
+          <a href="javascript:void(0)">
+            <div class="journey-image">
+              <img src="https://cdn.pixabay.com/photo/2025/04/22/06/26/robot-9548993_640.jpg" alt="프론트엔드 개발로 이어진 창작 여정">
+            </div>
+            <div class="journey-text-container">
+              <h3 class="journey-subtitle">창작의 도구를 만났습니다.</h3>
+              <p class="journey-description">무엇으로 나만의 이야기를 풀어낼 수 있을까 고민하던 중, 퍼블리싱과 프론트엔드 개발을 알게 되었습니다. 코드를 통해 의미 있는 경험을
+                시각적으로 표현하고, 화면에 생명을 불어넣는 그 과정에서 깊은 몰입을 느꼈습니다. 소비자였던 내가, 이제는 누군가에게 영감을 줄 수 있는 창작자가 되고자 합니다.</p>
+              <a href="javascript:void(0)">퍼블리싱이 내게 준 변화는?</a>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- //여정 -->
+
+  <!-- 퍼블리싱 -->
+  <section class="scroll-hold shadowed-top">
+    <section id="panel-id-1" class="panel" data-target="#panel-id-1">
+      <div class="grid">
+        <div class="col">
+
+          <!-- react -->
+          <div class="card">
+
+            <div class="desc tools">
+              <span># React</span>
+              <span># Node.js</span>
+              <span># JSX</span>
+              <span># SPA</span>
+            </div>
+
+            <a href="https://reactshoppinghnm.netlify.app/" target="_blank">
+              <div class="card__header"><img src="img/react.jpg" /></div>
             </a>
-            <a href="https://realmagma.netlify.app/" target="_blank" class="card card-2">
-              <img class="card-img" src="img/magma.jpg" alt="magma" />
-            </a>
-            <a href="https://reactshoppinghnm.netlify.app/" target="_blank" class="card card-3">
-              <img class="card-img" src="img/react.jpg" alt="react" />
-            </a>
-            <a href="https://kyliecosmetics.netlify.app/" target="_blank" class="card card-4">
-              <img class="card-img" src="img/kyliecosmetics.png" alt="kyliecosmetics" />
-            </a>
-            <a href="https://galismind.netlify.app/" target="_blank" class="card card-5">
-              <img class="card-img" src="img/babymetalclub.jpg" alt="babymetalclub" />
-            </a>
-            <a href="https://hanacardzzizone.netlify.app/" target="_blank" class="card card-6">
-              <img class="card-img" src="img/hanacard.jpg" alt="hanacard" />
-            </a>
+
+            <p class="desc">React를 이용하여 실제 페이지는 하나지만, 사용자에게는 여러 페이지가 있는 것처럼 보이도록하여 페이지 전체를 새로고침하지 않고, 필요한 부분만 바꿔서 앱처럼
+              빠르게 동작하는 Single Page Application 입니다.</p>
+
+            <div class="card__footer">
+              <div class="card__meta">
+                <a class="pill" href="https://reactshoppinghnm.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                <a class="pill" href="https://velog.io/@nanaportfolio/HM-ojscbcpf" target="_blank">code review</a>
+              </div>
+            </div>
           </div>
+          <!-- //react -->
+
+          <!-- sushi -->
+          <div class="card">
+
+            <div class="desc tools">
+              <span># 반응형</span>
+              <span># JavaScript</span>
+              <span># 로컬 스토리지</span>
+              <span># 시맨틱 마크업</span>
+            </div>
+
+            <a href="https://responsivesushi.netlify.app/" target="_blank">
+              <div class="card__header"><img src="img/sushi.jpg" /></div>
+            </a>
+
+            <p class="desc">GDWEB, Awwwards 레퍼런스 사이트를 참고하여 간단하면서도 실용적인 기능들을 녹여내 사용자 경험을 향상 시킨 반응형 브랜딩 페이지입니다.
+            </p>
+
+            <div class="card__footer">
+              <div class="card__meta">
+                <a class="pill" href="javascript:void(0)"
+                  onclick="window.open('https://responsivesushi.netlify.app/','', 'top=100,left=300,width=400,height=818')">mobile
+                  ver.</a>
+                <a class="pill" href="javascript:void(0)"
+                  onclick="window.open('https://responsivesushi.netlify.app/','', 'top=100,left=300,width=780,height=818')">tablet
+                  ver.</a>
+                <a class="pill" href="https://responsivesushi.netlify.app/" target="_blank">pc ver.</a>
+                <a class="pill" href="https://velog.io/@nanaportfolio/sushi" target="_blank">code review</a>
+              </div>
+            </div>
+          </div>
+          <!-- //sushi -->
 
         </div>
 
-        <div class="content-wrapper">
-          <!-- content-1 -->
-          <div class="content content-1">
-            <div class="mobile-visual">
-              <a href="https://cyberfiction1.netlify.app/" target="_blank">
-                <img class="card-img" src="img/cyberfiction.jpg" alt="cyberfiction" />
-              </a>
+        <div class="col">
+          <!-- magma -->
+          <div class="card">
+
+            <div class="desc tools">
+              <span># GSAP</span>
+              <span># JavaScript</span>
+              <span># Locomotive Scroll</span>
+              <span># CSS</span>
             </div>
-            <div class="meta">
-              <span class="desc">01 CYBERFICTION</span>
-              <p class="desc">GDWEB, Awwwards 레퍼런스 사이트를 참고하여 이미지 시퀀스 기반의 3D 모션그래픽이 스크롤에 따라 부드럽게 동기화되는 브랜딩 페이지 반응형
-                웹사이트입니다.</p>
-              <div class="desc tools">
-                <span># JavaScript</span>
-                <span># GSAP</span>
-                <span># 미디어 쿼리</span>
-                <span># 시맨틱 마크업</span>
-              </div>
-              <div class="desc gosite">
-                <a href="javascript:void(0)"
-                  onclick="window.open('https://cyberfiction1.netlify.app/','', 'top=100,left=300,width=400,height=818')">mobile
-                  ver.</a>
-                <a href="javascript:void(0)"
-                  onclick="window.open('https://cyberfiction1.netlify.app/','', 'top=100,left=300,width=780,height=818')">tablet
-                  ver.</a>
-                <a href="https://cyberfiction1.netlify.app/" target="_blank">pc ver.</a>
-                <a href="https://velog.io/@nanaportfolio/Cyberfiction" target="_blank">code review</a>
+
+            <a href="https://realmagma.netlify.app/" target="_blank">
+              <div class="card__header"><img src="img/magma.jpg" /></div>
+            </a>
+
+            <p class="desc">Magma 공식 사이트를 레퍼런스로 텍스트, 이미지, 영상, 캔버스를 유기적으로 연결하고, 페이지 간 전환을 자연스럽게 구성하여 사용자의 몰입도를 높인
+              웹사이트입니다.</p>
+
+            <div class="card__footer">
+              <div class="card__meta">
+                <a class="pill" href="https://realmagma.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                <a class="pill" href="https://velog.io/@nanaportfolio/Magma" target="_blank">code review</a>
               </div>
             </div>
           </div>
+          <!-- //magma -->
 
-          <!-- content-2 -->
-          <div class="content content-2">
-            <div class="mobile-visual">
-              <a href="https://realmagma.netlify.app/" target="_blank">
-                <img class="card-img" src="img/magma.jpg" alt="magma" />
-              </a>
+          <!-- cyberfiction -->
+          <div class="card">
+
+            <div class="desc tools">
+              <span># 반응형</span>
+              <span># HTML</span>
+              <span># JavaScript</span>
+              <span># GSAP</span>
             </div>
-            <div class="meta">
-              <span class="desc">02 MAGMA</span>
-              <p class="desc">Magma 공식 사이트를 레퍼런스로 텍스트, 이미지, 영상, 캔버스를 유기적으로 연결하고, 페이지 간 전환을 자연스럽게 구성하여 사용자의 몰입도를 높인
-                웹사이트입니다.</p>
-              <div class="desc tools">
-                <span># GSAP</span>
-                <span># JavaScript</span>
-                <span># Locomotive Scroll</span>
-                <span># CSS</span>
-              </div>
-              <div class="desc gosite">
-                <a href="https://realmagma.netlify.app/" target="_blank">프로젝트 바로가기</a>
-                <a href="https://velog.io/@nanaportfolio/Magma" target="_blank">code review</a>
+
+            <a href="https://cyberfiction1.netlify.app/" target="_blank">
+              <div class="card__header"><img src="img/cyberfiction.jpg" /></div>
+            </a>
+
+            <p class="desc">GDWEB, Awwwards 레퍼런스 사이트를 참고하여 이미지 시퀀스 기반의 3D 모션그래픽이 스크롤에 따라 부드럽게 동기화되는 브랜딩 페이지 반응형
+              웹사이트입니다.</p>
+
+            <div class="card__footer">
+              <div class="card__meta">
+                <a class="pill" href="https://cyberfiction1.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                <a class="pill" href="https://velog.io/@nanaportfolio/Cyberfiction" target="_blank">code review</a>
               </div>
             </div>
           </div>
+          <!-- //cyberfiction -->
 
-          <!-- content-3 -->
-          <div class="content content-3">
-            <div class="mobile-visual">
-              <a href="https://reactshoppinghnm.netlify.app/" target="_blank">
-                <img class="card-img" src="img/react.jpg" alt="react" />
-              </a>
-            </div>
-            <div class="meta">
-              <span class="desc">03 H&M</span>
-              <p class="desc">React를 이용하여 실제 페이지는 하나지만, 사용자에게는 여러 페이지가 있는 것처럼 보이도록하여 페이지 전체를 새로고침하지 않고, 필요한 부분만 바꿔서 앱처럼
-                빠르게 동작하는 SPA(Single Page Application) 입니다.</p>
-              <div class="desc tools">
-                <span># React</span>
-                <span># Node.js</span>
-                <span># JSX</span>
-                <span># SPA</span>
-              </div>
-              <div class="desc gosite">
-                <a href="https://reactshoppinghnm.netlify.app/" target="_blank">프로젝트 바로가기</a>
-                <a href="https://velog.io/@nanaportfolio/HM-ojscbcpf" target="_blank">code review</a>
-              </div>
-            </div>
-          </div>
+        </div>
 
-          <!-- content-4 -->
-          <div class="content content-4">
-            <div class="mobile-visual">
-              <a href="https://kyliecosmetics.netlify.app/" target="_blank">
-                <img class="card-img" src="img/kyliecosmetics.png" alt="kyliecosmetics" />
-              </a>
+        <div class="col">
+
+          <!-- kylie Cosmetics -->
+          <div class="card">
+            <div class="desc tools">
+              <span># 반응형</span>
+              <span># 시맨틱 마크업</span>
+              <span># 미디어 쿼리</span>
+              <span># jQuery</span>
             </div>
-            <div class="meta">
-              <span class="desc">04 Kylie Cosmetics</span>
-              <p class="desc">공식 사이트를 참고하여 jQuery와 외부 라이브러리를 활용해 동적인 UI를 구현한 반응형 웹사이트입니다.</p>
-              <div class="desc tools">
-                <span># 시맨틱 마크업</span>
-                <span># 미디어 쿼리</span>
-                <span># jQuery</span>
-              </div>
-              <div class="desc gosite">
-                <a href="javascript:void(0)"
+
+            <a href="https://kyliecosmetics.netlify.app/" target="_blank">
+              <div class="card__header"><img src="img/kyliecosmetics.png" /></div>
+            </a>
+
+            <p class="desc">공식 사이트를 참고하여 jQuery와 외부 라이브러리를 활용해 동적인 UI를 구현한 반응형 웹사이트입니다.</p>
+
+            <div class="card__footer">
+              <div class="card__meta">
+                <a class="pill" href="javascript:void(0)"
                   onclick="window.open('https://kyliecosmetics.netlify.app/','', 'top=100,left=300,width=400,height=818')">mobile
                   ver.</a>
-                <a href="javascript:void(0)"
+                <a class="pill" href="javascript:void(0)"
                   onclick="window.open('https://kyliecosmetics.netlify.app/','', 'top=100,left=300,width=780,height=818')">tablet
                   ver.</a>
-                <a href="https://kyliecosmetics.netlify.app/" target="_blank">pc ver.</a>
-                <a href="https://velog.io/@nanaportfolio/Kylie-Cosmetics" target="_blank">code review</a>
+                <a class="pill" href="https://kyliecosmetics.netlify.app/" target="_blank">pc ver.</a>
+                <a class="pill" href="https://velog.io/@nanaportfolio/Kylie-Cosmetics" target="_blank">code
+                  review</a>
               </div>
             </div>
           </div>
+          <!-- //kylie Cosmetics -->
 
-          <!-- content-5 -->
-          <div class="content content-5">
-            <div class="mobile-visual">
-              <a href="https://galismind.netlify.app/" target="_blank">
-                <img class="card-img" src="img/babymetalclub.jpg" alt="babymetalclub" />
-              </a>
+          <!-- 하나카드 -->
+          <div class="card">
+
+            <div class="desc tools">
+              <span># 적응형</span>
+              <span># jQuery</span>
+              <span># slick slider</span>
+              <span># 웹 접근성</span>
             </div>
-            <div class="meta">
-              <span class="desc">05 Babymetalclub</span>
-              <p class="desc">베이비메탈클럽 공식 사이트를 참고하여 Lenis를 이용해 부드러운 스크롤 효과를 구현하고, 회원가입 창에서는 정규식을 활용하여 이메일과 비밀번호의 유효성 검사를
-                추가해 사용자 입력을 검증하여 보안을 강화한 웹사이트를 만들었습니다.</p>
-              <div class="desc tools">
-                <span># Regex</span>
-                <span># GSAP</span>
-                <span># jQuery</span>
-                <span># 미디어 쿼리</span>
-              </div>
-              <div class="desc gosite">
-                <a href="javascript:void(0)"
-                  onclick="window.open('https://galismind.netlify.app/','', 'top=100,left=300,width=400,height=818')">mobile
-                  ver.</a>
-                <a href="javascript:void(0)"
-                  onclick="window.open('https://galismind.netlify.app/','', 'top=100,left=300,width=780,height=818')">tablet
-                  ver.</a>
-                <a href="https://galismind.netlify.app/" target="_blank">pc ver.</a>
-                <a href="https://velog.io/@nanaportfolio/Babymetalclub" target="_blank">code review</a>
-              </div>
-            </div>
-          </div>
 
-          <!-- content-6 -->
-          <div class="content content-6">
-            <div class="mobile-visual">
-              <a href="https://hanacardzzizone.netlify.app/" target="_blank">
-                <img class="card-img" src="img/hanacard.jpg" alt="hanacard" />
-              </a>
-            </div>
-            <div class="meta">
-              <span class="desc">06 하나카드</span>
-              <p class="desc">웹 개발 역량 강화를 위해 공식 사이트를 참고하여 시멘틱 마크업, 웹 접근성에 유의하며 다양한 스크립트 구현을 진행하였으며, PC에 최적화된 적응형
-                웹사이트입니다.</p>
-              <div class="desc tools">
-                <span># jQuery</span>
-                <span># slick slider</span>
-                <span># 적응형</span>
-                <span># 웹 접근성</span>
-              </div>
-              <div class="desc gosite">
-                <a href="https://hanacardzzizone.netlify.app/" target="_blank">프로젝트 바로가기</a>
-                <a href="https://velog.io/@nanaportfolio/하나카드" target="_blank">code review</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- 카드 섹션 끝 -->
-
-    <!-- //흠 -->
-
-    <!-- 프로젝트 -->
-
-    <!-- 줌 -->
-    <section class="zoom">
-      <div class="zoom-reveal">
-      </div>
-      <div class="scroll">scroll down</div>
-
-      <div id="homemain2">
-        <!-- Big Text -->
-        <div class="page__text">
-          <div class="page__text__trigger"></div>
-          <div id="homemain2">
-            <div class="headings">
-              <h1 class="magnet-target">I strive to keep my passion</h1>
-            </div>
-            <div class="headings">
-              <h1 class="magnet-target">for design alive as well.</h1>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="scroll">scroll down</div>
-    </section>
-    <!-- //줌 -->
-
-
-    <!-- 디자인 -->
-    <section class="events-page">
-      <!-- 각 이벤트 섹션 -->
-      <div class="event" id="section1">
-        <div class="pinWrapper">
-          <div class="text">
-            <span class="desc">01 photoshop</span>
-            <p class="desc">포토샵에서 직접 디자인한 시안의 가이드라인을 참고하여 웹사이트를 구현했습니다.</p>
-            <div class="desc gosite">
-              <a href="https://photoshopweb.netlify.app/" target="_blank">프로젝트 바로가기</a>
-              <a href="img/photoshop_web.png" target="_blank">Design draft</a>
-              <a href="img/photoshop_guideline.png" target="_blank">Guide line</a>
-            </div>
-          </div>
-          <div class="image">
-            <a href="https://photoshopweb.netlify.app/" target="_blank">
-              <img src="img/photoshop.png" alt="photoshop" />
+            <a href="https://hanacardzzizone.netlify.app/" target="_blank">
+              <div class="card__header"><img src="img/hanacard.jpg" /></div>
             </a>
-          </div>
-        </div>
-      </div>
 
-      <div class="event" id="section2">
-        <div class="pinWrapper">
-          <div class="text">
-            <span class="desc">02 dorarun</span>
-            <p class="desc">디자이너를 위한 노코드 플랫폼을 이용해 3D 애니메이션이 적용된 웹사이트를 제작했습니다.</p>
-            <div class="desc gosite">
-              <a href="https://khlaw1np.dora.run/" target="_blank">프로젝트 바로가기</a>
-              <a href="img/dorarun draft.jpg" target="_blank">Design draft</a>
-              <a href="img/dorarun 3D draft.jpg" target="_blank">3D draft</a>
-            </div>
-          </div>
-          <div class="image">
-            <a href="https://khlaw1np.dora.run/" target="_blank">
-              <img src="img/dorarun.jpg" alt="dorarun" />
-            </a>
-          </div>
-        </div>
-      </div>
+            <p class="desc">웹 개발 역량 강화를 위해 공식 사이트를 참고하여 시멘틱 마크업, 웹 접근성에 유의하며 다양한 스크립트 구현을 진행하였으며, PC에 최적화된 적응형
+              웹사이트입니다.</p>
 
-      <div class="event" id="section3">
-        <div class="pinWrapper">
-          <div class="text">
-            <span class="desc">03 illustrator</span>
-            <p class="desc">펜툴을 활용하여 곡선을 조절하며 디지털 드로잉에서 세밀한 디테일을 표현하는 기술을 연습하였습니다.</p>
-            <div class="desc gosite">
-              <a href="img/maru.png" target="_blank">프로젝트 바로가기</a>
-              <a href="img/aineko.png" target="_blank">Read more</a>
-            </div>
-          </div>
-          <div class="image">
-            <a href="img/maru.png" target="_blank">
-              <img src="img/maru.png" alt="illustrator" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="event" id="section4">
-        <div class="pinWrapper">
-          <div class="text">
-            <span class="desc">04 figma</span>
-            <p class="desc">피그마에서 제작한 iPhone 16 Pro UI 프로토타입을 웹으로 구현하고, 각 요소에 원본 시안과 연결된 링크를 연동했습니다.</p>
-            <div class="desc gosite">
-              <a href="https://figmaportfoliogogoring.netlify.app/" target="_blank">프로젝트 바로가기</a>
-              <a href="https://www.figma.com/proto/bmdcqRuPlT0EUCLwa5w1Uw/" target="_blank">Prototype</a>
-            </div>
-          </div>
-          <div class="image">
-            <a href="https://figmaportfoliogogoring.netlify.app/" target="_blank">
-              <img src="img/figma.jpg" alt="figma" />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="event" id="section5">
-        <div class="pinWrapper">
-          <div class="text">
-            <!-- 말풍선 -->
-            <div class="mine messages">
-              <div class="message last">
-                Press a key or click on the keyboard
+            <div class="card__footer">
+              <div class="card__meta">
+                <a class="pill" href="https://hanacardzzizone.netlify.app/" target="_blank">프로젝트 바로가기</a>
+                <a class="pill" href="https://velog.io/@nanaportfolio/하나카드" target="_blank">code review</a>
               </div>
             </div>
-            <!-- //말풍선 -->
-            <span class="desc">05 spline</span>
-            <p class="desc">스플라인을 이용하여 간단한 3D 모델링을 구현하였으며, 화면의 키패드를 클릭하거나 숫자 및 엔터 키를 누르면 작동되도록 만들었습니다.</p>
           </div>
-          <div class="image">
-            <iframe class="keyboard" src='https://my.spline.design/untitled-63c60b07e6e1d5d659ef8afb73ab6e1f/'
-              frameborder='0' width='100%' height='100%'></iframe>
-          </div>
+          <!-- //하나카드 -->
+
         </div>
       </div>
     </section>
-    <!-- //디자인 -->
 
-
-
-
-
-    <!-- 설명 -->
-    <div class="section-fluid-main">
-      <div class="section-row">
-        <div class="section-col">
-          <p class="goal">
-            디자이너 및 개발자와의 <a href="javascript:void(0)" class="hover-target img-5">원활한 협업</a>과
-            웹 퍼블리셔로서의 <a href="javascript:void(0)" class="hover-target img-6">전문성</a>을 키우기 위해
-            다양한 디자인 툴을 꾸준히 학습하고 있으며, 단순히 툴을 다루는 데 그치지 않고
-            <a href="javascript:void(0)" class="hover-target img-7">커뮤니케이션 능력</a>과
-            <a href="javascript:void(0)" class="hover-target img-8">디자인 감각</a> 향상을 위해 지속적으로 노력하고 있습니다.
-          </p>
-        </div>
+    <!-- 가치 -->
+    <div id="values">
+      <div class="title_area" data-aos="fade-right">
+        <p class="title">Web Design That Preserves <span>Values Amidst Change</span></p>
+        <p class="description">빠르게 변화하는 기술 속에서도, 사용자의 경험과 웹의 본질을 존중하는 마음을 지키고자 합니다.</p>
       </div>
 
-      <div class='cursor' id="cursor"></div>
-      <div class='cursor2' id="cursor2"></div>
-      <div class='cursor3' id="cursor3"></div>
+      <div class="image_slider_wrapper">
+        <ul class="image_slider">
+          <li>
+            <a href="javascript:void(0)">
+              <img src="https://cdn.pixabay.com/photo/2021/08/04/13/06/software-developer-6521720_1280.jpg"
+                alt="values img">
+              <div class="text_overlay">
+                <p>설계에 앞서 고민부터</p>
+                <div>왜 그렇게 만드는지에 대한 고민을 바탕으로, 프로젝트에 적합한 웹 구조와 디자인을 설계합니다.</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="https://cdn.pixabay.com/photo/2022/09/29/06/58/brain-7486701_1280.jpg" alt="values img">
+              <div class="text_overlay">
+                <p>기본을 지키는 자세</p>
+                <div> 기본 원칙을 준수하고, 표준과 접근성을 고려합니다.</div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="https://cdn.pixabay.com/photo/2021/10/13/14/51/businesswoman-6706846_1280.jpg" alt="values img">
+              <div class="text_overlay">
+                <p>지속적인 성장</p>
+                <div>사용자가 진정으로 필요로 하는 가치를 제공하기 위해 끊임없이 발전하고, 변화에 유연하게 대응할 수 있는 능력을 기르고 있습니다.</div>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="background_overlay">
+        <p class="flow_text">From Thoughtful Design to Meaningful Experience</p>
+        <p class="box"></p>
+      </div>
     </div>
-    <!-- //설명 -->
+    <!-- //가치 -->
+  </section>
+  <!-- //퍼블리싱 -->
 
 
+  <!-- 스킬 이미지 -->
+  <div class="gallery-wrap">
+    <div class="gallery gallery--grid10" id="gallery-3">
+      <div class="gallery__item pos-1" style="background-image:url(img/3d_ai.jpg)">
+      </div>
+      <div class="gallery__item pos-2" style="background-image:url(img/3d_psd.jpg)">
+      </div>
+      <div class="gallery__item pos-3" style="background-image:url(img/3d_php.jpg)">
+      </div>
+      <div class="gallery__item pos-4" style="background-image:url(img/3d_css.jpg)">
+      </div>
+      <div class="gallery__item pos-5" style="background-image:url(img/3d_Jquery.png)">
+      </div>
+      <div class="gallery__item pos-6" style="background-image:url(img/3d_mysql.png)">
+      </div>
+      <div class="gallery__item pos-7" style="background-image:url(img/3d_js.jpg)">
+      </div>
+      <div class="gallery__item pos-8" style="background-image:url(img/3d_figma.jpg)">
+      </div>
+      <div class="gallery__item pos-9" style="background-image:url(img/3d_html.jpg)">
+      </div>
+      <div class="gallery__item pos-10" style="background-image:url(img/3d_box.jpg)">
+      </div>
+      <div class="gallery__item pos-11" style="background-image:url(img/3d_www.png)">
+      </div>
+      <div class="caption">In Progress, with Purpose.</div>
+
+    </div>
   </div>
-  <!-- //프로젝트 -->
+  <!-- //스킬 이미지 -->
 
-  <!-- footer -->
+  <!-- 디자인 -->
+  <section class="events-page">
+    <!-- 각 이벤트 섹션 -->
+    <div class="event" id="section1">
+      <div class="pinWrapper">
+        <div class="text">
+          <span class="desc">01. PHOTOSHOP</span>
+          <p class="desc">포토샵에서 직접 디자인한 시안의 가이드라인을 참고하여 웹사이트를 구현했습니다.</p>
+          <div class="desc gosite">
+            <a href="https://photoshopweb.netlify.app/" target="_blank">프로젝트 바로가기</a>
+            <a href="img/photoshop_web.png" target="_blank">DESIGN DRAFT</a>
+            <a href="img/photoshop_guideline.png" target="_blank">GUIDE LINE</a>
+          </div>
+        </div>
+        <div class="image">
+          <a href="https://photoshopweb.netlify.app/" target="_blank">
+            <img src="img/photoshop.png" alt="photoshop" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event" id="section2">
+      <div class="pinWrapper">
+        <div class="text">
+          <span class="desc">02. DORARUN</span>
+          <p class="desc">디자이너를 위한 노코드 플랫폼을 이용해 3D 애니메이션이 적용된 웹사이트를 제작했습니다.</p>
+          <div class="desc gosite">
+            <a href="https://khlaw1np.dora.run/" target="_blank">프로젝트 바로가기</a>
+            <a href="img/dorarun draft.jpg" target="_blank">DESIGN DRAFT</a>
+            <a href="img/dorarun 3D draft.jpg" target="_blank">3D DRAFT</a>
+          </div>
+        </div>
+        <div class="image">
+          <a href="https://khlaw1np.dora.run/" target="_blank">
+            <img src="img/dorarun.jpg" alt="dorarun" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event" id="section3">
+      <div class="pinWrapper">
+        <div class="text">
+          <span class="desc">03. ILLUSTRATOR</span>
+          <p class="desc">펜툴을 활용하여 곡선을 조절하며 디지털 드로잉에서 세밀한 디테일을 표현하는 기술을 연습하였습니다.</p>
+          <div class="desc gosite">
+            <a href="img/maru.png" target="_blank">프로젝트 바로가기</a>
+            <a href="img/aineko.png" target="_blank">READ MORE</a>
+          </div>
+        </div>
+        <div class="image">
+          <a href="img/maru.png" target="_blank">
+            <img src="img/maru.png" alt="illustrator" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event" id="section4">
+      <div class="pinWrapper">
+        <div class="text">
+          <span class="desc">04. FIGMA</span>
+          <p class="desc">피그마에서 제작한 iPhone 16 Pro UI 프로토타입을 웹으로 구현하고, 각 요소에 원본 시안과 연결된 링크를 연동했습니다.</p>
+          <div class="desc gosite">
+            <a href="https://figmaportfoliogogoring.netlify.app/" target="_blank">프로젝트 바로가기</a>
+            <a href="https://www.figma.com/proto/bmdcqRuPlT0EUCLwa5w1Uw/" target="_blank">PROTOTYPE</a>
+          </div>
+        </div>
+        <div class="image">
+          <a href="https://figmaportfoliogogoring.netlify.app/" target="_blank">
+            <img src="img/figma.jpg" alt="figma" />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="event" id="section5">
+      <div class="pinWrapper">
+        <div class="text">
+          <!-- 말풍선 -->
+          <div class="mine messages">
+            <div class="message last">
+              Press a key or click on the keyboard
+            </div>
+          </div>
+          <!-- //말풍선 -->
+          <span class="desc">05. SPLINE</span>
+          <p class="desc">스플라인을 이용하여 간단한 3D 모델링을 구현하였으며, 화면의 키패드를 클릭하거나 숫자 및 엔터 키를 누르면 작동되도록 만들었습니다.</p>
+        </div>
+        <div class="image">
+          <iframe class="keyboard" src='https://my.spline.design/untitled-63c60b07e6e1d5d659ef8afb73ab6e1f/'
+            frameborder='0' width='100%' height='100%'></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- //디자인 -->
+
+  <!-- 설명 -->
+  <div class="section-fluid-main">
+    <div class="section-row">
+      <div class="section-col">
+        <p class="goal">
+          단순히 툴을 다루는 데 그치지 않고 디자이너 및 개발자 등 이해관계자들과 원활한 <a href="javascript:void(0)" class="hover-target img-1">협업</a>을
+          위한
+          <a href="javascript:void(0)" class="hover-target img-2">커뮤니케이션</a> 능력 향상을 위해 다양한 <a href="javascript:void(0)"
+            class="hover-target img-3">디자인 툴</a>을 학습하고 있으며, <a href="javascript:void(0)" class="hover-target img-4">디자인
+            감각</a> 향상을 위해 노력하겠습니다.
+        </p>
+      </div>
+    </div>
+
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+  </div>
+  <!-- //설명 -->
+
+  <!-- 푸터 -->
   <footer id="footer" class="footer">
 
     <a href="https://velog.io/@nanaportfolio/posts" target="_blank" class="github">
@@ -547,8 +631,8 @@
       <div class="form-container">
         <h2>Contact</h2>
         <form action="https://formsubmit.co/kimnahye1313@naver.com" method="POST">
-          <input type="text" name="name" placeholder="이름, 문의사항" required>
           <input type="email" name="email" placeholder="이메일" required>
+          <input type="text" name="name" placeholder="이름, 문의사항" required>
           <button type="submit">Send</button>
           <button type="button" class="close-popup" id="closePopup">Close</button>
         </form>
@@ -561,37 +645,33 @@
     </a>
 
   </footer>
-  <!-- //footer -->
+  <!-- //푸터 -->
 
-  </div>
+
+  <!-- test -->
+  <script src='https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js'></script>
+  <!-- //test -->
+
+  <!-- 로고, 프리로더 -->
+  <script src="https://unpkg.com/split-type"></script>
+  <!-- //로고, 프리로더 -->
+
+  <!-- GSAP & Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
   <!-- 마그넷 -->
+  <script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+  <!-- //마그넷 -->
+
+  <!-- 디자인(ScrollMagic) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
+  <!-- //디자인 -->
+  <script src='https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js'></script>
+  <script src='https://assets.codepen.io/16327/Flip.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/5.0.0/imagesloaded.pkgd.min.js'></script>
+  <script type="module" src="./script.js"></script>
 
 </body>
-
-<!-- script -->
-<!-- Core Libraries -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js"></script>
-
-<!-- GSAP & Plugins -->
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-
-<!-- Smooth Scrolling -->
-<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.0/bundled/lenis.js"></script>
-
-<!-- Text Splitting / Animation -->
-<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-<script src="https://unpkg.com/split-type"></script>
-
-<!-- UI/UX Effects -->
-<script src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
-
-<!-- Custom Scripts -->
-<script src="main.js"></script>
-<!-- //script -->
-
-</body>
-
 
 </html>
