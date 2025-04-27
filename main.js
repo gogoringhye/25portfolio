@@ -317,28 +317,7 @@ document.querySelectorAll('.card').forEach(card => {
 /* //퍼블리싱 */
 
 
-/* 마그넷 */
-
-// 마우스 팔로워 효과
-Shery.mouseFollower({
-  skew: true,
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  duration: 1,
-});
-
-// 마그넷 효과
-Shery.makeMagnet(".magnet-target", {
-  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-  duration: 0.3,
-});
-
-// 호버 시 미디어 서클
-Shery.hoverWithMediaCircle(".hvr", {
-  images: ["img/planet1.png", "img/planet2.png", "img/planet3.png", "img/planet4.png", "img/planet5.png", "img/planet6.png", "img/planet7.png", "img/planet8.png"]
-});
-/* 영상은 깃헙에서 들어오는 편이 로딩 짧음, 직접 다운 받아서 가지고 있으면 로딩이 김 */
-/* //마그넷 */
-
+/* 헤더 */
 
 /* 로고 */
 const Intro = function () {
@@ -410,6 +389,29 @@ const handleScroll = () => {
 window.addEventListener("scroll", handleScroll);
 /* //로고 */
 
+/* 마그넷 */
+
+// 마우스 팔로워 효과
+Shery.mouseFollower({
+  skew: true,
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 1,
+});
+
+// 마그넷 효과
+Shery.makeMagnet(".magnet-target", {
+  ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+  duration: 0.3,
+});
+
+// 호버 시 미디어 서클
+Shery.hoverWithMediaCircle(".hvr", {
+  images: ["img/planet1.png", "img/planet2.png", "img/planet3.png", "img/planet4.png", "img/planet5.png", "img/planet6.png", "img/planet7.png", "img/planet8.png"]
+});
+/* 영상은 깃헙에서 들어오는 편이 로딩 짧음, 직접 다운 받아서 가지고 있으면 로딩이 김 */
+/* //마그넷 */
+
+/* //헤더 */
 
 /* 이메일 */
 // 팝업 열기 및 닫기 기능
