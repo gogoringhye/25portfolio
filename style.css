@@ -652,8 +652,8 @@ img {
 
 /* 버튼2 */
 .pinWrapper .desc {
-  font-size: 1.8rem;
-  font-family: 'SUIT', sans-serif;
+  font-size: 1.6rem;
+  font-family: "Fahkwang", sans-serif;
   line-height: 1.5;
   max-inline-size: 700px;
   margin: 2vw;
@@ -673,7 +673,7 @@ img {
 .pinWrapper .text .desc.gosite a {
   display: inline-block;
   padding: 10px 35px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: bold;
   color: rgb(255, 255, 255);
   background-color: rgb(3, 3, 3);
