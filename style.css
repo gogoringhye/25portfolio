@@ -292,8 +292,8 @@ img {
   position: absolute;
   animation: float1 7s infinite;
   transform: translateX(-50%);
-  width: 380px;
-  left: -25%;
+  width: 390px;
+  left: -12%;
   top: 36%;
   z-index: 10;
 }
