@@ -293,8 +293,8 @@ img {
   animation: float1 7s infinite;
   transform: translateX(-50%);
   width: 380px;
-  left: 4%;
-  top: 35%;
+  left: -4%;
+  top: 36%;
   z-index: 10;
 }
 
@@ -375,9 +375,9 @@ img {
 .homemain {
   position: absolute;
   bottom: 10%;
-  left: 10%;
+  left: -10%;
   height: auto;
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -394,7 +394,7 @@ img {
   font-size: 7rem;
   font-weight: bold;
   line-height: 1.5;
-  letter-spacing: 20px;
+  letter-spacing: 25px;
   margin: 0;
   text-transform: uppercase;
 }
