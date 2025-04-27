@@ -293,7 +293,7 @@ img {
   animation: float1 7s infinite;
   transform: translateX(-50%);
   width: 380px;
-  left: -4%;
+  left: -25%;
   top: 36%;
   z-index: 10;
 }
@@ -304,8 +304,8 @@ img {
   animation: float2 11s infinite;
   width: 210px;
   z-index: 10;
-  top: 55%;
-  left: -45%;
+  top: 50%;
+  right: -20%;
   transform: translateX(-50%);
 }
 
@@ -391,10 +391,10 @@ img {
 }
 
 .homemain .headings h1 {
-  font-size: 7rem;
+  font-size: 7.5rem;
   font-weight: bold;
   line-height: 1.5;
-  letter-spacing: 25px;
+  letter-spacing: 30px;
   margin: 0;
   text-transform: uppercase;
 }
