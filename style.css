@@ -221,7 +221,7 @@ img {
   height: 100vh;
   justify-content: center;
   align-items: center;
-  position: relative; 
+  position: relative;
 }
 
 /* 로고 */
@@ -294,7 +294,7 @@ img {
   transform: translateX(-50%);
   width: 400px;
   left: -12%;
-  top: 36%;
+  top: 38%;
   z-index: 10;
 }
 
@@ -375,14 +375,13 @@ img {
 .homemain {
   position: absolute;
   bottom: 10%;
-  left: -10%;
+  left: 0%;
   height: auto;
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2vw;
-
 }
 
 .headings {
