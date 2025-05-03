@@ -296,7 +296,7 @@ img {
   width: 350px;
   left: -12%;
   top: 38%;
-  z-index: 10;
+  z-index: 5;
 }
 
 /* 두 번째 이미지 (첫 번째 컵 이미지) */
@@ -575,7 +575,7 @@ img {
   }
 
   .gallery--grid10:not(.gallery--switch) .pos-11 {
-    grid-area: 4 / 7;
+    grid-area: 4 / 8;
   }
 }
 
