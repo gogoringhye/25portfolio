@@ -669,7 +669,7 @@ body.active {
 /* 슬라이드 */
 
 #int {
-   overflow: hidden;
+    overflow: hidden;
     position: relative;
 }
 
@@ -1529,6 +1529,10 @@ footer .top_section article {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .filter-item button.active {
+        color: var(--white);
     }
 
 }
