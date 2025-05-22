@@ -1559,8 +1559,6 @@ footer .top_section article {
         max-width: max-content;
     }
 
-
-
     .project-list {
         grid-template-columns: 1fr 1fr;
     }
@@ -1573,7 +1571,6 @@ footer .top_section article {
         aspect-ratio: 10 / 14;
         top: -85px;
     }
-
 
     .contact-form {
         max-width: 450px;
@@ -1637,6 +1634,11 @@ footer .top_section article {
     footer .top_section article:not(:first-child) {
         width: 100%;
         justify-content: left;
+    }
+
+     .filter-item button {
+        color: var(--dark);
+        font-size: 0.6rem;
     }
 
 }
