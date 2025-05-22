@@ -1527,7 +1527,9 @@ footer .top_section article {
         object-fit: cover;
     }
 
-
+    .filter-list {
+        color: var(--dark);
+    }
 
 }
 
