@@ -5,6 +5,10 @@
 :root {
     --black: hsl(0, 0%, 0%);
     --white: hsl(0, 0%, 100%);
+    --black: #000;
+    --gray: #5b5b5b;
+    --lite: #ebebeb;
+    --dark: #1d1e22;
 
     --ff-poppins: 'Poppins', sans-serif;
     --ff-parisienne: 'Parisienne', sans-serif;
