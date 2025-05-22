@@ -557,7 +557,7 @@ body.active {
 }
 
 .gallery__row:hover {
-    height: 360px;
+    height: 240px;
 }
 
 .gallery__row:hover~.gallery__row,
