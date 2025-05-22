@@ -665,7 +665,7 @@ body.active {
 /* 슬라이드 */
 
 #int {
-    overflow: hidden;
+   overflow: hidden;
     position: relative;
 }
 
