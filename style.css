@@ -850,6 +850,13 @@ body.active {
     margin-top: 50px;
 }
 
+.filter-item button {
+    color: var(--dark);
+    font-size: var(--fs-5);
+    font-weight: var(--fw-600);
+    transition: var(--transition1);
+}
+
 .filter-item button.active {
     background: var(--dark);
     color: var(--white);
@@ -1552,12 +1559,7 @@ footer .top_section article {
         max-width: max-content;
     }
 
-    .filter-item button {
-        color: var(--dark);
-        font-size: var(--fs-5);
-        font-weight: var(--fw-600);
-        transition: var(--transition1);
-    }
+
 
     .project-list {
         grid-template-columns: 1fr 1fr;
