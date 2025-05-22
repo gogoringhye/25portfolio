@@ -839,7 +839,6 @@ body.active {
     gap: 15px;
     margin-bottom: 20px;
     background: var(--bg-secondary);
-    color: var(--dark);
     display: flex;
     align-items: center;
     padding: 10px 15px;
@@ -1554,7 +1553,7 @@ footer .top_section article {
     }
 
     .filter-item button {
-        color: var(--color-primary);
+        color: var(--dark);
         font-size: var(--fs-5);
         font-weight: var(--fw-600);
         transition: var(--transition1);
